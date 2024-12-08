@@ -4,4 +4,5 @@ namespace VanCodX\Data\Validator\Traits\Interfaces;
 
 interface BoolInterface
 {
+    public static function isBool(mixed $value): bool;
 }
