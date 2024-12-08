@@ -1,0 +1,39 @@
+{
+  "name": "vancodx/php-data-validator",
+  "description": "VanCodX PHP Data Validator",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ivan Chistyakov",
+      "email": "vancodx@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "VanCodX\\Data\\Validator\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^8.3"
+  },
+  "require-dev": {
+    "vancodx/php-coding-style": "^1.1.0",
+    "vancodx/php-testing": "^1.0.0"
+  },
+  "scripts": {
+    "test": [
+      "php-cs-fixer fix",
+      "phpunit"
+    ]
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
