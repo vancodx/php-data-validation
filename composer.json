@@ -1,6 +1,11 @@
 {
-  "name": "vancodx/php-data-validator",
-  "description": "VanCodX PHP Data Validator",
+  "name": "vancodx/php-data-validation",
+  "description": "VanCodX PHP Data Validation",
+  "keywords": [
+    "vancodx",
+    "data",
+    "validation"
+  ],
   "type": "library",
   "license": "MIT",
   "authors": [
@@ -11,7 +16,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "VanCodX\\Data\\Validator\\": "src/"
+      "VanCodX\\Data\\Validation\\": "src/"
     }
   },
   "autoload-dev": {
@@ -24,16 +29,20 @@
     "php": "^8.3"
   },
   "require-dev": {
-    "vancodx/php-coding-style": "^1.1.0",
-    "vancodx/php-testing": "^1.0.0"
+    "roave/security-advisories": "dev-latest",
+    "vancodx/php-coding-style": "^1.2.0",
+    "vancodx/php-testing": "^1.1.0"
   },
   "scripts": {
     "test": [
       "php-cs-fixer fix",
+      "phpcs -p",
+      "phpstan analyze",
       "phpunit"
     ]
   },
   "config": {
-    "sort-packages": true
+    "sort-packages": true,
+    "optimize-autoloader": true
   }
 }

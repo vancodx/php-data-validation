@@ -6,11 +6,8 @@ use VanCodX\Testing\PHPUnit\TestCase;
 
 class ExampleTest extends TestCase
 {
-    /**
-     * @return void
-     */
     public function testExample(): void
     {
-        $this->assertTrue(true);
+        $this->assertGreaterThan(1, time());
     }
 }

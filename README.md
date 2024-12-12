@@ -1,2 +1,2 @@
-VanCodX PHP Data Validator
-==========================
+VanCodX PHP Data Validation
+===========================

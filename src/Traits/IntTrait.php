@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace VanCodX\Data\Validator\Traits;
+namespace VanCodX\Data\Validation\Traits;
 
 trait IntTrait
 {
