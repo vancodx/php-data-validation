@@ -7,6 +7,9 @@ use VanCodX\Testing\PHPUnit\TestCase;
 
 class BoolTraitTest extends TestCase
 {
+    /**
+     * @return void
+     */
     public function testIsBool(): void
     {
         $this->assertTrue(V::isBool(true));
