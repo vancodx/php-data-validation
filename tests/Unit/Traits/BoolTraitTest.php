@@ -10,22 +10,32 @@ class BoolTraitTest extends TestCase
 {
     /**
      * @return mixed[][]
+     * @phpstan-return array<int, array{0: mixed, 1: bool}>
      */
-    public static function isBoolTrueProvider(): array
+    public static function isBoolDataProvider(): array
     {
-        return array_map(fn (mixed $value) => [$value], [
+        $passingValues = [
             true,
             false
-        ]);
+        ];
+        $fallingValues = [
+            'true',
+            'false'
+        ];
+        return array_merge(
+            array_map(fn (mixed $value) => [$value, true], $passingValues),
+            array_map(fn (mixed $value) => [$value, false], $fallingValues)
+        );
     }
 
     /**
      * @param mixed $value
+     * @param bool $expected
      * @return void
      */
-    #[DataProvider('isBoolTrueProvider')]
-    public function testIsBool(mixed $value): void
+    #[DataProvider('isBoolDataProvider')]
+    public function testIsBool(mixed $value, bool $expected): void
     {
-        $this->assertTrue(V::isBool($value));
+        $this->assertSame($expected, V::isBool($value));
     }
 }
