@@ -51,4 +51,26 @@ class MiscTraitTest extends ValidationTestCase
     {
         $this->assertSame($expected, V::isTrue($value));
     }
+
+    /**
+     * @return mixed[][]
+     * @phpstan-return array<int, array{0: mixed, 1: bool}>
+     */
+    public static function isFalseDataProvider(): array
+    {
+        return static::buildDataProvider([
+            false
+        ]);
+    }
+
+    /**
+     * @param mixed $value
+     * @param bool $expected
+     * @return void
+     */
+    #[DataProvider('isFalseDataProvider')]
+    public function testIsFalse(mixed $value, bool $expected): void
+    {
+        $this->assertSame($expected, V::isFalse($value));
+    }
 }
