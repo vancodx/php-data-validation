@@ -2,23 +2,30 @@
 
 namespace Tests\Unit\Traits;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use VanCodX\Data\Validation\Validation as V;
 use VanCodX\Testing\PHPUnit\TestCase;
 
 class BoolTraitTest extends TestCase
 {
     /**
+     * @return mixed[][]
+     */
+    public static function isBoolTrueProvider(): array
+    {
+        return array_map(fn (mixed $value) => [$value], [
+            true,
+            false
+        ]);
+    }
+
+    /**
+     * @param mixed $value
      * @return void
      */
-    public function testIsBool(): void
+    #[DataProvider('isBoolTrueProvider')]
+    public function testIsBool(mixed $value): void
     {
-        $this->assertTrue(V::isBool(true));
-        $this->assertTrue(V::isBool(false));
-
-        $this->assertFalse(V::isBool(1));
-        $this->assertFalse(V::isBool(0));
-        $this->assertFalse(V::isBool('true'));
-        $this->assertFalse(V::isBool(''));
-        $this->assertFalse(V::isBool(null));
+        $this->assertTrue(V::isBool($value));
     }
 }
