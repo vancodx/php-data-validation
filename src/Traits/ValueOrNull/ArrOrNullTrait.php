@@ -17,6 +17,7 @@ trait ArrOrNullTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true non-empty-array<mixed>|null $value
      */
     public static function isArrLenOrNull(mixed $value): bool
     {
@@ -26,6 +27,7 @@ trait ArrOrNullTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{}|null $value
      */
     public static function isEmptyArrOrNull(mixed $value): bool
     {

@@ -17,6 +17,7 @@ trait ListOrNullTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true non-empty-list<mixed>|null $value
      */
     public static function isListLenOrNull(mixed $value): bool
     {
@@ -26,6 +27,7 @@ trait ListOrNullTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{}|null $value
      */
     public static function isEmptyListOrNull(mixed $value): bool
     {

@@ -17,6 +17,7 @@ trait StrOrNullTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true non-empty-string|null $value
      */
     public static function isStrLenOrNull(mixed $value): bool
     {
@@ -26,6 +27,7 @@ trait StrOrNullTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true ''|null $value
      */
     public static function isEmptyStrOrNull(mixed $value): bool
     {
