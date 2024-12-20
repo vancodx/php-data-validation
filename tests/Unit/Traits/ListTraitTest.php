@@ -6,17 +6,15 @@ use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\Unit\ValidationTestCase;
 use VanCodX\Data\Validation\Validation as V;
 
-class ArrTraitTest extends ValidationTestCase
+class ListTraitTest extends ValidationTestCase
 {
     /**
      * @return list<array{mixed, bool}>
      */
-    public static function isArrDataProvider(): array
+    public static function isListDataProvider(): array
     {
         return static::buildDataSet([
             [null],
-            ['true' => true, 'false' => false],
-            ['x' => 0, 'y' => 1, 'z' => -1],
             [0.0, 1.0, -1.0],
             ['0', '1', '-1'],
             [''],
@@ -29,21 +27,19 @@ class ArrTraitTest extends ValidationTestCase
      * @param bool $expected
      * @return void
      */
-    #[DataProvider('isArrDataProvider')]
-    public function testIsArr(mixed $value, bool $expected): void
+    #[DataProvider('isListDataProvider')]
+    public function testIsList(mixed $value, bool $expected): void
     {
-        $this->assertSame($expected, V::isArr($value));
+        $this->assertSame($expected, V::isList($value));
     }
 
     /**
      * @return list<array{mixed, bool}>
      */
-    public static function isArrLenDataProvider(): array
+    public static function isListLenDataProvider(): array
     {
         return static::buildDataSet([
             [null],
-            ['true' => true, 'false' => false],
-            ['x' => 0, 'y' => 1, 'z' => -1],
             [0.0, 1.0, -1.0],
             ['0', '1', '-1'],
             ['']
@@ -55,16 +51,16 @@ class ArrTraitTest extends ValidationTestCase
      * @param bool $expected
      * @return void
      */
-    #[DataProvider('isArrLenDataProvider')]
-    public function testIsArrLen(mixed $value, bool $expected): void
+    #[DataProvider('isListLenDataProvider')]
+    public function testIsListLen(mixed $value, bool $expected): void
     {
-        $this->assertSame($expected, V::isArrLen($value));
+        $this->assertSame($expected, V::isListLen($value));
     }
 
     /**
      * @return list<array{mixed, bool}>
      */
-    public static function isEmptyArrDataProvider(): array
+    public static function isEmptyListDataProvider(): array
     {
         return static::buildDataSet([
             []
@@ -76,9 +72,9 @@ class ArrTraitTest extends ValidationTestCase
      * @param bool $expected
      * @return void
      */
-    #[DataProvider('isEmptyArrDataProvider')]
-    public function testIsEmptyArr(mixed $value, bool $expected): void
+    #[DataProvider('isEmptyListDataProvider')]
+    public function testIsEmptyList(mixed $value, bool $expected): void
     {
-        $this->assertSame($expected, V::isEmptyArr($value));
+        $this->assertSame($expected, V::isEmptyList($value));
     }
 }
