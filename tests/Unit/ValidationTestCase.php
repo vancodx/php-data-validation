@@ -7,7 +7,7 @@ use VanCodX\Testing\PHPUnit\TestCase;
 abstract class ValidationTestCase extends TestCase
 {
     /**
-     * @return mixed[]
+     * @return list<mixed>
      */
     protected static function getAnyValues(): array
     {
@@ -24,20 +24,20 @@ abstract class ValidationTestCase extends TestCase
     }
 
     /**
-     * @param mixed[] $passingValues
-     * @return mixed[]
+     * @param list<mixed> $passingValues
+     * @return list<mixed>
      */
     protected static function buildFallingValues(array $passingValues): array
     {
+        /** @phpstan-ignore return.type */
         return array_diff(static::getAnyValues(), $passingValues);
     }
 
     /**
-     * @param mixed[] $passingValues
-     * @return mixed[][]
-     * @phpstan-return array<int, array{0: mixed, 1: bool}>
+     * @param list<mixed> $passingValues
+     * @return list<array{mixed, bool}>
      */
-    protected static function buildDataProvider(array $passingValues): array
+    protected static function buildDataSet(array $passingValues): array
     {
         $fallingValues = static::buildFallingValues($passingValues);
         return array_merge(

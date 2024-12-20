@@ -7,6 +7,7 @@ trait ArrTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array<mixed> $value
      */
     public static function isArr(mixed $value): bool
     {

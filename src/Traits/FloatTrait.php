@@ -7,6 +7,7 @@ trait FloatTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true float $value
      */
     public static function isFloat(mixed $value): bool
     {

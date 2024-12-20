@@ -7,6 +7,7 @@ trait ListTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true list<mixed> $value
      */
     public static function isList(mixed $value): bool
     {

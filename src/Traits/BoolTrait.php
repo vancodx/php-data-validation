@@ -7,6 +7,7 @@ trait BoolTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true bool $value
      */
     public static function isBool(mixed $value): bool
     {

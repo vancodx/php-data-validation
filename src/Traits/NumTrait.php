@@ -7,6 +7,7 @@ trait NumTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true int|float $value
      */
     public static function isNum(mixed $value): bool
     {

@@ -9,12 +9,11 @@ use VanCodX\Data\Validation\Validation as V;
 class MiscTraitTest extends ValidationTestCase
 {
     /**
-     * @return mixed[][]
-     * @phpstan-return array<int, array{0: mixed, 1: bool}>
+     * @return list<array{mixed, bool}>
      */
     public static function isNullDataProvider(): array
     {
-        return static::buildDataProvider([
+        return static::buildDataSet([
             null
         ]);
     }
@@ -31,12 +30,11 @@ class MiscTraitTest extends ValidationTestCase
     }
 
     /**
-     * @return mixed[][]
-     * @phpstan-return array<int, array{0: mixed, 1: bool}>
+     * @return list<array{mixed, bool}>
      */
     public static function isTrueDataProvider(): array
     {
-        return static::buildDataProvider([
+        return static::buildDataSet([
             true
         ]);
     }
@@ -53,12 +51,11 @@ class MiscTraitTest extends ValidationTestCase
     }
 
     /**
-     * @return mixed[][]
-     * @phpstan-return array<int, array{0: mixed, 1: bool}>
+     * @return list<array{mixed, bool}>
      */
     public static function isFalseDataProvider(): array
     {
-        return static::buildDataProvider([
+        return static::buildDataSet([
             false
         ]);
     }
