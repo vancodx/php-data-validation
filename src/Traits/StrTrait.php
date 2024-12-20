@@ -7,6 +7,7 @@ trait StrTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true string $value
      */
     public static function isStr(mixed $value): bool
     {

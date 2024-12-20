@@ -7,6 +7,7 @@ trait MiscTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true null $value
      */
     public static function isNull(mixed $value): bool
     {
@@ -16,6 +17,7 @@ trait MiscTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true true $value
      */
     public static function isTrue(mixed $value): bool
     {
@@ -25,6 +27,7 @@ trait MiscTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true false $value
      */
     public static function isFalse(mixed $value): bool
     {

@@ -9,12 +9,11 @@ use VanCodX\Data\Validation\Validation as V;
 class BoolTraitTest extends ValidationTestCase
 {
     /**
-     * @return mixed[][]
-     * @phpstan-return array<int, array{0: mixed, 1: bool}>
+     * @return list<array{mixed, bool}>
      */
     public static function isBoolDataProvider(): array
     {
-        return static::buildDataProvider([
+        return static::buildDataSet([
             true,
             false
         ]);

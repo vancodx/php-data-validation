@@ -7,6 +7,7 @@ trait IntTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true int $value
      */
     public static function isInt(mixed $value): bool
     {
