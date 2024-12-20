@@ -12,14 +12,34 @@ abstract class ValidationTestCase extends TestCase
     protected static function getAnyValues(): array
     {
         return [
+            null,
             true, false,
-            0, 1, 1000000, -1, -1000000,
-            0.0, 1.0, 1000000.1, -1.0, -1000000.1,
-            'true', 'false',
-            '0', '1', '-1',
-            '0.0', '1.0', '-1.0',
+            0,
+            1,
+            1000000,
+            -1,
+            -1000000,
+            0.0,
+            1.0,
+            1000000.1,
+            -1.0,
+            -1000000.1,
+            'true',
+            'false',
+            '0',
+            '1',
+            '-1',
+            '0.0',
+            '1.0',
+            '-1.0',
             '',
-            null
+            [null],
+            [true, false],
+            [0, 1, -1],
+            [0.0, 1.0, -1.0],
+            ['0', '1', '-1'],
+            [''],
+            []
         ];
     }
 
@@ -29,8 +49,13 @@ abstract class ValidationTestCase extends TestCase
      */
     protected static function buildFallingValues(array $passingValues): array
     {
-        /** @phpstan-ignore return.type */
-        return array_diff(static::getAnyValues(), $passingValues);
+        $fallingValues = [];
+        foreach (static::getAnyValues() as $value) {
+            if (!in_array($value, $passingValues, true)) {
+                $fallingValues[] = $value;
+            }
+        }
+        return $fallingValues;
     }
 
     /**
