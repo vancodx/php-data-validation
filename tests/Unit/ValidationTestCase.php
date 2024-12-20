@@ -12,18 +12,12 @@ abstract class ValidationTestCase extends TestCase
     protected static function getAnyValues(): array
     {
         return [
-            true,
-            false,
-            0,
-            1,
-            1000000,
-            -1,
-            -1000000,
-            'true',
-            'false',
-            '0',
-            '1',
-            '-1',
+            true, false,
+            0, 1, 1000000, -1, -1000000,
+            0.0, 1.0, 1000000.1, -1.0, -1000000.1,
+            'true', 'false',
+            '0', '1', '-1',
+            '0.0', '1.0', '-1.0',
             '',
             null
         ];
