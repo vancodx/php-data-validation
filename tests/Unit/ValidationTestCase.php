@@ -14,10 +14,16 @@ abstract class ValidationTestCase extends TestCase
         return [
             true,
             false,
-            1,
             0,
+            1,
+            1000000,
+            -1,
+            -1000000,
             'true',
             'false',
+            '0',
+            '1',
+            '-1',
             '',
             null
         ];
