@@ -29,4 +29,36 @@ class ArrOrNullTraitTest extends ValueOrNullTestCase
     {
         $this->checkValueOrNullFunction(__FUNCTION__);
     }
+
+    /**
+     * @return void
+     */
+    public function testIsArrSoloOrNull(): void
+    {
+        $this->checkValueOrNullFunction(__FUNCTION__);
+    }
+
+    /**
+     * @return void
+     */
+    public function testIsArrDuoOrNull(): void
+    {
+        $this->checkValueOrNullFunction(__FUNCTION__);
+    }
+
+    /**
+     * @return void
+     */
+    public function testIsArrTrioOrNull(): void
+    {
+        $this->checkValueOrNullFunction(__FUNCTION__);
+    }
+
+    /**
+     * @return void
+     */
+    public function testIsArrQuadOrNull(): void
+    {
+        $this->checkValueOrNullFunction(__FUNCTION__);
+    }
 }
