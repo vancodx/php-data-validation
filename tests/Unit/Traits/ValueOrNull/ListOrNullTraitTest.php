@@ -29,4 +29,36 @@ class ListOrNullTraitTest extends ValueOrNullTestCase
     {
         $this->checkValueOrNullFunction(__FUNCTION__);
     }
+
+    /**
+     * @return void
+     */
+    public function testIsListSoloOrNull(): void
+    {
+        $this->checkValueOrNullFunction(__FUNCTION__);
+    }
+
+    /**
+     * @return void
+     */
+    public function testIsListDuoOrNull(): void
+    {
+        $this->checkValueOrNullFunction(__FUNCTION__);
+    }
+
+    /**
+     * @return void
+     */
+    public function testIsListTrioOrNull(): void
+    {
+        $this->checkValueOrNullFunction(__FUNCTION__);
+    }
+
+    /**
+     * @return void
+     */
+    public function testIsListQuadOrNull(): void
+    {
+        $this->checkValueOrNullFunction(__FUNCTION__);
+    }
 }

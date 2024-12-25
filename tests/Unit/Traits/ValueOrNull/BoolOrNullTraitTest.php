@@ -13,4 +13,20 @@ class BoolOrNullTraitTest extends ValueOrNullTestCase
     {
         $this->checkValueOrNullFunction(__FUNCTION__);
     }
+
+    /**
+     * @return void
+     */
+    public function testIsTrueOrNull(): void
+    {
+        $this->checkValueOrNullFunction(__FUNCTION__);
+    }
+
+    /**
+     * @return void
+     */
+    public function testIsFalseOrNull(): void
+    {
+        $this->checkValueOrNullFunction(__FUNCTION__);
+    }
 }

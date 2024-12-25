@@ -13,7 +13,9 @@ abstract class ValueTestCase extends TestCase
     {
         return [
             null,
-            true, false,
+            STDOUT,
+            true,
+            false,
             0,
             1,
             1000000,
@@ -34,10 +36,13 @@ abstract class ValueTestCase extends TestCase
             '-1.0',
             '',
             [null],
-            ['true' => true, 'false' => false],
-            ['x' => 0, 'y' => 1, 'z' => -1],
+            ['STDOUT' => STDOUT],
+            [true, false],
+            ['a' => 0, 'b' => 1],
             [0.0, 1.0, -1.0],
-            ['0', '1', '-1.0'],
+            ['x' => '0.0', 'y' => '1.0', 'z' => '-1.0'],
+            [null, false, -1.0, ['empty-string' => '']],
+            ['STDOUT' => STDOUT, 'b' => 1, 'z' => '-1.0', []],
             [''],
             []
         ];

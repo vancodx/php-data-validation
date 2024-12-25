@@ -15,6 +15,7 @@ use VanCodX\Data\Validation\Traits\ValueOrNull\BoolOrNullTrait;
 use VanCodX\Data\Validation\Traits\ValueOrNull\FloatOrNullTrait;
 use VanCodX\Data\Validation\Traits\ValueOrNull\IntOrNullTrait;
 use VanCodX\Data\Validation\Traits\ValueOrNull\ListOrNullTrait;
+use VanCodX\Data\Validation\Traits\ValueOrNull\MiscOrNullTrait;
 use VanCodX\Data\Validation\Traits\ValueOrNull\NumOrNullTrait;
 use VanCodX\Data\Validation\Traits\ValueOrNull\StrOrNullTrait;
 
@@ -33,6 +34,7 @@ class Validation
     use FloatOrNullTrait;
     use IntOrNullTrait;
     use ListOrNullTrait;
+    use MiscOrNullTrait;
     use NumOrNullTrait;
     use StrOrNullTrait;
 }
