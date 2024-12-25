@@ -15,11 +15,13 @@ class ArrTraitTest extends ValueTestCase
     {
         return static::buildDataSet([
             [null],
-            [STDOUT],
-            ['true' => true, 'false' => false],
-            ['x' => 0, 'y' => 1, 'z' => -1],
+            ['STDOUT' => STDOUT],
+            [true, false],
+            ['a' => 0, 'b' => 1],
             [0.0, 1.0, -1.0],
-            ['0', '1', '-1.0'],
+            ['x' => '0.0', 'y' => '1.0', 'z' => '-1.0'],
+            [null, false, -1.0, ['empty-string' => '']],
+            ['STDOUT' => STDOUT, 'b' => 1, 'z' => '-1.0', []],
             [''],
             []
         ]);
@@ -43,11 +45,13 @@ class ArrTraitTest extends ValueTestCase
     {
         return static::buildDataSet([
             [null],
-            [STDOUT],
-            ['true' => true, 'false' => false],
-            ['x' => 0, 'y' => 1, 'z' => -1],
+            ['STDOUT' => STDOUT],
+            [true, false],
+            ['a' => 0, 'b' => 1],
             [0.0, 1.0, -1.0],
-            ['0', '1', '-1.0'],
+            ['x' => '0.0', 'y' => '1.0', 'z' => '-1.0'],
+            [null, false, -1.0, ['empty-string' => '']],
+            ['STDOUT' => STDOUT, 'b' => 1, 'z' => '-1.0', []],
             ['']
         ]);
     }
@@ -82,5 +86,94 @@ class ArrTraitTest extends ValueTestCase
     public function testIsEmptyArr(mixed $value, bool $expected): void
     {
         $this->assertSame($expected, V::isEmptyArr($value));
+    }
+
+    /**
+     * @return list<array{mixed, bool}>
+     */
+    public static function isArrSoloDataProvider(): array
+    {
+        return static::buildDataSet([
+            [null],
+            ['STDOUT' => STDOUT],
+            ['']
+        ]);
+    }
+
+    /**
+     * @param mixed $value
+     * @param bool $expected
+     * @return void
+     */
+    #[DataProvider('isArrSoloDataProvider')]
+    public function testIsArrSolo(mixed $value, bool $expected): void
+    {
+        $this->assertSame($expected, V::isArrSolo($value));
+    }
+
+    /**
+     * @return list<array{mixed, bool}>
+     */
+    public static function isArrDuoDataProvider(): array
+    {
+        return static::buildDataSet([
+            [true, false],
+            ['a' => 0, 'b' => 1]
+        ]);
+    }
+
+    /**
+     * @param mixed $value
+     * @param bool $expected
+     * @return void
+     */
+    #[DataProvider('isArrDuoDataProvider')]
+    public function testIsArrDuo(mixed $value, bool $expected): void
+    {
+        $this->assertSame($expected, V::isArrDuo($value));
+    }
+
+    /**
+     * @return list<array{mixed, bool}>
+     */
+    public static function isArrTrioDataProvider(): array
+    {
+        return static::buildDataSet([
+            [0.0, 1.0, -1.0],
+            ['x' => '0.0', 'y' => '1.0', 'z' => '-1.0']
+        ]);
+    }
+
+    /**
+     * @param mixed $value
+     * @param bool $expected
+     * @return void
+     */
+    #[DataProvider('isArrTrioDataProvider')]
+    public function testIsArrTrio(mixed $value, bool $expected): void
+    {
+        $this->assertSame($expected, V::isArrTrio($value));
+    }
+
+    /**
+     * @return list<array{mixed, bool}>
+     */
+    public static function isArrQuadDataProvider(): array
+    {
+        return static::buildDataSet([
+            [null, false, -1.0, ['empty-string' => '']],
+            ['STDOUT' => STDOUT, 'b' => 1, 'z' => '-1.0', []]
+        ]);
+    }
+
+    /**
+     * @param mixed $value
+     * @param bool $expected
+     * @return void
+     */
+    #[DataProvider('isArrQuadDataProvider')]
+    public function testIsArrQuad(mixed $value, bool $expected): void
+    {
+        $this->assertSame($expected, V::isArrQuad($value));
     }
 }

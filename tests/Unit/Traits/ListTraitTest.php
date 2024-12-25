@@ -15,9 +15,9 @@ class ListTraitTest extends ValueTestCase
     {
         return static::buildDataSet([
             [null],
-            [STDOUT],
+            [true, false],
             [0.0, 1.0, -1.0],
-            ['0', '1', '-1.0'],
+            [null, false, -1.0, ['empty-string' => '']],
             [''],
             []
         ]);
@@ -41,9 +41,9 @@ class ListTraitTest extends ValueTestCase
     {
         return static::buildDataSet([
             [null],
-            [STDOUT],
+            [true, false],
             [0.0, 1.0, -1.0],
-            ['0', '1', '-1.0'],
+            [null, false, -1.0, ['empty-string' => '']],
             ['']
         ]);
     }
@@ -78,5 +78,90 @@ class ListTraitTest extends ValueTestCase
     public function testIsEmptyList(mixed $value, bool $expected): void
     {
         $this->assertSame($expected, V::isEmptyList($value));
+    }
+
+    /**
+     * @return list<array{mixed, bool}>
+     */
+    public static function isListSoloDataProvider(): array
+    {
+        return static::buildDataSet([
+            [null],
+            ['']
+        ]);
+    }
+
+    /**
+     * @param mixed $value
+     * @param bool $expected
+     * @return void
+     */
+    #[DataProvider('isListSoloDataProvider')]
+    public function testIsListSolo(mixed $value, bool $expected): void
+    {
+        $this->assertSame($expected, V::isListSolo($value));
+    }
+
+    /**
+     * @return list<array{mixed, bool}>
+     */
+    public static function isListDuoDataProvider(): array
+    {
+        return static::buildDataSet([
+            [true, false]
+        ]);
+    }
+
+    /**
+     * @param mixed $value
+     * @param bool $expected
+     * @return void
+     */
+    #[DataProvider('isListDuoDataProvider')]
+    public function testIsListDuo(mixed $value, bool $expected): void
+    {
+        $this->assertSame($expected, V::isListDuo($value));
+    }
+
+    /**
+     * @return list<array{mixed, bool}>
+     */
+    public static function isListTrioDataProvider(): array
+    {
+        return static::buildDataSet([
+            [0.0, 1.0, -1.0]
+        ]);
+    }
+
+    /**
+     * @param mixed $value
+     * @param bool $expected
+     * @return void
+     */
+    #[DataProvider('isListTrioDataProvider')]
+    public function testIsListTrio(mixed $value, bool $expected): void
+    {
+        $this->assertSame($expected, V::isListTrio($value));
+    }
+
+    /**
+     * @return list<array{mixed, bool}>
+     */
+    public static function isListQuadDataProvider(): array
+    {
+        return static::buildDataSet([
+            [null, false, -1.0, ['empty-string' => '']]
+        ]);
+    }
+
+    /**
+     * @param mixed $value
+     * @param bool $expected
+     * @return void
+     */
+    #[DataProvider('isListQuadDataProvider')]
+    public function testIsListQuad(mixed $value, bool $expected): void
+    {
+        $this->assertSame($expected, V::isListQuad($value));
     }
 }
