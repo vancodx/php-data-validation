@@ -17,20 +17,10 @@ trait MiscTrait
     /**
      * @param mixed $value
      * @return bool
-     * @phpstan-assert-if-true true $value
+     * @phpstan-assert-if-true resource $value
      */
-    public static function isTrue(mixed $value): bool
+    public static function isRes(mixed $value): bool
     {
-        return ($value === true);
-    }
-
-    /**
-     * @param mixed $value
-     * @return bool
-     * @phpstan-assert-if-true false $value
-     */
-    public static function isFalse(mixed $value): bool
-    {
-        return ($value === false);
+        return is_resource($value);
     }
 }

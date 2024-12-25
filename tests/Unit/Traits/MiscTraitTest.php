@@ -32,10 +32,10 @@ class MiscTraitTest extends ValueTestCase
     /**
      * @return list<array{mixed, bool}>
      */
-    public static function isTrueDataProvider(): array
+    public static function isResDataProvider(): array
     {
         return static::buildDataSet([
-            true
+            STDOUT
         ]);
     }
 
@@ -44,30 +44,9 @@ class MiscTraitTest extends ValueTestCase
      * @param bool $expected
      * @return void
      */
-    #[DataProvider('isTrueDataProvider')]
-    public function testIsTrue(mixed $value, bool $expected): void
+    #[DataProvider('isResDataProvider')]
+    public function testIsRes(mixed $value, bool $expected): void
     {
-        $this->assertSame($expected, V::isTrue($value));
-    }
-
-    /**
-     * @return list<array{mixed, bool}>
-     */
-    public static function isFalseDataProvider(): array
-    {
-        return static::buildDataSet([
-            false
-        ]);
-    }
-
-    /**
-     * @param mixed $value
-     * @param bool $expected
-     * @return void
-     */
-    #[DataProvider('isFalseDataProvider')]
-    public function testIsFalse(mixed $value, bool $expected): void
-    {
-        $this->assertSame($expected, V::isFalse($value));
+        $this->assertSame($expected, V::isRes($value));
     }
 }

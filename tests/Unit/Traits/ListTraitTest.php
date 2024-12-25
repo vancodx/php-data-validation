@@ -15,6 +15,7 @@ class ListTraitTest extends ValueTestCase
     {
         return static::buildDataSet([
             [null],
+            [STDOUT],
             [0.0, 1.0, -1.0],
             ['0', '1', '-1.0'],
             [''],
@@ -40,6 +41,7 @@ class ListTraitTest extends ValueTestCase
     {
         return static::buildDataSet([
             [null],
+            [STDOUT],
             [0.0, 1.0, -1.0],
             ['0', '1', '-1.0'],
             ['']

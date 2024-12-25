@@ -15,6 +15,7 @@ class ArrTraitTest extends ValueTestCase
     {
         return static::buildDataSet([
             [null],
+            [STDOUT],
             ['true' => true, 'false' => false],
             ['x' => 0, 'y' => 1, 'z' => -1],
             [0.0, 1.0, -1.0],
@@ -42,6 +43,7 @@ class ArrTraitTest extends ValueTestCase
     {
         return static::buildDataSet([
             [null],
+            [STDOUT],
             ['true' => true, 'false' => false],
             ['x' => 0, 'y' => 1, 'z' => -1],
             [0.0, 1.0, -1.0],
