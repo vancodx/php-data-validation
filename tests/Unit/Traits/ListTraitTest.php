@@ -3,10 +3,10 @@
 namespace Tests\Unit\Traits;
 
 use PHPUnit\Framework\Attributes\DataProvider;
-use Tests\Unit\ValidationTestCase;
+use Tests\Unit\ValueTestCase;
 use VanCodX\Data\Validation\Validation as V;
 
-class ListTraitTest extends ValidationTestCase
+class ListTraitTest extends ValueTestCase
 {
     /**
      * @return list<array{mixed, bool}>
@@ -16,7 +16,7 @@ class ListTraitTest extends ValidationTestCase
         return static::buildDataSet([
             [null],
             [0.0, 1.0, -1.0],
-            ['0', '1', '-1'],
+            ['0', '1', '-1.0'],
             [''],
             []
         ]);
@@ -41,7 +41,7 @@ class ListTraitTest extends ValidationTestCase
         return static::buildDataSet([
             [null],
             [0.0, 1.0, -1.0],
-            ['0', '1', '-1'],
+            ['0', '1', '-1.0'],
             ['']
         ]);
     }

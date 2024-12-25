@@ -3,10 +3,10 @@
 namespace Tests\Unit\Traits;
 
 use PHPUnit\Framework\Attributes\DataProvider;
-use Tests\Unit\ValidationTestCase;
+use Tests\Unit\ValueTestCase;
 use VanCodX\Data\Validation\Validation as V;
 
-class FloatTraitTest extends ValidationTestCase
+class FloatTraitTest extends ValueTestCase
 {
     /**
      * @return list<array{mixed, bool}>

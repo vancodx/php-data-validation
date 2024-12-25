@@ -4,7 +4,7 @@ namespace Tests\Unit;
 
 use VanCodX\Testing\PHPUnit\TestCase;
 
-abstract class ValidationTestCase extends TestCase
+abstract class ValueTestCase extends TestCase
 {
     /**
      * @return list<mixed>
@@ -37,7 +37,7 @@ abstract class ValidationTestCase extends TestCase
             ['true' => true, 'false' => false],
             ['x' => 0, 'y' => 1, 'z' => -1],
             [0.0, 1.0, -1.0],
-            ['0', '1', '-1'],
+            ['0', '1', '-1.0'],
             [''],
             []
         ];
@@ -47,7 +47,7 @@ abstract class ValidationTestCase extends TestCase
      * @param list<mixed> $passingValues
      * @return list<mixed>
      */
-    protected static function buildFallingValues(array $passingValues): array
+    protected static function getFallingValues(array $passingValues): array
     {
         $fallingValues = [];
         foreach (static::getAnyValues() as $value) {
@@ -64,10 +64,10 @@ abstract class ValidationTestCase extends TestCase
      */
     protected static function buildDataSet(array $passingValues): array
     {
-        $fallingValues = static::buildFallingValues($passingValues);
+        $fallingValues = static::getFallingValues($passingValues);
         return array_merge(
-            array_map(fn (mixed $value) => [$value, true], $passingValues),
-            array_map(fn (mixed $value) => [$value, false], $fallingValues)
+            array_map(static fn (mixed $value) => [$value, true], $passingValues),
+            array_map(static fn (mixed $value) => [$value, false], $fallingValues)
         );
     }
 }
