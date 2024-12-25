@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace VanCodX\Data\Validation\Traits\ValueOrNull;
+namespace VanCodX\Data\Validation\Traits\OrNull;
 
 trait ListOrNullTrait
 {
