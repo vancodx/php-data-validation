@@ -10,14 +10,7 @@ use VanCodX\Data\Validation\Traits\IntTrait;
 use VanCodX\Data\Validation\Traits\ListTrait;
 use VanCodX\Data\Validation\Traits\MiscTrait;
 use VanCodX\Data\Validation\Traits\NumTrait;
-use VanCodX\Data\Validation\Traits\OrNull\ArrOrNullTrait;
-use VanCodX\Data\Validation\Traits\OrNull\BoolOrNullTrait;
-use VanCodX\Data\Validation\Traits\OrNull\FloatOrNullTrait;
-use VanCodX\Data\Validation\Traits\OrNull\IntOrNullTrait;
-use VanCodX\Data\Validation\Traits\OrNull\ListOrNullTrait;
-use VanCodX\Data\Validation\Traits\OrNull\MiscOrNullTrait;
-use VanCodX\Data\Validation\Traits\OrNull\NumOrNullTrait;
-use VanCodX\Data\Validation\Traits\OrNull\StrOrNullTrait;
+use VanCodX\Data\Validation\Traits\OrNullTraits;
 use VanCodX\Data\Validation\Traits\StrTrait;
 
 class Validation
@@ -30,13 +23,6 @@ class Validation
     use MiscTrait;
     use NumTrait;
     use StrTrait;
-    use ArrOrNullTrait;
-    use BoolOrNullTrait;
-    use FloatOrNullTrait;
-    use IntOrNullTrait;
-    use ListOrNullTrait;
-    use MiscOrNullTrait;
-    use NumOrNullTrait;
-    use StrOrNullTrait;
+    use OrNullTraits;
     use ArrOfTraits;
 }
