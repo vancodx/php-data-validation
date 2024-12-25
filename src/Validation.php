@@ -2,6 +2,7 @@
 
 namespace VanCodX\Data\Validation;
 
+use VanCodX\Data\Validation\Traits\ArrOf\ArrOfTrait;
 use VanCodX\Data\Validation\Traits\ArrTrait;
 use VanCodX\Data\Validation\Traits\BoolTrait;
 use VanCodX\Data\Validation\Traits\FloatTrait;
@@ -37,4 +38,5 @@ class Validation
     use MiscOrNullTrait;
     use NumOrNullTrait;
     use StrOrNullTrait;
+    use ArrOfTrait;
 }
