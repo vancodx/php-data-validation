@@ -21,6 +21,6 @@ trait BasicTraits
     use StrTrait;
     use MiscTrait;
     use ArrTrait;
-    use AssocTrait;
     use ListTrait;
+    use AssocTrait;
 }

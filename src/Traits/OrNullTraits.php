@@ -3,6 +3,7 @@
 namespace VanCodX\Data\Validation\Traits;
 
 use VanCodX\Data\Validation\Traits\OrNull\ArrOrNullTrait;
+use VanCodX\Data\Validation\Traits\OrNull\AssocOrNullTrait;
 use VanCodX\Data\Validation\Traits\OrNull\BoolOrNullTrait;
 use VanCodX\Data\Validation\Traits\OrNull\FloatOrNullTrait;
 use VanCodX\Data\Validation\Traits\OrNull\IntOrNullTrait;
@@ -21,4 +22,5 @@ trait OrNullTraits
     use MiscOrNullTrait;
     use ArrOrNullTrait;
     use ListOrNullTrait;
+    use AssocOrNullTrait;
 }
