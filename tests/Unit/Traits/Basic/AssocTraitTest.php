@@ -9,7 +9,7 @@ use VanCodX\Data\Validation\Validation as V;
 class AssocTraitTest extends BasicTestCase
 {
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isAssocDataProvider(): array
     {
@@ -34,7 +34,7 @@ class AssocTraitTest extends BasicTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isAssocLenDataProvider(): array
     {
@@ -58,7 +58,7 @@ class AssocTraitTest extends BasicTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isEmptyAssocDataProvider(): array
     {
@@ -79,7 +79,7 @@ class AssocTraitTest extends BasicTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isAssocSoloDataProvider(): array
     {
@@ -100,7 +100,7 @@ class AssocTraitTest extends BasicTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isAssocDuoDataProvider(): array
     {
@@ -121,7 +121,7 @@ class AssocTraitTest extends BasicTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isAssocTrioDataProvider(): array
     {
@@ -142,7 +142,7 @@ class AssocTraitTest extends BasicTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isAssocQuadDataProvider(): array
     {

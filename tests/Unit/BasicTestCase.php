@@ -65,7 +65,7 @@ abstract class BasicTestCase extends TestCase
 
     /**
      * @param list<mixed> $passingValues
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     protected static function buildDataSet(array $passingValues): array
     {

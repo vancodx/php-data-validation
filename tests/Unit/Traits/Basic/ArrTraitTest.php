@@ -9,7 +9,7 @@ use VanCodX\Data\Validation\Validation as V;
 class ArrTraitTest extends BasicTestCase
 {
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isArrDataProvider(): array
     {
@@ -39,7 +39,7 @@ class ArrTraitTest extends BasicTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isArrLenDataProvider(): array
     {
@@ -68,7 +68,7 @@ class ArrTraitTest extends BasicTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isEmptyArrDataProvider(): array
     {
@@ -89,7 +89,7 @@ class ArrTraitTest extends BasicTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isArrSoloDataProvider(): array
     {
@@ -112,7 +112,7 @@ class ArrTraitTest extends BasicTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isArrDuoDataProvider(): array
     {
@@ -134,7 +134,7 @@ class ArrTraitTest extends BasicTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isArrTrioDataProvider(): array
     {
@@ -156,7 +156,7 @@ class ArrTraitTest extends BasicTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isArrQuadDataProvider(): array
     {

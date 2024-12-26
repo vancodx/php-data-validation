@@ -9,7 +9,7 @@ use VanCodX\Data\Validation\Validation as V;
 class IntTraitTest extends BasicTestCase
 {
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isIntDataProvider(): array
     {
@@ -34,7 +34,7 @@ class IntTraitTest extends BasicTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isUIntDataProvider(): array
     {
@@ -57,7 +57,7 @@ class IntTraitTest extends BasicTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isPosIntDataProvider(): array
     {
@@ -79,7 +79,7 @@ class IntTraitTest extends BasicTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isNegIntDataProvider(): array
     {
@@ -101,7 +101,7 @@ class IntTraitTest extends BasicTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isIntIdDataProvider(): array
     {

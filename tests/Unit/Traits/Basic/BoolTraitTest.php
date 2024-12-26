@@ -9,7 +9,7 @@ use VanCodX\Data\Validation\Validation as V;
 class BoolTraitTest extends BasicTestCase
 {
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isBoolDataProvider(): array
     {
@@ -31,7 +31,7 @@ class BoolTraitTest extends BasicTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isTrueDataProvider(): array
     {
@@ -52,7 +52,7 @@ class BoolTraitTest extends BasicTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isFalseDataProvider(): array
     {

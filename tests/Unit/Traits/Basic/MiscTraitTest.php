@@ -9,7 +9,7 @@ use VanCodX\Data\Validation\Validation as V;
 class MiscTraitTest extends BasicTestCase
 {
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isNullDataProvider(): array
     {
@@ -30,7 +30,7 @@ class MiscTraitTest extends BasicTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isResDataProvider(): array
     {

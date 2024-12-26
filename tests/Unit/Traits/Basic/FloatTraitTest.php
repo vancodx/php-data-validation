@@ -9,7 +9,7 @@ use VanCodX\Data\Validation\Validation as V;
 class FloatTraitTest extends BasicTestCase
 {
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isFloatDataProvider(): array
     {
@@ -34,7 +34,7 @@ class FloatTraitTest extends BasicTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isUFloatDataProvider(): array
     {
@@ -57,7 +57,7 @@ class FloatTraitTest extends BasicTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isPosFloatDataProvider(): array
     {
@@ -79,7 +79,7 @@ class FloatTraitTest extends BasicTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isNegFloatDataProvider(): array
     {

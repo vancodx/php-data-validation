@@ -10,13 +10,13 @@ use VanCodX\Testing\PHPUnit\MockeryTestCase;
 abstract class OrNullTestCase extends MockeryTestCase
 {
     /**
-     * @param non-empty-string $name
+     * @param string $name
      * @return void
      */
     protected function checkOrNullFunction(string $name): void
     {
         if (!preg_match('~^test((Is[[:alpha:]]+)OrNull)$~', $name, $match) || !method_exists(V::class, $match[1])) {
-            throw new InvalidArgumentException('Invalid "name" argument.');
+            throw new InvalidArgumentException('Argument "name" is invalid.');
         }
         $checkOrNullFuncName = lcfirst($match[1]);
         $checkValueFuncName = lcfirst($match[2]);

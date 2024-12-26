@@ -9,7 +9,7 @@ use VanCodX\Data\Validation\Validation as V;
 class StrTraitTest extends BasicTestCase
 {
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isStrDataProvider(): array
     {
@@ -38,7 +38,7 @@ class StrTraitTest extends BasicTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isStrLenDataProvider(): array
     {
@@ -66,7 +66,7 @@ class StrTraitTest extends BasicTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isEmptyStrDataProvider(): array
     {
