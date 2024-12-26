@@ -1,17 +1,17 @@
 <?php declare(strict_types=1);
 
-namespace Tests\Unit\Traits\ValueOrNull;
+namespace Tests\Unit\Traits\OrNull;
 
-use Tests\Unit\ValueOrNullTestCase;
+use Tests\Unit\OrNullTestCase;
 
-class ListOrNullTraitTest extends ValueOrNullTestCase
+class ListOrNullTraitTest extends OrNullTestCase
 {
     /**
      * @return void
      */
     public function testIsListOrNull(): void
     {
-        $this->checkValueOrNullFunction(__FUNCTION__);
+        $this->checkOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -19,7 +19,7 @@ class ListOrNullTraitTest extends ValueOrNullTestCase
      */
     public function testIsListLenOrNull(): void
     {
-        $this->checkValueOrNullFunction(__FUNCTION__);
+        $this->checkOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -27,7 +27,7 @@ class ListOrNullTraitTest extends ValueOrNullTestCase
      */
     public function testIsEmptyListOrNull(): void
     {
-        $this->checkValueOrNullFunction(__FUNCTION__);
+        $this->checkOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -35,7 +35,7 @@ class ListOrNullTraitTest extends ValueOrNullTestCase
      */
     public function testIsListSoloOrNull(): void
     {
-        $this->checkValueOrNullFunction(__FUNCTION__);
+        $this->checkOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -43,7 +43,7 @@ class ListOrNullTraitTest extends ValueOrNullTestCase
      */
     public function testIsListDuoOrNull(): void
     {
-        $this->checkValueOrNullFunction(__FUNCTION__);
+        $this->checkOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -51,7 +51,7 @@ class ListOrNullTraitTest extends ValueOrNullTestCase
      */
     public function testIsListTrioOrNull(): void
     {
-        $this->checkValueOrNullFunction(__FUNCTION__);
+        $this->checkOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -59,6 +59,6 @@ class ListOrNullTraitTest extends ValueOrNullTestCase
      */
     public function testIsListQuadOrNull(): void
     {
-        $this->checkValueOrNullFunction(__FUNCTION__);
+        $this->checkOrNullFunction(__FUNCTION__);
     }
 }

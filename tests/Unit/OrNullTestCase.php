@@ -7,18 +7,18 @@ use Mockery;
 use VanCodX\Data\Validation\Validation as V;
 use VanCodX\Testing\PHPUnit\MockeryTestCase;
 
-abstract class ValueOrNullTestCase extends MockeryTestCase
+abstract class OrNullTestCase extends MockeryTestCase
 {
     /**
      * @param non-empty-string $name
      * @return void
      */
-    protected function checkValueOrNullFunction(string $name): void
+    protected function checkOrNullFunction(string $name): void
     {
         if (!preg_match('~^test((Is[[:alpha:]]+)OrNull)$~', $name, $match) || !method_exists(V::class, $match[1])) {
             throw new InvalidArgumentException('Invalid "name" argument.');
         }
-        $checkValueOrNullFuncName = lcfirst($match[1]);
+        $checkOrNullFuncName = lcfirst($match[1]);
         $checkValueFuncName = lcfirst($match[2]);
         $isNullFuncName = 'isNull';
 
@@ -38,8 +38,8 @@ abstract class ValueOrNullTestCase extends MockeryTestCase
         $mock->expects($isNullFuncName)->never();
         $mock->expects($checkValueFuncName)->never();
 
-        $this->assertFalse($mock::$checkValueOrNullFuncName($call1));
-        $this->assertTrue($mock::$checkValueOrNullFuncName($call2));
-        $this->assertTrue($mock::$checkValueOrNullFuncName($call3));
+        $this->assertFalse($mock::$checkOrNullFuncName($call1));
+        $this->assertTrue($mock::$checkOrNullFuncName($call2));
+        $this->assertTrue($mock::$checkOrNullFuncName($call3));
     }
 }

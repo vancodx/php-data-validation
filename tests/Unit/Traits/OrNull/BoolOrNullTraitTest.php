@@ -1,17 +1,17 @@
 <?php declare(strict_types=1);
 
-namespace Tests\Unit\Traits\ValueOrNull;
+namespace Tests\Unit\Traits\OrNull;
 
-use Tests\Unit\ValueOrNullTestCase;
+use Tests\Unit\OrNullTestCase;
 
-class BoolOrNullTraitTest extends ValueOrNullTestCase
+class BoolOrNullTraitTest extends OrNullTestCase
 {
     /**
      * @return void
      */
     public function testIsBoolOrNull(): void
     {
-        $this->checkValueOrNullFunction(__FUNCTION__);
+        $this->checkOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -19,7 +19,7 @@ class BoolOrNullTraitTest extends ValueOrNullTestCase
      */
     public function testIsTrueOrNull(): void
     {
-        $this->checkValueOrNullFunction(__FUNCTION__);
+        $this->checkOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -27,6 +27,6 @@ class BoolOrNullTraitTest extends ValueOrNullTestCase
      */
     public function testIsFalseOrNull(): void
     {
-        $this->checkValueOrNullFunction(__FUNCTION__);
+        $this->checkOrNullFunction(__FUNCTION__);
     }
 }
