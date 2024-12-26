@@ -22,7 +22,7 @@ trait ArrQuadOfTrait
         return true;
     }
 
-    /* ---------- BOOL ---------------------------------------------------------- */
+    // ========== BOOL ========================================================== //
 
     /**
      * @param mixed $value
@@ -34,7 +34,7 @@ trait ArrQuadOfTrait
         return static::isArrQuadOf($value, static::isBool(...));
     }
 
-    /* ---------- INT ----------------------------------------------------------- */
+    // ========== INT =========================================================== //
 
     /**
      * @param mixed $value
@@ -86,7 +86,7 @@ trait ArrQuadOfTrait
         return static::isArrQuadOf($value, static::isIntId(...));
     }
 
-    /* ---------- FLOAT --------------------------------------------------------- */
+    // ========== FLOAT ========================================================= //
 
     /**
      * @param mixed $value
@@ -125,7 +125,7 @@ trait ArrQuadOfTrait
         return static::isArrQuadOf($value, static::isNegFloat(...));
     }
 
-    /* ---------- NUM ----------------------------------------------------------- */
+    // ========== NUM =========================================================== //
 
     /**
      * @param mixed $value
@@ -164,7 +164,7 @@ trait ArrQuadOfTrait
         return static::isArrQuadOf($value, static::isNegNum(...));
     }
 
-    /* ---------- STR ----------------------------------------------------------- */
+    // ========== STR =========================================================== //
 
     /**
      * @param mixed $value
@@ -186,7 +186,7 @@ trait ArrQuadOfTrait
         return static::isArrQuadOf($value, static::isStrLen(...));
     }
 
-    /* ---------- MISC ---------------------------------------------------------- */
+    // ========== MISC ========================================================== //
 
     /**
      * @param mixed $value
