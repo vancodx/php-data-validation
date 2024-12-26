@@ -1,12 +1,12 @@
 <?php declare(strict_types=1);
 
-namespace Tests\Unit\Traits;
+namespace Tests\Unit\Traits\Basic;
 
 use PHPUnit\Framework\Attributes\DataProvider;
-use Tests\Unit\ValueTestCase;
+use Tests\Unit\BasicTestCase;
 use VanCodX\Data\Validation\Validation as V;
 
-class ArrTraitTest extends ValueTestCase
+class ArrTraitTest extends BasicTestCase
 {
     /**
      * @return list<array{mixed, bool}>
@@ -21,7 +21,7 @@ class ArrTraitTest extends ValueTestCase
             [0.0, 1.0, -1.0],
             ['x' => '0.0', 'y' => '1.0', 'z' => '-1.0'],
             [null, false, -1.0, ['empty-string' => '']],
-            ['STDOUT' => STDOUT, 'b' => 1, 'z' => '-1.0', []],
+            ['STDOUT' => STDOUT, 'b' => 1, 'z' => '-1.0', 'empty-array' => []],
             [''],
             []
         ]);
@@ -51,7 +51,7 @@ class ArrTraitTest extends ValueTestCase
             [0.0, 1.0, -1.0],
             ['x' => '0.0', 'y' => '1.0', 'z' => '-1.0'],
             [null, false, -1.0, ['empty-string' => '']],
-            ['STDOUT' => STDOUT, 'b' => 1, 'z' => '-1.0', []],
+            ['STDOUT' => STDOUT, 'b' => 1, 'z' => '-1.0', 'empty-array' => []],
             ['']
         ]);
     }
@@ -162,7 +162,7 @@ class ArrTraitTest extends ValueTestCase
     {
         return static::buildDataSet([
             [null, false, -1.0, ['empty-string' => '']],
-            ['STDOUT' => STDOUT, 'b' => 1, 'z' => '-1.0', []]
+            ['STDOUT' => STDOUT, 'b' => 1, 'z' => '-1.0', 'empty-array' => []]
         ]);
     }
 

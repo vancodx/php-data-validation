@@ -4,7 +4,7 @@ namespace Tests\Unit;
 
 use VanCodX\Testing\PHPUnit\TestCase;
 
-abstract class ValueTestCase extends TestCase
+abstract class BasicTestCase extends TestCase
 {
     /**
      * @return list<mixed>
@@ -42,7 +42,7 @@ abstract class ValueTestCase extends TestCase
             [0.0, 1.0, -1.0],
             ['x' => '0.0', 'y' => '1.0', 'z' => '-1.0'],
             [null, false, -1.0, ['empty-string' => '']],
-            ['STDOUT' => STDOUT, 'b' => 1, 'z' => '-1.0', []],
+            ['STDOUT' => STDOUT, 'b' => 1, 'z' => '-1.0', 'empty-array' => []],
             [''],
             []
         ];

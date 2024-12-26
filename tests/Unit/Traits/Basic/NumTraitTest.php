@@ -1,19 +1,24 @@
 <?php declare(strict_types=1);
 
-namespace Tests\Unit\Traits;
+namespace Tests\Unit\Traits\Basic;
 
 use PHPUnit\Framework\Attributes\DataProvider;
-use Tests\Unit\ValueTestCase;
+use Tests\Unit\BasicTestCase;
 use VanCodX\Data\Validation\Validation as V;
 
-class FloatTraitTest extends ValueTestCase
+class NumTraitTest extends BasicTestCase
 {
     /**
      * @return list<array{mixed, bool}>
      */
-    public static function isFloatDataProvider(): array
+    public static function isNumDataProvider(): array
     {
         return static::buildDataSet([
+            0,
+            1,
+            1000000,
+            -1,
+            -1000000,
             0.0,
             1.0,
             1000000.1,
@@ -27,18 +32,21 @@ class FloatTraitTest extends ValueTestCase
      * @param bool $expected
      * @return void
      */
-    #[DataProvider('isFloatDataProvider')]
-    public function testIsFloat(mixed $value, bool $expected): void
+    #[DataProvider('isNumDataProvider')]
+    public function testIsNum(mixed $value, bool $expected): void
     {
-        $this->assertSame($expected, V::isFloat($value));
+        $this->assertSame($expected, V::isNum($value));
     }
 
     /**
      * @return list<array{mixed, bool}>
      */
-    public static function isUFloatDataProvider(): array
+    public static function isUNumDataProvider(): array
     {
         return static::buildDataSet([
+            0,
+            1,
+            1000000,
             0.0,
             1.0,
             1000000.1
@@ -50,18 +58,20 @@ class FloatTraitTest extends ValueTestCase
      * @param bool $expected
      * @return void
      */
-    #[DataProvider('isUFloatDataProvider')]
-    public function testIsUFloat(mixed $value, bool $expected): void
+    #[DataProvider('isUNumDataProvider')]
+    public function testIsUNum(mixed $value, bool $expected): void
     {
-        $this->assertSame($expected, V::isUFloat($value));
+        $this->assertSame($expected, V::isUNum($value));
     }
 
     /**
      * @return list<array{mixed, bool}>
      */
-    public static function isPosFloatDataProvider(): array
+    public static function isPosNumDataProvider(): array
     {
         return static::buildDataSet([
+            1,
+            1000000,
             1.0,
             1000000.1
         ]);
@@ -72,18 +82,20 @@ class FloatTraitTest extends ValueTestCase
      * @param bool $expected
      * @return void
      */
-    #[DataProvider('isPosFloatDataProvider')]
-    public function testIsPosFloat(mixed $value, bool $expected): void
+    #[DataProvider('isPosNumDataProvider')]
+    public function testIsPosNum(mixed $value, bool $expected): void
     {
-        $this->assertSame($expected, V::isPosFloat($value));
+        $this->assertSame($expected, V::isPosNum($value));
     }
 
     /**
      * @return list<array{mixed, bool}>
      */
-    public static function isNegFloatDataProvider(): array
+    public static function isNegNumDataProvider(): array
     {
         return static::buildDataSet([
+            -1,
+            -1000000,
             -1.0,
             -1000000.1
         ]);
@@ -94,9 +106,9 @@ class FloatTraitTest extends ValueTestCase
      * @param bool $expected
      * @return void
      */
-    #[DataProvider('isNegFloatDataProvider')]
-    public function testIsNegFloat(mixed $value, bool $expected): void
+    #[DataProvider('isNegNumDataProvider')]
+    public function testIsNegNum(mixed $value, bool $expected): void
     {
-        $this->assertSame($expected, V::isNegFloat($value));
+        $this->assertSame($expected, V::isNegNum($value));
     }
 }
