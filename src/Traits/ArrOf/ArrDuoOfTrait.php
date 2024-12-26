@@ -14,8 +14,8 @@ trait ArrDuoOfTrait
         if (!static::isArrDuo($value)) {
             return false;
         }
-        foreach ($value as $item) {
-            if (!$validator($item)) {
+        foreach ($value as $itemValue) {
+            if (!$validator($itemValue)) {
                 return false;
             }
         }
