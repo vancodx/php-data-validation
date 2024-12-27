@@ -71,8 +71,8 @@ abstract class BasicTestCase extends TestCase
     {
         $fallingValues = static::getFallingValues($passingValues);
         return array_merge(
-            array_map(static fn (mixed $value) => [$value, true], $passingValues),
-            array_map(static fn (mixed $value) => [$value, false], $fallingValues)
+            array_map(static fn (mixed $value): array => [$value, true], $passingValues),
+            array_map(static fn (mixed $value): array => [$value, false], $fallingValues)
         );
     }
 }

@@ -31,7 +31,8 @@ trait ArrOfTrait
      */
     public static function isArrOfBool(mixed $value): bool
     {
-        return static::isArrOf($value, static::isBool(...));
+        static $validator = static::isBool(...);
+        return static::isArrOf($value, $validator);
     }
 
     // ========== INT =========================================================== //
@@ -43,7 +44,8 @@ trait ArrOfTrait
      */
     public static function isArrOfInt(mixed $value): bool
     {
-        return static::isArrOf($value, static::isInt(...));
+        static $validator = static::isInt(...);
+        return static::isArrOf($value, $validator);
     }
 
     /**
@@ -53,7 +55,8 @@ trait ArrOfTrait
      */
     public static function isArrOfUInt(mixed $value): bool
     {
-        return static::isArrOf($value, static::isUInt(...));
+        static $validator = static::isUInt(...);
+        return static::isArrOf($value, $validator);
     }
 
     /**
@@ -63,7 +66,8 @@ trait ArrOfTrait
      */
     public static function isArrOfPosInt(mixed $value): bool
     {
-        return static::isArrOf($value, static::isPosInt(...));
+        static $validator = static::isPosInt(...);
+        return static::isArrOf($value, $validator);
     }
 
     /**
@@ -73,7 +77,8 @@ trait ArrOfTrait
      */
     public static function isArrOfNegInt(mixed $value): bool
     {
-        return static::isArrOf($value, static::isNegInt(...));
+        static $validator = static::isNegInt(...);
+        return static::isArrOf($value, $validator);
     }
 
     /**
@@ -83,7 +88,8 @@ trait ArrOfTrait
      */
     public static function isArrOfIntId(mixed $value): bool
     {
-        return static::isArrOf($value, static::isIntId(...));
+        static $validator = static::isIntId(...);
+        return static::isArrOf($value, $validator);
     }
 
     // ========== FLOAT ========================================================= //
@@ -95,7 +101,8 @@ trait ArrOfTrait
      */
     public static function isArrOfFloat(mixed $value): bool
     {
-        return static::isArrOf($value, static::isFloat(...));
+        static $validator = static::isFloat(...);
+        return static::isArrOf($value, $validator);
     }
 
     /**
@@ -104,7 +111,8 @@ trait ArrOfTrait
      */
     public static function isArrOfUFloat(mixed $value): bool
     {
-        return static::isArrOf($value, static::isUFloat(...));
+        static $validator = static::isUFloat(...);
+        return static::isArrOf($value, $validator);
     }
 
     /**
@@ -113,7 +121,8 @@ trait ArrOfTrait
      */
     public static function isArrOfPosFloat(mixed $value): bool
     {
-        return static::isArrOf($value, static::isPosFloat(...));
+        static $validator = static::isPosFloat(...);
+        return static::isArrOf($value, $validator);
     }
 
     /**
@@ -122,7 +131,8 @@ trait ArrOfTrait
      */
     public static function isArrOfNegFloat(mixed $value): bool
     {
-        return static::isArrOf($value, static::isNegFloat(...));
+        static $validator = static::isNegFloat(...);
+        return static::isArrOf($value, $validator);
     }
 
     // ========== NUM =========================================================== //
@@ -134,7 +144,8 @@ trait ArrOfTrait
      */
     public static function isArrOfNum(mixed $value): bool
     {
-        return static::isArrOf($value, static::isNum(...));
+        static $validator = static::isNum(...);
+        return static::isArrOf($value, $validator);
     }
 
     /**
@@ -143,7 +154,8 @@ trait ArrOfTrait
      */
     public static function isArrOfUNum(mixed $value): bool
     {
-        return static::isArrOf($value, static::isUNum(...));
+        static $validator = static::isUNum(...);
+        return static::isArrOf($value, $validator);
     }
 
     /**
@@ -152,7 +164,8 @@ trait ArrOfTrait
      */
     public static function isArrOfPosNum(mixed $value): bool
     {
-        return static::isArrOf($value, static::isPosNum(...));
+        static $validator = static::isPosNum(...);
+        return static::isArrOf($value, $validator);
     }
 
     /**
@@ -161,7 +174,8 @@ trait ArrOfTrait
      */
     public static function isArrOfNegNum(mixed $value): bool
     {
-        return static::isArrOf($value, static::isNegNum(...));
+        static $validator = static::isNegNum(...);
+        return static::isArrOf($value, $validator);
     }
 
     // ========== STR =========================================================== //
@@ -173,7 +187,8 @@ trait ArrOfTrait
      */
     public static function isArrOfStr(mixed $value): bool
     {
-        return static::isArrOf($value, static::isStr(...));
+        static $validator = static::isStr(...);
+        return static::isArrOf($value, $validator);
     }
 
     /**
@@ -183,7 +198,8 @@ trait ArrOfTrait
      */
     public static function isArrOfStrLen(mixed $value): bool
     {
-        return static::isArrOf($value, static::isStrLen(...));
+        static $validator = static::isStrLen(...);
+        return static::isArrOf($value, $validator);
     }
 
     // ========== MISC ========================================================== //
@@ -195,6 +211,7 @@ trait ArrOfTrait
      */
     public static function isArrOfRes(mixed $value): bool
     {
-        return static::isArrOf($value, static::isRes(...));
+        static $validator = static::isRes(...);
+        return static::isArrOf($value, $validator);
     }
 }

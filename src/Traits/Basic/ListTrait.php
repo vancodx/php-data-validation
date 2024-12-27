@@ -11,7 +11,7 @@ trait ListTrait
      */
     public static function isList(mixed $value): bool
     {
-        return static::isArr($value) && array_is_list($value);
+        return is_array($value) && array_is_list($value);
     }
 
     /**

@@ -11,7 +11,7 @@ trait AssocTrait
      */
     public static function isAssoc(mixed $value): bool
     {
-        if (!static::isArr($value)) {
+        if (!is_array($value)) {
             return false;
         }
         foreach ($value as $itemKey => $itemValue) {
