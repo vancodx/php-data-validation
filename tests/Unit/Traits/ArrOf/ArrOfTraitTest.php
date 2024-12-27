@@ -102,8 +102,7 @@ class ArrOfTraitTest extends ArrOfTestCase
     }
 
     /**
-     * @param mixed $value
-     * @return bool
+     * @return void
      */
     public function testIsArrOfPosFloat(): void
     {

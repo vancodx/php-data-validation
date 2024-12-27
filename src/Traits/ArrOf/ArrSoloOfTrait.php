@@ -31,6 +31,7 @@ trait ArrSoloOfTrait
      */
     public static function isArrSoloOfBool(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isBool(...);
         return static::isArrSoloOf($value, $validator);
     }
@@ -44,6 +45,7 @@ trait ArrSoloOfTrait
      */
     public static function isArrSoloOfInt(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isInt(...);
         return static::isArrSoloOf($value, $validator);
     }
@@ -55,6 +57,7 @@ trait ArrSoloOfTrait
      */
     public static function isArrSoloOfUInt(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isUInt(...);
         return static::isArrSoloOf($value, $validator);
     }
@@ -66,6 +69,7 @@ trait ArrSoloOfTrait
      */
     public static function isArrSoloOfPosInt(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isPosInt(...);
         return static::isArrSoloOf($value, $validator);
     }
@@ -77,6 +81,7 @@ trait ArrSoloOfTrait
      */
     public static function isArrSoloOfNegInt(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isNegInt(...);
         return static::isArrSoloOf($value, $validator);
     }
@@ -88,6 +93,7 @@ trait ArrSoloOfTrait
      */
     public static function isArrSoloOfIntId(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isIntId(...);
         return static::isArrSoloOf($value, $validator);
     }
@@ -101,6 +107,7 @@ trait ArrSoloOfTrait
      */
     public static function isArrSoloOfFloat(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isFloat(...);
         return static::isArrSoloOf($value, $validator);
     }
@@ -111,6 +118,7 @@ trait ArrSoloOfTrait
      */
     public static function isArrSoloOfUFloat(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isUFloat(...);
         return static::isArrSoloOf($value, $validator);
     }
@@ -121,6 +129,7 @@ trait ArrSoloOfTrait
      */
     public static function isArrSoloOfPosFloat(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isPosFloat(...);
         return static::isArrSoloOf($value, $validator);
     }
@@ -131,6 +140,7 @@ trait ArrSoloOfTrait
      */
     public static function isArrSoloOfNegFloat(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isNegFloat(...);
         return static::isArrSoloOf($value, $validator);
     }
@@ -144,6 +154,7 @@ trait ArrSoloOfTrait
      */
     public static function isArrSoloOfNum(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isNum(...);
         return static::isArrSoloOf($value, $validator);
     }
@@ -154,6 +165,7 @@ trait ArrSoloOfTrait
      */
     public static function isArrSoloOfUNum(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isUNum(...);
         return static::isArrSoloOf($value, $validator);
     }
@@ -164,6 +176,7 @@ trait ArrSoloOfTrait
      */
     public static function isArrSoloOfPosNum(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isPosNum(...);
         return static::isArrSoloOf($value, $validator);
     }
@@ -174,6 +187,7 @@ trait ArrSoloOfTrait
      */
     public static function isArrSoloOfNegNum(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isNegNum(...);
         return static::isArrSoloOf($value, $validator);
     }
@@ -187,6 +201,7 @@ trait ArrSoloOfTrait
      */
     public static function isArrSoloOfStr(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isStr(...);
         return static::isArrSoloOf($value, $validator);
     }
@@ -198,6 +213,7 @@ trait ArrSoloOfTrait
      */
     public static function isArrSoloOfStrLen(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isStrLen(...);
         return static::isArrSoloOf($value, $validator);
     }
@@ -211,6 +227,7 @@ trait ArrSoloOfTrait
      */
     public static function isArrSoloOfRes(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isRes(...);
         return static::isArrSoloOf($value, $validator);
     }

@@ -31,6 +31,7 @@ trait ArrTrioOfTrait
      */
     public static function isArrTrioOfBool(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isBool(...);
         return static::isArrTrioOf($value, $validator);
     }
@@ -44,6 +45,7 @@ trait ArrTrioOfTrait
      */
     public static function isArrTrioOfInt(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isInt(...);
         return static::isArrTrioOf($value, $validator);
     }
@@ -55,6 +57,7 @@ trait ArrTrioOfTrait
      */
     public static function isArrTrioOfUInt(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isUInt(...);
         return static::isArrTrioOf($value, $validator);
     }
@@ -66,6 +69,7 @@ trait ArrTrioOfTrait
      */
     public static function isArrTrioOfPosInt(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isPosInt(...);
         return static::isArrTrioOf($value, $validator);
     }
@@ -77,6 +81,7 @@ trait ArrTrioOfTrait
      */
     public static function isArrTrioOfNegInt(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isNegInt(...);
         return static::isArrTrioOf($value, $validator);
     }
@@ -88,6 +93,7 @@ trait ArrTrioOfTrait
      */
     public static function isArrTrioOfIntId(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isIntId(...);
         return static::isArrTrioOf($value, $validator);
     }
@@ -101,6 +107,7 @@ trait ArrTrioOfTrait
      */
     public static function isArrTrioOfFloat(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isFloat(...);
         return static::isArrTrioOf($value, $validator);
     }
@@ -111,6 +118,7 @@ trait ArrTrioOfTrait
      */
     public static function isArrTrioOfUFloat(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isUFloat(...);
         return static::isArrTrioOf($value, $validator);
     }
@@ -121,6 +129,7 @@ trait ArrTrioOfTrait
      */
     public static function isArrTrioOfPosFloat(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isPosFloat(...);
         return static::isArrTrioOf($value, $validator);
     }
@@ -131,6 +140,7 @@ trait ArrTrioOfTrait
      */
     public static function isArrTrioOfNegFloat(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isNegFloat(...);
         return static::isArrTrioOf($value, $validator);
     }
@@ -144,6 +154,7 @@ trait ArrTrioOfTrait
      */
     public static function isArrTrioOfNum(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isNum(...);
         return static::isArrTrioOf($value, $validator);
     }
@@ -154,6 +165,7 @@ trait ArrTrioOfTrait
      */
     public static function isArrTrioOfUNum(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isUNum(...);
         return static::isArrTrioOf($value, $validator);
     }
@@ -164,6 +176,7 @@ trait ArrTrioOfTrait
      */
     public static function isArrTrioOfPosNum(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isPosNum(...);
         return static::isArrTrioOf($value, $validator);
     }
@@ -174,6 +187,7 @@ trait ArrTrioOfTrait
      */
     public static function isArrTrioOfNegNum(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isNegNum(...);
         return static::isArrTrioOf($value, $validator);
     }
@@ -187,6 +201,7 @@ trait ArrTrioOfTrait
      */
     public static function isArrTrioOfStr(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isStr(...);
         return static::isArrTrioOf($value, $validator);
     }
@@ -198,6 +213,7 @@ trait ArrTrioOfTrait
      */
     public static function isArrTrioOfStrLen(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isStrLen(...);
         return static::isArrTrioOf($value, $validator);
     }
@@ -211,6 +227,7 @@ trait ArrTrioOfTrait
      */
     public static function isArrTrioOfRes(mixed $value): bool
     {
+        /** @var \Closure(mixed): bool $validator */
         static $validator = static::isRes(...);
         return static::isArrTrioOf($value, $validator);
     }
