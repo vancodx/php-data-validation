@@ -4,12 +4,12 @@ namespace Tests\Unit\Traits\ArrOf;
 
 use Tests\Unit\ArrOfTestCase;
 
-class ArrOfTraitTest extends ArrOfTestCase
+class ArrDuoOfTraitTest extends ArrOfTestCase
 {
     /**
      * @return void
      */
-    public function testIsArrOf(): void
+    public function testIsArrDuoOf(): void
     {
         $this->checkArrOfFunction(__FUNCTION__);
     }
@@ -19,7 +19,7 @@ class ArrOfTraitTest extends ArrOfTestCase
     /**
      * @return void
      */
-    public function testIsArrOfBool(): void
+    public function testIsArrDuoOfBool(): void
     {
         $this->checkArrOfSthFunction(__FUNCTION__);
     }
@@ -29,7 +29,7 @@ class ArrOfTraitTest extends ArrOfTestCase
     /**
      * @return void
      */
-    public function testIsArrOfInt(): void
+    public function testIsArrDuoOfInt(): void
     {
         $this->checkArrOfSthFunction(__FUNCTION__);
     }
@@ -37,7 +37,7 @@ class ArrOfTraitTest extends ArrOfTestCase
     /**
      * @return void
      */
-    public function testIsArrOfUInt(): void
+    public function testIsArrDuoOfUInt(): void
     {
         $this->checkArrOfSthFunction(__FUNCTION__);
     }
@@ -45,7 +45,7 @@ class ArrOfTraitTest extends ArrOfTestCase
     /**
      * @return void
      */
-    public function testIsArrOfPosInt(): void
+    public function testIsArrDuoOfPosInt(): void
     {
         $this->checkArrOfSthFunction(__FUNCTION__);
     }
@@ -53,7 +53,7 @@ class ArrOfTraitTest extends ArrOfTestCase
     /**
      * @return void
      */
-    public function testIsArrOfNegInt(): void
+    public function testIsArrDuoOfNegInt(): void
     {
         $this->checkArrOfSthFunction(__FUNCTION__);
     }
@@ -61,7 +61,7 @@ class ArrOfTraitTest extends ArrOfTestCase
     /**
      * @return void
      */
-    public function testIsArrOfIntId(): void
+    public function testIsArrDuoOfIntId(): void
     {
         $this->checkArrOfSthFunction(__FUNCTION__);
     }
@@ -71,7 +71,7 @@ class ArrOfTraitTest extends ArrOfTestCase
     /**
      * @return void
      */
-    public function testIsArrOfFloat(): void
+    public function testIsArrDuoOfFloat(): void
     {
         $this->checkArrOfSthFunction(__FUNCTION__);
     }
@@ -79,7 +79,7 @@ class ArrOfTraitTest extends ArrOfTestCase
     /**
      * @return void
      */
-    public function testIsArrOfUFloat(): void
+    public function testIsArrDuoOfUFloat(): void
     {
         $this->checkArrOfSthFunction(__FUNCTION__);
     }
@@ -87,7 +87,7 @@ class ArrOfTraitTest extends ArrOfTestCase
     /**
      * @return void
      */
-    public function testIsArrOfPosFloat(): void
+    public function testIsArrDuoOfPosFloat(): void
     {
         $this->checkArrOfSthFunction(__FUNCTION__);
     }
@@ -95,7 +95,7 @@ class ArrOfTraitTest extends ArrOfTestCase
     /**
      * @return void
      */
-    public function testIsArrOfNegFloat(): void
+    public function testIsArrDuoOfNegFloat(): void
     {
         $this->checkArrOfSthFunction(__FUNCTION__);
     }
@@ -105,7 +105,7 @@ class ArrOfTraitTest extends ArrOfTestCase
     /**
      * @return void
      */
-    public function testIsArrOfNum(): void
+    public function testIsArrDuoOfNum(): void
     {
         $this->checkArrOfSthFunction(__FUNCTION__);
     }
@@ -113,7 +113,7 @@ class ArrOfTraitTest extends ArrOfTestCase
     /**
      * @return void
      */
-    public function testIsArrOfUNum(): void
+    public function testIsArrDuoOfUNum(): void
     {
         $this->checkArrOfSthFunction(__FUNCTION__);
     }
@@ -121,7 +121,7 @@ class ArrOfTraitTest extends ArrOfTestCase
     /**
      * @return void
      */
-    public function testIsArrOfPosNum(): void
+    public function testIsArrDuoOfPosNum(): void
     {
         $this->checkArrOfSthFunction(__FUNCTION__);
     }
@@ -129,7 +129,7 @@ class ArrOfTraitTest extends ArrOfTestCase
     /**
      * @return void
      */
-    public function testIsArrOfNegNum(): void
+    public function testIsArrDuoOfNegNum(): void
     {
         $this->checkArrOfSthFunction(__FUNCTION__);
     }
@@ -139,7 +139,7 @@ class ArrOfTraitTest extends ArrOfTestCase
     /**
      * @return void
      */
-    public function testIsArrOfStr(): void
+    public function testIsArrDuoOfStr(): void
     {
         $this->checkArrOfSthFunction(__FUNCTION__);
     }
@@ -147,7 +147,7 @@ class ArrOfTraitTest extends ArrOfTestCase
     /**
      * @return void
      */
-    public function testIsArrOfStrLen(): void
+    public function testIsArrDuoOfStrLen(): void
     {
         $this->checkArrOfSthFunction(__FUNCTION__);
     }
@@ -157,7 +157,7 @@ class ArrOfTraitTest extends ArrOfTestCase
     /**
      * @return void
      */
-    public function testIsArrOfRes(): void
+    public function testIsArrDuoOfRes(): void
     {
         $this->checkArrOfSthFunction(__FUNCTION__);
     }
