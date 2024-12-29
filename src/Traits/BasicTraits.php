@@ -3,6 +3,7 @@
 namespace VanCodX\Data\Validation\Traits;
 
 use VanCodX\Data\Validation\Traits\Basic\ArrTrait;
+use VanCodX\Data\Validation\Traits\Basic\AssocTrait;
 use VanCodX\Data\Validation\Traits\Basic\BoolTrait;
 use VanCodX\Data\Validation\Traits\Basic\FloatTrait;
 use VanCodX\Data\Validation\Traits\Basic\IntTrait;
@@ -21,4 +22,5 @@ trait BasicTraits
     use MiscTrait;
     use ArrTrait;
     use ListTrait;
+    use AssocTrait;
 }

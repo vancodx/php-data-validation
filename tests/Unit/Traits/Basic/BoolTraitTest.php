@@ -1,15 +1,15 @@
 <?php declare(strict_types=1);
 
-namespace Tests\Unit\Traits;
+namespace Tests\Unit\Traits\Basic;
 
 use PHPUnit\Framework\Attributes\DataProvider;
-use Tests\Unit\ValueTestCase;
+use Tests\Unit\BasicTestCase;
 use VanCodX\Data\Validation\Validation as V;
 
-class BoolTraitTest extends ValueTestCase
+class BoolTraitTest extends BasicTestCase
 {
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isBoolDataProvider(): array
     {
@@ -31,7 +31,7 @@ class BoolTraitTest extends ValueTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isTrueDataProvider(): array
     {
@@ -52,7 +52,7 @@ class BoolTraitTest extends ValueTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isFalseDataProvider(): array
     {

@@ -4,7 +4,7 @@ namespace Tests\Unit;
 
 use VanCodX\Testing\PHPUnit\TestCase;
 
-abstract class ValueTestCase extends TestCase
+abstract class BasicTestCase extends TestCase
 {
     /**
      * @return list<mixed>
@@ -42,7 +42,7 @@ abstract class ValueTestCase extends TestCase
             [0.0, 1.0, -1.0],
             ['x' => '0.0', 'y' => '1.0', 'z' => '-1.0'],
             [null, false, -1.0, ['empty-string' => '']],
-            ['STDOUT' => STDOUT, 'b' => 1, 'z' => '-1.0', []],
+            ['STDOUT' => STDOUT, 'b' => 1, 'z' => '-1.0', 'empty-array' => []],
             [''],
             []
         ];
@@ -65,14 +65,14 @@ abstract class ValueTestCase extends TestCase
 
     /**
      * @param list<mixed> $passingValues
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     protected static function buildDataSet(array $passingValues): array
     {
         $fallingValues = static::getFallingValues($passingValues);
         return array_merge(
-            array_map(static fn (mixed $value) => [$value, true], $passingValues),
-            array_map(static fn (mixed $value) => [$value, false], $fallingValues)
+            array_map(static fn (mixed $value): array => [$value, true], $passingValues),
+            array_map(static fn (mixed $value): array => [$value, false], $fallingValues)
         );
     }
 }

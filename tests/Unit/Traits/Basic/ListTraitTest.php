@@ -1,15 +1,15 @@
 <?php declare(strict_types=1);
 
-namespace Tests\Unit\Traits;
+namespace Tests\Unit\Traits\Basic;
 
 use PHPUnit\Framework\Attributes\DataProvider;
-use Tests\Unit\ValueTestCase;
+use Tests\Unit\BasicTestCase;
 use VanCodX\Data\Validation\Validation as V;
 
-class ListTraitTest extends ValueTestCase
+class ListTraitTest extends BasicTestCase
 {
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isListDataProvider(): array
     {
@@ -35,7 +35,7 @@ class ListTraitTest extends ValueTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isListLenDataProvider(): array
     {
@@ -60,7 +60,7 @@ class ListTraitTest extends ValueTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isEmptyListDataProvider(): array
     {
@@ -81,7 +81,7 @@ class ListTraitTest extends ValueTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isListSoloDataProvider(): array
     {
@@ -103,7 +103,7 @@ class ListTraitTest extends ValueTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isListDuoDataProvider(): array
     {
@@ -124,7 +124,7 @@ class ListTraitTest extends ValueTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isListTrioDataProvider(): array
     {
@@ -145,7 +145,7 @@ class ListTraitTest extends ValueTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isListQuadDataProvider(): array
     {

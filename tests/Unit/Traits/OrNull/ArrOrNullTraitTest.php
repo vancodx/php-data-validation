@@ -1,17 +1,17 @@
 <?php declare(strict_types=1);
 
-namespace Tests\Unit\Traits\ValueOrNull;
+namespace Tests\Unit\Traits\OrNull;
 
-use Tests\Unit\ValueOrNullTestCase;
+use Tests\Unit\OrNullTestCase;
 
-class ArrOrNullTraitTest extends ValueOrNullTestCase
+class ArrOrNullTraitTest extends OrNullTestCase
 {
     /**
      * @return void
      */
     public function testIsArrOrNull(): void
     {
-        $this->checkValueOrNullFunction(__FUNCTION__);
+        $this->checkSthOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -19,7 +19,7 @@ class ArrOrNullTraitTest extends ValueOrNullTestCase
      */
     public function testIsArrLenOrNull(): void
     {
-        $this->checkValueOrNullFunction(__FUNCTION__);
+        $this->checkSthOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -27,7 +27,7 @@ class ArrOrNullTraitTest extends ValueOrNullTestCase
      */
     public function testIsEmptyArrOrNull(): void
     {
-        $this->checkValueOrNullFunction(__FUNCTION__);
+        $this->checkSthOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -35,7 +35,7 @@ class ArrOrNullTraitTest extends ValueOrNullTestCase
      */
     public function testIsArrSoloOrNull(): void
     {
-        $this->checkValueOrNullFunction(__FUNCTION__);
+        $this->checkSthOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -43,7 +43,7 @@ class ArrOrNullTraitTest extends ValueOrNullTestCase
      */
     public function testIsArrDuoOrNull(): void
     {
-        $this->checkValueOrNullFunction(__FUNCTION__);
+        $this->checkSthOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -51,7 +51,7 @@ class ArrOrNullTraitTest extends ValueOrNullTestCase
      */
     public function testIsArrTrioOrNull(): void
     {
-        $this->checkValueOrNullFunction(__FUNCTION__);
+        $this->checkSthOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -59,6 +59,6 @@ class ArrOrNullTraitTest extends ValueOrNullTestCase
      */
     public function testIsArrQuadOrNull(): void
     {
-        $this->checkValueOrNullFunction(__FUNCTION__);
+        $this->checkSthOrNullFunction(__FUNCTION__);
     }
 }

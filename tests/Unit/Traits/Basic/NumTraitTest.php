@@ -1,15 +1,15 @@
 <?php declare(strict_types=1);
 
-namespace Tests\Unit\Traits;
+namespace Tests\Unit\Traits\Basic;
 
 use PHPUnit\Framework\Attributes\DataProvider;
-use Tests\Unit\ValueTestCase;
+use Tests\Unit\BasicTestCase;
 use VanCodX\Data\Validation\Validation as V;
 
-class NumTraitTest extends ValueTestCase
+class NumTraitTest extends BasicTestCase
 {
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isNumDataProvider(): array
     {
@@ -39,7 +39,7 @@ class NumTraitTest extends ValueTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isUNumDataProvider(): array
     {
@@ -65,7 +65,7 @@ class NumTraitTest extends ValueTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isPosNumDataProvider(): array
     {
@@ -89,7 +89,7 @@ class NumTraitTest extends ValueTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isNegNumDataProvider(): array
     {

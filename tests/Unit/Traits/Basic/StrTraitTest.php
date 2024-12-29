@@ -1,15 +1,15 @@
 <?php declare(strict_types=1);
 
-namespace Tests\Unit\Traits;
+namespace Tests\Unit\Traits\Basic;
 
 use PHPUnit\Framework\Attributes\DataProvider;
-use Tests\Unit\ValueTestCase;
+use Tests\Unit\BasicTestCase;
 use VanCodX\Data\Validation\Validation as V;
 
-class StrTraitTest extends ValueTestCase
+class StrTraitTest extends BasicTestCase
 {
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isStrDataProvider(): array
     {
@@ -38,7 +38,7 @@ class StrTraitTest extends ValueTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isStrLenDataProvider(): array
     {
@@ -66,7 +66,7 @@ class StrTraitTest extends ValueTestCase
     }
 
     /**
-     * @return list<array{mixed, bool}>
+     * @return list<array{0: mixed, 1: bool}>
      */
     public static function isEmptyStrDataProvider(): array
     {
