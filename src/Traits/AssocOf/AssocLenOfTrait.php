@@ -231,4 +231,42 @@ trait AssocLenOfTrait
         static $validator = static::isRes(...);
         return static::isAssocLenOf($value, $validator);
     }
+
+    // ========== OBJ =========================================================== //
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true non-empty-array<non-empty-string, object> $value
+     */
+    public static function isAssocLenOfObj(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isObj(...);
+        return static::isAssocLenOf($value, $validator);
+    }
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true non-empty-array<non-empty-string, class-string> $value
+     */
+    public static function isAssocLenOfCls(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isCls(...);
+        return static::isAssocLenOf($value, $validator);
+    }
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true non-empty-array<non-empty-string, class-string> $value
+     */
+    public static function isAssocLenOfIfc(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isIfc(...);
+        return static::isAssocLenOf($value, $validator);
+    }
 }

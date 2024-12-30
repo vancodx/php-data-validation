@@ -231,4 +231,42 @@ trait AssocTrioOfTrait
         static $validator = static::isRes(...);
         return static::isAssocTrioOf($value, $validator);
     }
+
+    // ========== OBJ =========================================================== //
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: object, non-empty-string: object, non-empty-string: object} $value
+     */
+    public static function isAssocTrioOfObj(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isObj(...);
+        return static::isAssocTrioOf($value, $validator);
+    }
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: class-string, non-empty-string: class-string, non-empty-string: class-string} $value
+     */
+    public static function isAssocTrioOfCls(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isCls(...);
+        return static::isAssocTrioOf($value, $validator);
+    }
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: class-string, non-empty-string: class-string, non-empty-string: class-string} $value
+     */
+    public static function isAssocTrioOfIfc(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isIfc(...);
+        return static::isAssocTrioOf($value, $validator);
+    }
 }

@@ -231,4 +231,42 @@ trait ArrLenOfTrait
         static $validator = static::isRes(...);
         return static::isArrLenOf($value, $validator);
     }
+
+    // ========== OBJ =========================================================== //
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true non-empty-array<object> $value
+     */
+    public static function isArrLenOfObj(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isObj(...);
+        return static::isArrLenOf($value, $validator);
+    }
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true non-empty-array<class-string> $value
+     */
+    public static function isArrLenOfCls(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isCls(...);
+        return static::isArrLenOf($value, $validator);
+    }
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true non-empty-array<class-string> $value
+     */
+    public static function isArrLenOfIfc(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isIfc(...);
+        return static::isArrLenOf($value, $validator);
+    }
 }

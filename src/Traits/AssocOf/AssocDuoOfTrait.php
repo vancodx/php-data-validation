@@ -231,4 +231,42 @@ trait AssocDuoOfTrait
         static $validator = static::isRes(...);
         return static::isAssocDuoOf($value, $validator);
     }
+
+    // ========== OBJ =========================================================== //
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: object, non-empty-string: object} $value
+     */
+    public static function isAssocDuoOfObj(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isObj(...);
+        return static::isAssocDuoOf($value, $validator);
+    }
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: class-string, non-empty-string: class-string} $value
+     */
+    public static function isAssocDuoOfCls(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isCls(...);
+        return static::isAssocDuoOf($value, $validator);
+    }
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: class-string, non-empty-string: class-string} $value
+     */
+    public static function isAssocDuoOfIfc(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isIfc(...);
+        return static::isAssocDuoOf($value, $validator);
+    }
 }

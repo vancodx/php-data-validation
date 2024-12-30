@@ -231,4 +231,42 @@ trait ListQuadOfTrait
         static $validator = static::isRes(...);
         return static::isListQuadOf($value, $validator);
     }
+
+    // ========== OBJ =========================================================== //
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true array{0: object, 1: object, 2: object, 3: object} $value
+     */
+    public static function isListQuadOfObj(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isObj(...);
+        return static::isListQuadOf($value, $validator);
+    }
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true array{0: class-string, 1: class-string, 2: class-string, 3: class-string} $value
+     */
+    public static function isListQuadOfCls(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isCls(...);
+        return static::isListQuadOf($value, $validator);
+    }
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true array{0: class-string, 1: class-string, 2: class-string, 3: class-string} $value
+     */
+    public static function isListQuadOfIfc(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isIfc(...);
+        return static::isListQuadOf($value, $validator);
+    }
 }
