@@ -231,4 +231,42 @@ trait ListOfTrait
         static $validator = static::isRes(...);
         return static::isListOf($value, $validator);
     }
+
+    // ========== OBJ =========================================================== //
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true list<object> $value
+     */
+    public static function isListOfObj(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isObj(...);
+        return static::isListOf($value, $validator);
+    }
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true list<class-string> $value
+     */
+    public static function isListOfCls(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isCls(...);
+        return static::isListOf($value, $validator);
+    }
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true list<class-string> $value
+     */
+    public static function isListOfIfc(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isIfc(...);
+        return static::isListOf($value, $validator);
+    }
 }

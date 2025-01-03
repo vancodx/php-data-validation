@@ -161,4 +161,30 @@ class ArrQuadOfTraitTest extends ArrOfTestCase
     {
         $this->checkArrOfSthFunction(__FUNCTION__);
     }
+
+    // ========== OBJ =========================================================== //
+
+    /**
+     * @return void
+     */
+    public function testIsArrQuadOfObj(): void
+    {
+        $this->checkArrOfSthFunction(__FUNCTION__);
+    }
+
+    /**
+     * @return void
+     */
+    public function testIsArrQuadOfCls(): void
+    {
+        $this->checkArrOfSthFunction(__FUNCTION__);
+    }
+
+    /**
+     * @return void
+     */
+    public function testIsArrQuadOfIfc(): void
+    {
+        $this->checkArrOfSthFunction(__FUNCTION__);
+    }
 }

@@ -161,4 +161,30 @@ class ArrLenOfTraitTest extends ArrOfTestCase
     {
         $this->checkArrOfSthFunction(__FUNCTION__);
     }
+
+    // ========== OBJ =========================================================== //
+
+    /**
+     * @return void
+     */
+    public function testIsArrLenOfObj(): void
+    {
+        $this->checkArrOfSthFunction(__FUNCTION__);
+    }
+
+    /**
+     * @return void
+     */
+    public function testIsArrLenOfCls(): void
+    {
+        $this->checkArrOfSthFunction(__FUNCTION__);
+    }
+
+    /**
+     * @return void
+     */
+    public function testIsArrLenOfIfc(): void
+    {
+        $this->checkArrOfSthFunction(__FUNCTION__);
+    }
 }

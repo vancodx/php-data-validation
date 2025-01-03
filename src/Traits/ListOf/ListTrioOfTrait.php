@@ -231,4 +231,42 @@ trait ListTrioOfTrait
         static $validator = static::isRes(...);
         return static::isListTrioOf($value, $validator);
     }
+
+    // ========== OBJ =========================================================== //
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true array{0: object, 1: object, 2: object} $value
+     */
+    public static function isListTrioOfObj(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isObj(...);
+        return static::isListTrioOf($value, $validator);
+    }
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true array{0: class-string, 1: class-string, 2: class-string} $value
+     */
+    public static function isListTrioOfCls(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isCls(...);
+        return static::isListTrioOf($value, $validator);
+    }
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true array{0: class-string, 1: class-string, 2: class-string} $value
+     */
+    public static function isListTrioOfIfc(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isIfc(...);
+        return static::isListTrioOf($value, $validator);
+    }
 }

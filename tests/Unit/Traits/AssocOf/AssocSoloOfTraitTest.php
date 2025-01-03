@@ -161,4 +161,30 @@ class AssocSoloOfTraitTest extends ArrOfTestCase
     {
         $this->checkArrOfSthFunction(__FUNCTION__);
     }
+
+    // ========== OBJ =========================================================== //
+
+    /**
+     * @return void
+     */
+    public function testIsAssocSoloOfObj(): void
+    {
+        $this->checkArrOfSthFunction(__FUNCTION__);
+    }
+
+    /**
+     * @return void
+     */
+    public function testIsAssocSoloOfCls(): void
+    {
+        $this->checkArrOfSthFunction(__FUNCTION__);
+    }
+
+    /**
+     * @return void
+     */
+    public function testIsAssocSoloOfIfc(): void
+    {
+        $this->checkArrOfSthFunction(__FUNCTION__);
+    }
 }

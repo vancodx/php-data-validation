@@ -10,6 +10,7 @@ use VanCodX\Data\Validation\Traits\Basic\IntTrait;
 use VanCodX\Data\Validation\Traits\Basic\ListTrait;
 use VanCodX\Data\Validation\Traits\Basic\MiscTrait;
 use VanCodX\Data\Validation\Traits\Basic\NumTrait;
+use VanCodX\Data\Validation\Traits\Basic\ObjTrait;
 use VanCodX\Data\Validation\Traits\Basic\StrTrait;
 
 trait BasicTraits
@@ -23,4 +24,5 @@ trait BasicTraits
     use ArrTrait;
     use ListTrait;
     use AssocTrait;
+    use ObjTrait;
 }

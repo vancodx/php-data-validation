@@ -231,4 +231,42 @@ trait ArrSoloOfTrait
         static $validator = static::isRes(...);
         return static::isArrSoloOf($value, $validator);
     }
+
+    // ========== OBJ =========================================================== //
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true array{object} $value
+     */
+    public static function isArrSoloOfObj(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isObj(...);
+        return static::isArrSoloOf($value, $validator);
+    }
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true array{class-string} $value
+     */
+    public static function isArrSoloOfCls(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isCls(...);
+        return static::isArrSoloOf($value, $validator);
+    }
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true array{class-string} $value
+     */
+    public static function isArrSoloOfIfc(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isIfc(...);
+        return static::isArrSoloOf($value, $validator);
+    }
 }

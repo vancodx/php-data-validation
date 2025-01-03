@@ -2,6 +2,8 @@
 
 namespace Tests\Unit;
 
+use ArrayAccess;
+use ArrayObject;
 use VanCodX\Testing\PHPUnit\TestCase;
 
 abstract class BasicTestCase extends TestCase
@@ -44,8 +46,21 @@ abstract class BasicTestCase extends TestCase
             [null, false, -1.0, ['empty-string' => '']],
             ['STDOUT' => STDOUT, 'b' => 1, 'z' => '-1.0', 'empty-array' => []],
             [''],
-            []
+            [],
+            static::getArrayObjectInstance(),
+            ArrayObject::class,
+            ArrayAccess::class
         ];
+    }
+
+    /**
+     * @return ArrayObject<non-empty-string, mixed>
+     */
+    protected static function getArrayObjectInstance(): ArrayObject
+    {
+        /** @var ArrayObject<non-empty-string, mixed> $instance */
+        static $instance = new ArrayObject();
+        return $instance;
     }
 
     /**

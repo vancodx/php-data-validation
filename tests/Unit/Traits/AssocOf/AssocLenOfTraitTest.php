@@ -161,4 +161,30 @@ class AssocLenOfTraitTest extends ArrOfTestCase
     {
         $this->checkArrOfSthFunction(__FUNCTION__);
     }
+
+    // ========== OBJ =========================================================== //
+
+    /**
+     * @return void
+     */
+    public function testIsAssocLenOfObj(): void
+    {
+        $this->checkArrOfSthFunction(__FUNCTION__);
+    }
+
+    /**
+     * @return void
+     */
+    public function testIsAssocLenOfCls(): void
+    {
+        $this->checkArrOfSthFunction(__FUNCTION__);
+    }
+
+    /**
+     * @return void
+     */
+    public function testIsAssocLenOfIfc(): void
+    {
+        $this->checkArrOfSthFunction(__FUNCTION__);
+    }
 }

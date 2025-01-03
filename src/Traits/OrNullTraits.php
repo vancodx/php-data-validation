@@ -10,6 +10,7 @@ use VanCodX\Data\Validation\Traits\OrNull\IntOrNullTrait;
 use VanCodX\Data\Validation\Traits\OrNull\ListOrNullTrait;
 use VanCodX\Data\Validation\Traits\OrNull\MiscOrNullTrait;
 use VanCodX\Data\Validation\Traits\OrNull\NumOrNullTrait;
+use VanCodX\Data\Validation\Traits\OrNull\ObjOrNullTrait;
 use VanCodX\Data\Validation\Traits\OrNull\StrOrNullTrait;
 
 trait OrNullTraits
@@ -23,4 +24,5 @@ trait OrNullTraits
     use ArrOrNullTrait;
     use ListOrNullTrait;
     use AssocOrNullTrait;
+    use ObjOrNullTrait;
 }

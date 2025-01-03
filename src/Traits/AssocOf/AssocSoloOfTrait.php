@@ -231,4 +231,42 @@ trait AssocSoloOfTrait
         static $validator = static::isRes(...);
         return static::isAssocSoloOf($value, $validator);
     }
+
+    // ========== OBJ =========================================================== //
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: object} $value
+     */
+    public static function isAssocSoloOfObj(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isObj(...);
+        return static::isAssocSoloOf($value, $validator);
+    }
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: class-string} $value
+     */
+    public static function isAssocSoloOfCls(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isCls(...);
+        return static::isAssocSoloOf($value, $validator);
+    }
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: class-string} $value
+     */
+    public static function isAssocSoloOfIfc(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isIfc(...);
+        return static::isAssocSoloOf($value, $validator);
+    }
 }

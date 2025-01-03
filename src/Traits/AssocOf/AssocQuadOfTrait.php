@@ -231,4 +231,42 @@ trait AssocQuadOfTrait
         static $validator = static::isRes(...);
         return static::isAssocQuadOf($value, $validator);
     }
+
+    // ========== OBJ =========================================================== //
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: object, non-empty-string: object, non-empty-string: object, non-empty-string: object} $value
+     */
+    public static function isAssocQuadOfObj(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isObj(...);
+        return static::isAssocQuadOf($value, $validator);
+    }
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: class-string, non-empty-string: class-string, non-empty-string: class-string, non-empty-string: class-string} $value
+     */
+    public static function isAssocQuadOfCls(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isCls(...);
+        return static::isAssocQuadOf($value, $validator);
+    }
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: class-string, non-empty-string: class-string, non-empty-string: class-string, non-empty-string: class-string} $value
+     */
+    public static function isAssocQuadOfIfc(mixed $value): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static::isIfc(...);
+        return static::isAssocQuadOf($value, $validator);
+    }
 }
