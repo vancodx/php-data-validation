@@ -22,7 +22,9 @@ class StrTraitTest extends BasicTestCase
             '0.0',
             '1.0',
             '-1.0',
-            ''
+            '',
+            'ArrayObject',
+            'ArrayAccess'
         ]);
     }
 
@@ -50,7 +52,9 @@ class StrTraitTest extends BasicTestCase
             '-1',
             '0.0',
             '1.0',
-            '-1.0'
+            '-1.0',
+            'ArrayObject',
+            'ArrayAccess'
         ]);
     }
 
