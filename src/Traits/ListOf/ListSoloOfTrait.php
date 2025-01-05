@@ -269,4 +269,32 @@ trait ListSoloOfTrait
         static $validator = static::isIfc(...);
         return static::isListSoloOf($value, $validator);
     }
+
+    /**
+     * @template TObject of object
+     * @param mixed $value
+     * @param class-string<TObject> $class
+     * @return bool
+     * @phpstan-assert-if-true array{0: TObject} $value
+     */
+    public static function isListSoloOfObjOf(mixed $value, string $class): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
+        return static::isListSoloOf($value, $validator);
+    }
+
+    /**
+     * @template TObject of object
+     * @param mixed $value
+     * @param class-string<TObject> $class
+     * @return bool
+     * @phpstan-assert-if-true array{0: class-string<TObject>} $value
+     */
+    public static function isListSoloOfClsOf(mixed $value, string $class): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
+        return static::isListSoloOf($value, $validator);
+    }
 }

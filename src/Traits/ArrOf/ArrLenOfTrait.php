@@ -269,4 +269,32 @@ trait ArrLenOfTrait
         static $validator = static::isIfc(...);
         return static::isArrLenOf($value, $validator);
     }
+
+    /**
+     * @template TObject of object
+     * @param mixed $value
+     * @param class-string<TObject> $class
+     * @return bool
+     * @phpstan-assert-if-true non-empty-array<TObject> $value
+     */
+    public static function isArrLenOfObjOf(mixed $value, string $class): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
+        return static::isArrLenOf($value, $validator);
+    }
+
+    /**
+     * @template TObject of object
+     * @param mixed $value
+     * @param class-string<TObject> $class
+     * @return bool
+     * @phpstan-assert-if-true non-empty-array<class-string<TObject>> $value
+     */
+    public static function isArrLenOfClsOf(mixed $value, string $class): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
+        return static::isArrLenOf($value, $validator);
+    }
 }

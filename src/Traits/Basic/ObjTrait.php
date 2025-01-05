@@ -33,4 +33,28 @@ trait ObjTrait
     {
         return static::isStrLen($value) && interface_exists($value);
     }
+
+    /**
+     * @template TObject of object
+     * @param mixed $value
+     * @param class-string<TObject> $class
+     * @return bool
+     * @phpstan-assert-if-true TObject $value
+     */
+    public static function isObjOf(mixed $value, string $class): bool
+    {
+        return static::isObj($value) && ($value instanceof $class);
+    }
+
+    /**
+     * @template TObject of object
+     * @param mixed $value
+     * @param class-string<TObject> $class
+     * @return bool
+     * @phpstan-assert-if-true class-string<TObject> $value
+     */
+    public static function isClsOf(mixed $value, string $class): bool
+    {
+        return static::isCls($value) && is_a($value, $class, true);
+    }
 }

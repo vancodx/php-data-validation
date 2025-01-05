@@ -269,4 +269,32 @@ trait ListDuoOfTrait
         static $validator = static::isIfc(...);
         return static::isListDuoOf($value, $validator);
     }
+
+    /**
+     * @template TObject of object
+     * @param mixed $value
+     * @param class-string<TObject> $class
+     * @return bool
+     * @phpstan-assert-if-true array{0: TObject, 1: TObject} $value
+     */
+    public static function isListDuoOfObjOf(mixed $value, string $class): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
+        return static::isListDuoOf($value, $validator);
+    }
+
+    /**
+     * @template TObject of object
+     * @param mixed $value
+     * @param class-string<TObject> $class
+     * @return bool
+     * @phpstan-assert-if-true array{0: class-string<TObject>, 1: class-string<TObject>} $value
+     */
+    public static function isListDuoOfClsOf(mixed $value, string $class): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
+        return static::isListDuoOf($value, $validator);
+    }
 }

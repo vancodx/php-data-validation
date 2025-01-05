@@ -269,4 +269,32 @@ trait AssocTrioOfTrait
         static $validator = static::isIfc(...);
         return static::isAssocTrioOf($value, $validator);
     }
+
+    /**
+     * @template TObject of object
+     * @param mixed $value
+     * @param class-string<TObject> $class
+     * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: TObject, non-empty-string: TObject, non-empty-string: TObject} $value
+     */
+    public static function isAssocTrioOfObjOf(mixed $value, string $class): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
+        return static::isAssocTrioOf($value, $validator);
+    }
+
+    /**
+     * @template TObject of object
+     * @param mixed $value
+     * @param class-string<TObject> $class
+     * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: class-string<TObject>, non-empty-string: class-string<TObject>, non-empty-string: class-string<TObject>} $value
+     */
+    public static function isAssocTrioOfClsOf(mixed $value, string $class): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
+        return static::isAssocTrioOf($value, $validator);
+    }
 }

@@ -269,4 +269,32 @@ trait ListLenOfTrait
         static $validator = static::isIfc(...);
         return static::isListLenOf($value, $validator);
     }
+
+    /**
+     * @template TObject of object
+     * @param mixed $value
+     * @param class-string<TObject> $class
+     * @return bool
+     * @phpstan-assert-if-true non-empty-list<TObject> $value
+     */
+    public static function isListLenOfObjOf(mixed $value, string $class): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
+        return static::isListLenOf($value, $validator);
+    }
+
+    /**
+     * @template TObject of object
+     * @param mixed $value
+     * @param class-string<TObject> $class
+     * @return bool
+     * @phpstan-assert-if-true non-empty-list<class-string<TObject>> $value
+     */
+    public static function isListLenOfClsOf(mixed $value, string $class): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        static $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
+        return static::isListLenOf($value, $validator);
+    }
 }
