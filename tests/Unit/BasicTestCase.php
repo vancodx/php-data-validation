@@ -4,6 +4,8 @@ namespace Tests\Unit;
 
 use ArrayAccess;
 use ArrayObject;
+use Tests\Support\MyArrayObject1;
+use Tests\Support\MyArrayObject2;
 use VanCodX\Testing\PHPUnit\TestCase;
 
 abstract class BasicTestCase extends TestCase
@@ -48,18 +50,42 @@ abstract class BasicTestCase extends TestCase
             [''],
             [],
             static::getArrayObjectInstance(),
+            static::getMyArrayObject1Instance(),
+            static::getMyArrayObject2Instance(),
             ArrayObject::class,
+            MyArrayObject1::class,
+            MyArrayObject2::class,
             ArrayAccess::class
         ];
     }
 
     /**
-     * @return ArrayObject<non-empty-string, mixed>
+     * @return ArrayObject<int|string, mixed>
      */
     protected static function getArrayObjectInstance(): ArrayObject
     {
-        /** @var ArrayObject<non-empty-string, mixed> $instance */
+        /** @var ArrayObject<int|string, mixed> $instance */
         static $instance = new ArrayObject();
+        return $instance;
+    }
+
+    /**
+     * @return MyArrayObject1<int|string, mixed>
+     */
+    protected static function getMyArrayObject1Instance(): MyArrayObject1
+    {
+        /** @var MyArrayObject1<int|string, mixed> $instance */
+        static $instance = new MyArrayObject1();
+        return $instance;
+    }
+
+    /**
+     * @return MyArrayObject2<int|string, mixed>
+     */
+    protected static function getMyArrayObject2Instance(): MyArrayObject2
+    {
+        /** @var MyArrayObject2<int|string, mixed> $instance */
+        static $instance = new MyArrayObject2();
         return $instance;
     }
 

@@ -5,6 +5,8 @@ namespace Tests\Unit\Traits\Basic;
 use ArrayAccess;
 use ArrayObject;
 use PHPUnit\Framework\Attributes\DataProvider;
+use Tests\Support\MyArrayObject1;
+use Tests\Support\MyArrayObject2;
 use Tests\Unit\BasicTestCase;
 use VanCodX\Data\Validation\Validation as V;
 
@@ -16,7 +18,9 @@ class ObjTraitTest extends BasicTestCase
     public static function isObjDataProvider(): array
     {
         return static::buildDataSet([
-            static::getArrayObjectInstance()
+            static::getArrayObjectInstance(),
+            static::getMyArrayObject1Instance(),
+            static::getMyArrayObject2Instance()
         ]);
     }
 
@@ -37,7 +41,9 @@ class ObjTraitTest extends BasicTestCase
     public static function isClsDataProvider(): array
     {
         return static::buildDataSet([
-            ArrayObject::class
+            ArrayObject::class,
+            MyArrayObject1::class,
+            MyArrayObject2::class
         ]);
     }
 
