@@ -280,7 +280,7 @@ trait ArrOfTrait
     public static function isArrOfObjOf(mixed $value, string $class): bool
     {
         /** @var \Closure(mixed): bool $validator */
-        static $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
+        $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
         return static::isArrOf($value, $validator);
     }
 
@@ -294,7 +294,7 @@ trait ArrOfTrait
     public static function isArrOfClsOf(mixed $value, string $class): bool
     {
         /** @var \Closure(mixed): bool $validator */
-        static $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
+        $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
         return static::isArrOf($value, $validator);
     }
 }

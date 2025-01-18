@@ -280,7 +280,7 @@ trait AssocQuadOfTrait
     public static function isAssocQuadOfObjOf(mixed $value, string $class): bool
     {
         /** @var \Closure(mixed): bool $validator */
-        static $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
+        $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
         return static::isAssocQuadOf($value, $validator);
     }
 
@@ -294,7 +294,7 @@ trait AssocQuadOfTrait
     public static function isAssocQuadOfClsOf(mixed $value, string $class): bool
     {
         /** @var \Closure(mixed): bool $validator */
-        static $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
+        $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
         return static::isAssocQuadOf($value, $validator);
     }
 }

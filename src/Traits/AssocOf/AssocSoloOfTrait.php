@@ -280,7 +280,7 @@ trait AssocSoloOfTrait
     public static function isAssocSoloOfObjOf(mixed $value, string $class): bool
     {
         /** @var \Closure(mixed): bool $validator */
-        static $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
+        $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
         return static::isAssocSoloOf($value, $validator);
     }
 
@@ -294,7 +294,7 @@ trait AssocSoloOfTrait
     public static function isAssocSoloOfClsOf(mixed $value, string $class): bool
     {
         /** @var \Closure(mixed): bool $validator */
-        static $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
+        $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
         return static::isAssocSoloOf($value, $validator);
     }
 }

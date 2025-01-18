@@ -187,4 +187,20 @@ class ArrTrioOfTraitTest extends ArrOfTestCase
     {
         $this->checkArrOfSthFunction(__FUNCTION__);
     }
+
+    /**
+     * @return void
+     */
+    public function testIsArrTrioOfObjOf(): void
+    {
+        $this->checkArrOfSthOfFunction(__FUNCTION__);
+    }
+
+    /**
+     * @return void
+     */
+    public function testIsArrTrioOfClsOf(): void
+    {
+        $this->checkArrOfSthOfFunction(__FUNCTION__);
+    }
 }

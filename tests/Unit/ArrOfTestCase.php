@@ -5,6 +5,7 @@ namespace Tests\Unit;
 use Closure;
 use InvalidArgumentException;
 use Mockery;
+use ReflectionFunction;
 use VanCodX\Data\Validation\Validation as V;
 use VanCodX\Testing\PHPUnit\MockeryTestCase;
 
@@ -89,5 +90,50 @@ abstract class ArrOfTestCase extends MockeryTestCase
 
         $this->assertFalse($mock::$checkArrOfSthFuncName($value1));
         $this->assertTrue($mock::$checkArrOfSthFuncName($value2));
+    }
+
+    /**
+     * @param string $name
+     * @return void
+     */
+    protected function checkArrOfSthOfFunction(string $name): void
+    {
+        if (
+            !preg_match('~^test((Is[[:alpha:]]+Of)([[:alpha:]]+Of))$~', $name, $match)
+            || !method_exists(V::class, $match[1])
+        ) {
+            throw new InvalidArgumentException('Argument "name" is invalid.');
+        }
+        $checkArrOfSthOfFuncName = lcfirst($match[1]);
+        $checkArrOfFuncName = lcfirst($match[2]);
+        $checkSthOfFuncName = 'is' . $match[3];
+
+        $mock = Mockery::mock(V::class)->makePartial();
+
+        $value1 = 'value-1';
+        $arg1 = 'arg-1';
+        $validatorMatcher1 = Mockery::on(static function (Closure $validator) use ($value1, $arg1): bool {
+            $staticVariables = (new ReflectionFunction($validator))->getStaticVariables();
+            return array_key_exists('class', $staticVariables) && ($staticVariables['class'] === $arg1)
+                && ($validator($value1) === false);
+        });
+        $mock->expects($checkArrOfFuncName)->once()->with($value1, $validatorMatcher1)->andReturnFalse();
+        $mock->expects($checkSthOfFuncName)->once()->with($value1, $arg1)->andReturnFalse();
+
+        $value2 = 'value-2';
+        $arg2 = 'arg-2';
+        $validatorMatcher2 = Mockery::on(static function (Closure $validator) use ($value2, $arg2): bool {
+            $staticVariables = (new ReflectionFunction($validator))->getStaticVariables();
+            return array_key_exists('class', $staticVariables) && ($staticVariables['class'] === $arg2)
+                && ($validator($value2) === true);
+        });
+        $mock->expects($checkArrOfFuncName)->once()->with($value2, $validatorMatcher2)->andReturnTrue();
+        $mock->expects($checkSthOfFuncName)->once()->with($value2, $arg2)->andReturnTrue();
+
+        $mock->expects($checkArrOfFuncName)->never();
+        $mock->expects($checkSthOfFuncName)->never();
+
+        $this->assertFalse($mock::$checkArrOfSthOfFuncName($value1, $arg1));
+        $this->assertTrue($mock::$checkArrOfSthOfFuncName($value2, $arg2));
     }
 }

@@ -187,4 +187,20 @@ class AssocTrioOfTraitTest extends ArrOfTestCase
     {
         $this->checkArrOfSthFunction(__FUNCTION__);
     }
+
+    /**
+     * @return void
+     */
+    public function testIsAssocTrioOfObjOf(): void
+    {
+        $this->checkArrOfSthOfFunction(__FUNCTION__);
+    }
+
+    /**
+     * @return void
+     */
+    public function testIsAssocTrioOfClsOf(): void
+    {
+        $this->checkArrOfSthOfFunction(__FUNCTION__);
+    }
 }

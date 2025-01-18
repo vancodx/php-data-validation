@@ -187,4 +187,20 @@ class ListLenOfTraitTest extends ArrOfTestCase
     {
         $this->checkArrOfSthFunction(__FUNCTION__);
     }
+
+    /**
+     * @return void
+     */
+    public function testIsListLenOfObjOf(): void
+    {
+        $this->checkArrOfSthOfFunction(__FUNCTION__);
+    }
+
+    /**
+     * @return void
+     */
+    public function testIsListLenOfClsOf(): void
+    {
+        $this->checkArrOfSthOfFunction(__FUNCTION__);
+    }
 }

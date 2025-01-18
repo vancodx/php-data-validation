@@ -49,7 +49,7 @@ abstract class OrNullTestCase extends MockeryTestCase
      */
     protected function checkSthOfOrNullFunction(string $name): void
     {
-        if (!preg_match('~^test((Is[[:alpha:]]+)OrNull)$~', $name, $match) || !method_exists(V::class, $match[1])) {
+        if (!preg_match('~^test((Is[[:alpha:]]+Of)OrNull)$~', $name, $match) || !method_exists(V::class, $match[1])) {
             throw new InvalidArgumentException('Argument "name" is invalid.');
         }
         $checkSthOfOrNullFuncName = lcfirst($match[1]);

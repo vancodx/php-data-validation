@@ -280,7 +280,7 @@ trait AssocLenOfTrait
     public static function isAssocLenOfObjOf(mixed $value, string $class): bool
     {
         /** @var \Closure(mixed): bool $validator */
-        static $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
+        $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
         return static::isAssocLenOf($value, $validator);
     }
 
@@ -294,7 +294,7 @@ trait AssocLenOfTrait
     public static function isAssocLenOfClsOf(mixed $value, string $class): bool
     {
         /** @var \Closure(mixed): bool $validator */
-        static $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
+        $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
         return static::isAssocLenOf($value, $validator);
     }
 }
