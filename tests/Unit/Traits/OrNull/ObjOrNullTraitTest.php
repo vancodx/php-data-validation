@@ -29,4 +29,20 @@ class ObjOrNullTraitTest extends OrNullTestCase
     {
         $this->checkSthOrNullFunction(__FUNCTION__);
     }
+
+    /**
+     * @return void
+     */
+    public function testIsObjOfOrNull(): void
+    {
+        $this->checkSthOfOrNullFunction(__FUNCTION__);
+    }
+
+    /**
+     * @return void
+     */
+    public function testIsClsOfOrNull(): void
+    {
+        $this->checkSthOfOrNullFunction(__FUNCTION__);
+    }
 }

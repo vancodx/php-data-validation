@@ -269,4 +269,32 @@ trait ArrDuoOfTrait
         static $validator = static::isIfc(...);
         return static::isArrDuoOf($value, $validator);
     }
+
+    /**
+     * @template TObject of object
+     * @param mixed $value
+     * @param class-string<TObject> $class
+     * @return bool
+     * @phpstan-assert-if-true array{TObject, TObject} $value
+     */
+    public static function isArrDuoOfObjOf(mixed $value, string $class): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
+        return static::isArrDuoOf($value, $validator);
+    }
+
+    /**
+     * @template TObject of object
+     * @param mixed $value
+     * @param class-string<TObject> $class
+     * @return bool
+     * @phpstan-assert-if-true array{class-string<TObject>, class-string<TObject>} $value
+     */
+    public static function isArrDuoOfClsOf(mixed $value, string $class): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
+        return static::isArrDuoOf($value, $validator);
+    }
 }

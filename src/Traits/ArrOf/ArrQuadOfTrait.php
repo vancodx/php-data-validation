@@ -269,4 +269,32 @@ trait ArrQuadOfTrait
         static $validator = static::isIfc(...);
         return static::isArrQuadOf($value, $validator);
     }
+
+    /**
+     * @template TObject of object
+     * @param mixed $value
+     * @param class-string<TObject> $class
+     * @return bool
+     * @phpstan-assert-if-true array{TObject, TObject, TObject, TObject} $value
+     */
+    public static function isArrQuadOfObjOf(mixed $value, string $class): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
+        return static::isArrQuadOf($value, $validator);
+    }
+
+    /**
+     * @template TObject of object
+     * @param mixed $value
+     * @param class-string<TObject> $class
+     * @return bool
+     * @phpstan-assert-if-true array{class-string<TObject>, class-string<TObject>, class-string<TObject>, class-string<TObject>} $value
+     */
+    public static function isArrQuadOfClsOf(mixed $value, string $class): bool
+    {
+        /** @var \Closure(mixed): bool $validator */
+        $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
+        return static::isArrQuadOf($value, $validator);
+    }
 }

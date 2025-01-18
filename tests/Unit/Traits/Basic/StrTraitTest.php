@@ -2,7 +2,11 @@
 
 namespace Tests\Unit\Traits\Basic;
 
+use ArrayAccess;
+use ArrayObject;
 use PHPUnit\Framework\Attributes\DataProvider;
+use Tests\Support\MyArrayObject1;
+use Tests\Support\MyArrayObject2;
 use Tests\Unit\BasicTestCase;
 use VanCodX\Data\Validation\Validation as V;
 
@@ -23,8 +27,10 @@ class StrTraitTest extends BasicTestCase
             '1.0',
             '-1.0',
             '',
-            'ArrayObject',
-            'ArrayAccess'
+            ArrayObject::class,
+            MyArrayObject1::class,
+            MyArrayObject2::class,
+            ArrayAccess::class
         ]);
     }
 
@@ -53,8 +59,10 @@ class StrTraitTest extends BasicTestCase
             '0.0',
             '1.0',
             '-1.0',
-            'ArrayObject',
-            'ArrayAccess'
+            ArrayObject::class,
+            MyArrayObject1::class,
+            MyArrayObject2::class,
+            ArrayAccess::class
         ]);
     }
 
