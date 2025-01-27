@@ -100,9 +100,11 @@ class PhpDocTagTest extends TestCase
 
         return array_map(static function (ReflectionMethod $method): array {
             $docComment = $method->getDocComment();
-            $type = $docComment && preg_match('~@phpstan-assert-if-true ([^$]+) \$value~', $docComment, $match)
-                ? $match[1] : null;
-            return [$method->getName(), $type];
+            return [
+                $method->getName(),
+                $docComment && preg_match('~@phpstan-assert-if-true (?<type>[^$]+) \$value\n~', $docComment, $match)
+                    ? $match['type'] : null
+            ];
         }, $methods);
     }
 
