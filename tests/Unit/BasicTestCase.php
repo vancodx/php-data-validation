@@ -11,7 +11,7 @@ use VanCodX\Testing\PHPUnit\TestCase;
 abstract class BasicTestCase extends TestCase
 {
     /**
-     * @return non-empty-list<mixed>
+     * @return list<mixed>
      */
     protected static function getAnyValues(): array
     {
