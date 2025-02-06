@@ -85,32 +85,32 @@ trait ArgumentExceptionTrait
     }
 
     /**
-     * @param string|list<string>|array<string, mixed> $argument
+     * @param string|list<string>|array<string, mixed> $arguments
      * @param int $code [optional]
      * @param Throwable|null $previous [optional]
      * @return Exception
      */
     public static function newArgumentException(
-        string|array $argument,
+        string|array $arguments,
         int $code = 0,
         Throwable $previous = null
     ): Exception {
-        if (static::isStrLen($argument)) {
-            $message = sprintf(static::getSingularArgumentMessageFormat(), $argument);
-        } elseif (static::isListLenOfStrLen($argument)) {
-            if (count($argument) === 1) {
-                $message = sprintf(static::getSingularArgumentMessageFormat(), $argument[0]);
+        if (static::isStrLen($arguments)) {
+            $message = sprintf(static::getSingularArgumentMessageFormat(), $arguments);
+        } elseif (static::isListLenOfStrLen($arguments)) {
+            if (count($arguments) === 1) {
+                $message = sprintf(static::getSingularArgumentMessageFormat(), $arguments[0]);
             } else {
-                $message = sprintf(static::getPluralArgumentMessageFormat(), implode(', ', $argument));
+                $message = sprintf(static::getPluralArgumentMessageFormat(), implode(', ', $arguments));
             }
-        } elseif (static::isAssocLen($argument)) {
-            if (count($argument) === 1) {
-                $message = sprintf(static::getSingularArgumentMessageFormat(), array_key_first($argument));
+        } elseif (static::isAssocLen($arguments)) {
+            if (count($arguments) === 1) {
+                $message = sprintf(static::getSingularArgumentMessageFormat(), array_key_first($arguments));
             } else {
-                $message = sprintf(static::getPluralArgumentMessageFormat(), implode(', ', array_keys($argument)));
+                $message = sprintf(static::getPluralArgumentMessageFormat(), implode(', ', array_keys($arguments)));
             }
         } else {
-            throw new InvalidArgumentException('Argument "argument" is invalid.');
+            throw new InvalidArgumentException('Argument "arguments" is invalid.');
         }
         return new (static::getArgumentExceptionClass())($message, $code, $previous);
     }
