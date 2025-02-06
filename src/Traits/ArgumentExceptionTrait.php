@@ -85,7 +85,7 @@ trait ArgumentExceptionTrait
     }
 
     /**
-     * @param string|array<string, mixed> $argument
+     * @param string|list<string>|array<string, mixed> $argument
      * @param int $code [optional]
      * @param Throwable|null $previous [optional]
      * @return Exception
@@ -97,6 +97,12 @@ trait ArgumentExceptionTrait
     ): Exception {
         if (static::isStrLen($argument)) {
             $message = sprintf(static::getSingularArgumentMessageFormat(), $argument);
+        } elseif (static::isListLenOfStrLen($argument)) {
+            if (count($argument) === 1) {
+                $message = sprintf(static::getSingularArgumentMessageFormat(), $argument[0]);
+            } else {
+                $message = sprintf(static::getPluralArgumentMessageFormat(), implode(', ', $argument));
+            }
         } elseif (static::isAssocLen($argument)) {
             if (count($argument) === 1) {
                 $message = sprintf(static::getSingularArgumentMessageFormat(), array_key_first($argument));
