@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b8b9e8b8c8d334d6d28146cea698fbf7",
+    "content-hash": "3d5fae5325b7db7f40ef36d32e28b709",
     "packages": [],
     "packages-dev": [
         {
@@ -1361,16 +1361,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "11.5.5",
+            "version": "11.5.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "b9a975972f580c0491f834eb0818ad2b32fd8bba"
+                "reference": "e1cb706f019e2547039ca2c839898cd5f557ee5d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b9a975972f580c0491f834eb0818ad2b32fd8bba",
-                "reference": "b9a975972f580c0491f834eb0818ad2b32fd8bba",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/e1cb706f019e2547039ca2c839898cd5f557ee5d",
+                "reference": "e1cb706f019e2547039ca2c839898cd5f557ee5d",
                 "shasum": ""
             },
             "require": {
@@ -1442,7 +1442,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.5"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.7"
             },
             "funding": [
                 {
@@ -1458,7 +1458,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-01-29T14:01:11+00:00"
+            "time": "2025-02-06T16:10:05+00:00"
         },
         {
             "name": "psr/container",
@@ -2145,12 +2145,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "4245b3fe2b3efed28fc094928cfe3ae625f18243"
+                "reference": "21fcdc144e1ec8fba4b30c10061a3627a0238d28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/4245b3fe2b3efed28fc094928cfe3ae625f18243",
-                "reference": "4245b3fe2b3efed28fc094928cfe3ae625f18243",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/21fcdc144e1ec8fba4b30c10061a3627a0238d28",
+                "reference": "21fcdc144e1ec8fba4b30c10061a3627a0238d28",
                 "shasum": ""
             },
             "conflict": {
@@ -2187,6 +2187,7 @@
                 "asymmetricrypt/asymmetricrypt": "<9.9.99",
                 "athlon1600/php-proxy": "<=5.1",
                 "athlon1600/php-proxy-app": "<=3",
+                "athlon1600/youtube-downloader": "<=4",
                 "austintoddj/canvas": "<=3.4.2",
                 "auth0/wordpress": "<=4.6",
                 "automad/automad": "<2.0.0.0-alpha5",
@@ -2248,6 +2249,7 @@
                 "codeigniter4/framework": "<4.5.8",
                 "codeigniter4/shield": "<1.0.0.0-beta8",
                 "codiad/codiad": "<=2.8.4",
+                "components/jquery": ">=1.0.3,<3.5",
                 "composer/composer": "<1.10.27|>=2,<2.2.24|>=2.3,<2.7.7",
                 "concrete5/concrete5": "<9.3.4",
                 "concrete5/core": "<8.5.8|>=9,<9.1",
@@ -2627,7 +2629,7 @@
                 "phpmyfaq/phpmyfaq": "<3.2.5|==3.2.5|>=3.2.10,<=4.0.1",
                 "phpoffice/common": "<0.2.9",
                 "phpoffice/phpexcel": "<1.8.1",
-                "phpoffice/phpspreadsheet": "<1.29.8|>=2,<2.1.7|>=2.2,<2.3.6|>=3,<3.8",
+                "phpoffice/phpspreadsheet": "<1.29.9|>=2,<2.1.8|>=2.2,<2.3.7|>=3,<3.9",
                 "phpseclib/phpseclib": "<2.0.47|>=3,<3.0.36",
                 "phpservermon/phpservermon": "<3.6",
                 "phpsysinfo/phpsysinfo": "<3.4.3",
@@ -2690,6 +2692,7 @@
                 "robrichards/xmlseclibs": ">=1,<3.0.4",
                 "roots/soil": "<4.1",
                 "rudloff/alltube": "<3.0.3",
+                "rudloff/rtmpdump-bin": "<=2.3.1",
                 "s-cart/core": "<6.9",
                 "s-cart/s-cart": "<6.9",
                 "sabberworm/php-css-parser": ">=1,<1.0.1|>=2,<2.0.1|>=3,<3.0.1|>=4,<4.0.1|>=5,<5.0.9|>=5.1,<5.1.3|>=5.2,<5.2.1|>=6,<6.0.2|>=7,<7.0.4|>=8,<8.0.1|>=8.1,<8.1.1|>=8.2,<8.2.1|>=8.3,<8.3.1",
@@ -2745,7 +2748,7 @@
                 "snipe/snipe-it": "<=7.0.13",
                 "socalnick/scn-social-auth": "<1.15.2",
                 "socialiteproviders/steam": "<1.1",
-                "spatie/browsershot": "<5.0.3",
+                "spatie/browsershot": "<5.0.5",
                 "spatie/image-optimizer": "<1.7.3",
                 "spencer14420/sp-php-email-handler": "<1",
                 "spipu/html2pdf": "<5.2.8",
@@ -3007,7 +3010,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-01-30T18:06:22+00:00"
+            "time": "2025-02-06T18:06:06+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -5403,22 +5406,22 @@
         },
         {
             "name": "vancodx/php-coding-style",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vancodx/php-coding-style.git",
-                "reference": "2b4e402ecb3bcc6a24084323ec39b6e7008d3efb"
+                "reference": "e55f114986ad67399d56c911ed4928938feb4dce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vancodx/php-coding-style/zipball/2b4e402ecb3bcc6a24084323ec39b6e7008d3efb",
-                "reference": "2b4e402ecb3bcc6a24084323ec39b6e7008d3efb",
+                "url": "https://api.github.com/repos/vancodx/php-coding-style/zipball/e55f114986ad67399d56c911ed4928938feb4dce",
+                "reference": "e55f114986ad67399d56c911ed4928938feb4dce",
                 "shasum": ""
             },
             "require": {
-                "friendsofphp/php-cs-fixer": "^3.65.0",
+                "friendsofphp/php-cs-fixer": "^3.68.5",
                 "php": "^8.3",
-                "squizlabs/php_codesniffer": "^3.11.2"
+                "squizlabs/php_codesniffer": "^3.11.3"
             },
             "require-dev": {
                 "roave/security-advisories": "dev-latest"
@@ -5451,9 +5454,9 @@
             ],
             "support": {
                 "issues": "https://github.com/vancodx/php-coding-style/issues",
-                "source": "https://github.com/vancodx/php-coding-style/tree/1.2.0"
+                "source": "https://github.com/vancodx/php-coding-style/tree/1.3.0"
             },
-            "time": "2024-12-11T19:14:58+00:00"
+            "time": "2025-02-01T19:48:28+00:00"
         },
         {
             "name": "vancodx/php-testing",
