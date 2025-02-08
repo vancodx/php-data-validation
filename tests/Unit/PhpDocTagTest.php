@@ -12,7 +12,7 @@ use VanCodX\Testing\PHPUnit\TestCase;
 class PhpDocTagTest extends TestCase
 {
     /**
-     * @var non-empty-array<non-empty-string, non-empty-string|null>
+     * @var array<string, string|null>
      */
     protected static array $basicTypeMap = [
         // Bool
@@ -57,7 +57,7 @@ class PhpDocTagTest extends TestCase
     ];
 
     /**
-     * @var non-empty-array<non-empty-string, non-empty-array<non-empty-string, non-empty-string>>
+     * @var array<string, array<string, string>>
      */
     protected static array $arrayTypeSizeMap = [
         'Arr' => [
@@ -89,7 +89,7 @@ class PhpDocTagTest extends TestCase
     ];
 
     /**
-     * @return list<array{0: non-empty-string, 1: non-empty-string|null}>
+     * @return list<array{0: string, 1: string|null}>
      */
     public static function funcNameAndTypeDataProvider(): array
     {
@@ -117,7 +117,7 @@ class PhpDocTagTest extends TestCase
     public function testPhpDocTag(string $funcName, ?string $actualType): void
     {
         $match = [];
-        /** @var non-empty-list<non-empty-string> $patterns */
+        /** @var list<string> $patterns */
         static $patterns = [
             // phpcs:disable Generic.Files.LineLength
             '~^is(?<arrayType>Arr|List|Assoc)(?<arraySize>Len|Solo|Duo|Trio|Quad)?(?<orNull>OrNull)?$~',
