@@ -239,9 +239,7 @@ trait AssocTrioOfTrait
      */
     public static function isAssocTrioOfObjOf(mixed $value, string $class): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
-        return static::isAssocTrioOf($value, $validator);
+        return static::isAssocTrioOf($value, static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class));
     }
 
     /**
@@ -253,8 +251,6 @@ trait AssocTrioOfTrait
      */
     public static function isAssocTrioOfClsOf(mixed $value, string $class): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
-        return static::isAssocTrioOf($value, $validator);
+        return static::isAssocTrioOf($value, static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class));
     }
 }

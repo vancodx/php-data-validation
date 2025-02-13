@@ -239,9 +239,7 @@ trait AssocDuoOfTrait
      */
     public static function isAssocDuoOfObjOf(mixed $value, string $class): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
-        return static::isAssocDuoOf($value, $validator);
+        return static::isAssocDuoOf($value, static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class));
     }
 
     /**
@@ -253,8 +251,6 @@ trait AssocDuoOfTrait
      */
     public static function isAssocDuoOfClsOf(mixed $value, string $class): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
-        return static::isAssocDuoOf($value, $validator);
+        return static::isAssocDuoOf($value, static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class));
     }
 }

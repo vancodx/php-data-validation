@@ -239,9 +239,7 @@ trait ListDuoOfTrait
      */
     public static function isListDuoOfObjOf(mixed $value, string $class): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
-        return static::isListDuoOf($value, $validator);
+        return static::isListDuoOf($value, static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class));
     }
 
     /**
@@ -253,8 +251,6 @@ trait ListDuoOfTrait
      */
     public static function isListDuoOfClsOf(mixed $value, string $class): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
-        return static::isListDuoOf($value, $validator);
+        return static::isListDuoOf($value, static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class));
     }
 }

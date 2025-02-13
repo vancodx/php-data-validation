@@ -239,9 +239,7 @@ trait ArrQuadOfTrait
      */
     public static function isArrQuadOfObjOf(mixed $value, string $class): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
-        return static::isArrQuadOf($value, $validator);
+        return static::isArrQuadOf($value, static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class));
     }
 
     /**
@@ -253,8 +251,6 @@ trait ArrQuadOfTrait
      */
     public static function isArrQuadOfClsOf(mixed $value, string $class): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
-        return static::isArrQuadOf($value, $validator);
+        return static::isArrQuadOf($value, static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class));
     }
 }

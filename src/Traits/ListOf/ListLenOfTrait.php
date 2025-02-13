@@ -239,9 +239,7 @@ trait ListLenOfTrait
      */
     public static function isListLenOfObjOf(mixed $value, string $class): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
-        return static::isListLenOf($value, $validator);
+        return static::isListLenOf($value, static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class));
     }
 
     /**
@@ -253,8 +251,6 @@ trait ListLenOfTrait
      */
     public static function isListLenOfClsOf(mixed $value, string $class): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
-        return static::isListLenOf($value, $validator);
+        return static::isListLenOf($value, static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class));
     }
 }

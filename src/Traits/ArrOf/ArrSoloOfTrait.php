@@ -239,9 +239,7 @@ trait ArrSoloOfTrait
      */
     public static function isArrSoloOfObjOf(mixed $value, string $class): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
-        return static::isArrSoloOf($value, $validator);
+        return static::isArrSoloOf($value, static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class));
     }
 
     /**
@@ -253,8 +251,6 @@ trait ArrSoloOfTrait
      */
     public static function isArrSoloOfClsOf(mixed $value, string $class): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
-        return static::isArrSoloOf($value, $validator);
+        return static::isArrSoloOf($value, static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class));
     }
 }

@@ -239,9 +239,7 @@ trait ListQuadOfTrait
      */
     public static function isListQuadOfObjOf(mixed $value, string $class): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
-        return static::isListQuadOf($value, $validator);
+        return static::isListQuadOf($value, static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class));
     }
 
     /**
@@ -253,8 +251,6 @@ trait ListQuadOfTrait
      */
     public static function isListQuadOfClsOf(mixed $value, string $class): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
-        return static::isListQuadOf($value, $validator);
+        return static::isListQuadOf($value, static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class));
     }
 }

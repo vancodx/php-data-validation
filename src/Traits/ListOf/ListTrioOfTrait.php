@@ -239,9 +239,7 @@ trait ListTrioOfTrait
      */
     public static function isListTrioOfObjOf(mixed $value, string $class): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
-        return static::isListTrioOf($value, $validator);
+        return static::isListTrioOf($value, static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class));
     }
 
     /**
@@ -253,8 +251,6 @@ trait ListTrioOfTrait
      */
     public static function isListTrioOfClsOf(mixed $value, string $class): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
-        return static::isListTrioOf($value, $validator);
+        return static::isListTrioOf($value, static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class));
     }
 }

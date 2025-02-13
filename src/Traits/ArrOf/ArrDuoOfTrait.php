@@ -239,9 +239,7 @@ trait ArrDuoOfTrait
      */
     public static function isArrDuoOfObjOf(mixed $value, string $class): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
-        return static::isArrDuoOf($value, $validator);
+        return static::isArrDuoOf($value, static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class));
     }
 
     /**
@@ -253,8 +251,6 @@ trait ArrDuoOfTrait
      */
     public static function isArrDuoOfClsOf(mixed $value, string $class): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
-        return static::isArrDuoOf($value, $validator);
+        return static::isArrDuoOf($value, static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class));
     }
 }
