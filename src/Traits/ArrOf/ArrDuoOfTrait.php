@@ -31,9 +31,7 @@ trait ArrDuoOfTrait
      */
     public static function isArrDuoOfBool(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isBool(...);
-        return static::isArrDuoOf($value, $validator);
+        return static::isArrDuoOf($value, static::isBool(...));
     }
 
     // ========== INT =========================================================== //
@@ -45,9 +43,7 @@ trait ArrDuoOfTrait
      */
     public static function isArrDuoOfInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isInt(...);
-        return static::isArrDuoOf($value, $validator);
+        return static::isArrDuoOf($value, static::isInt(...));
     }
 
     /**
@@ -57,9 +53,7 @@ trait ArrDuoOfTrait
      */
     public static function isArrDuoOfUInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isUInt(...);
-        return static::isArrDuoOf($value, $validator);
+        return static::isArrDuoOf($value, static::isUInt(...));
     }
 
     /**
@@ -69,9 +63,7 @@ trait ArrDuoOfTrait
      */
     public static function isArrDuoOfPosInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isPosInt(...);
-        return static::isArrDuoOf($value, $validator);
+        return static::isArrDuoOf($value, static::isPosInt(...));
     }
 
     /**
@@ -81,9 +73,7 @@ trait ArrDuoOfTrait
      */
     public static function isArrDuoOfNegInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNegInt(...);
-        return static::isArrDuoOf($value, $validator);
+        return static::isArrDuoOf($value, static::isNegInt(...));
     }
 
     /**
@@ -93,9 +83,7 @@ trait ArrDuoOfTrait
      */
     public static function isArrDuoOfIntId(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isIntId(...);
-        return static::isArrDuoOf($value, $validator);
+        return static::isArrDuoOf($value, static::isIntId(...));
     }
 
     // ========== FLOAT ========================================================= //
@@ -107,9 +95,7 @@ trait ArrDuoOfTrait
      */
     public static function isArrDuoOfFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isFloat(...);
-        return static::isArrDuoOf($value, $validator);
+        return static::isArrDuoOf($value, static::isFloat(...));
     }
 
     /**
@@ -118,9 +104,7 @@ trait ArrDuoOfTrait
      */
     public static function isArrDuoOfUFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isUFloat(...);
-        return static::isArrDuoOf($value, $validator);
+        return static::isArrDuoOf($value, static::isUFloat(...));
     }
 
     /**
@@ -129,9 +113,7 @@ trait ArrDuoOfTrait
      */
     public static function isArrDuoOfPosFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isPosFloat(...);
-        return static::isArrDuoOf($value, $validator);
+        return static::isArrDuoOf($value, static::isPosFloat(...));
     }
 
     /**
@@ -140,9 +122,7 @@ trait ArrDuoOfTrait
      */
     public static function isArrDuoOfNegFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNegFloat(...);
-        return static::isArrDuoOf($value, $validator);
+        return static::isArrDuoOf($value, static::isNegFloat(...));
     }
 
     // ========== NUM =========================================================== //
@@ -154,9 +134,7 @@ trait ArrDuoOfTrait
      */
     public static function isArrDuoOfNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNum(...);
-        return static::isArrDuoOf($value, $validator);
+        return static::isArrDuoOf($value, static::isNum(...));
     }
 
     /**
@@ -165,9 +143,7 @@ trait ArrDuoOfTrait
      */
     public static function isArrDuoOfUNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isUNum(...);
-        return static::isArrDuoOf($value, $validator);
+        return static::isArrDuoOf($value, static::isUNum(...));
     }
 
     /**
@@ -176,9 +152,7 @@ trait ArrDuoOfTrait
      */
     public static function isArrDuoOfPosNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isPosNum(...);
-        return static::isArrDuoOf($value, $validator);
+        return static::isArrDuoOf($value, static::isPosNum(...));
     }
 
     /**
@@ -187,9 +161,7 @@ trait ArrDuoOfTrait
      */
     public static function isArrDuoOfNegNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNegNum(...);
-        return static::isArrDuoOf($value, $validator);
+        return static::isArrDuoOf($value, static::isNegNum(...));
     }
 
     // ========== STR =========================================================== //
@@ -201,9 +173,7 @@ trait ArrDuoOfTrait
      */
     public static function isArrDuoOfStr(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isStr(...);
-        return static::isArrDuoOf($value, $validator);
+        return static::isArrDuoOf($value, static::isStr(...));
     }
 
     /**
@@ -213,9 +183,7 @@ trait ArrDuoOfTrait
      */
     public static function isArrDuoOfStrLen(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isStrLen(...);
-        return static::isArrDuoOf($value, $validator);
+        return static::isArrDuoOf($value, static::isStrLen(...));
     }
 
     // ========== MISC ========================================================== //
@@ -227,9 +195,7 @@ trait ArrDuoOfTrait
      */
     public static function isArrDuoOfRes(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isRes(...);
-        return static::isArrDuoOf($value, $validator);
+        return static::isArrDuoOf($value, static::isRes(...));
     }
 
     // ========== OBJ =========================================================== //
@@ -241,9 +207,7 @@ trait ArrDuoOfTrait
      */
     public static function isArrDuoOfObj(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isObj(...);
-        return static::isArrDuoOf($value, $validator);
+        return static::isArrDuoOf($value, static::isObj(...));
     }
 
     /**
@@ -253,9 +217,7 @@ trait ArrDuoOfTrait
      */
     public static function isArrDuoOfCls(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isCls(...);
-        return static::isArrDuoOf($value, $validator);
+        return static::isArrDuoOf($value, static::isCls(...));
     }
 
     /**
@@ -265,9 +227,7 @@ trait ArrDuoOfTrait
      */
     public static function isArrDuoOfIfc(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isIfc(...);
-        return static::isArrDuoOf($value, $validator);
+        return static::isArrDuoOf($value, static::isIfc(...));
     }
 
     /**

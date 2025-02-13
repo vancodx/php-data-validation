@@ -31,9 +31,7 @@ trait ListLenOfTrait
      */
     public static function isListLenOfBool(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isBool(...);
-        return static::isListLenOf($value, $validator);
+        return static::isListLenOf($value, static::isBool(...));
     }
 
     // ========== INT =========================================================== //
@@ -45,9 +43,7 @@ trait ListLenOfTrait
      */
     public static function isListLenOfInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isInt(...);
-        return static::isListLenOf($value, $validator);
+        return static::isListLenOf($value, static::isInt(...));
     }
 
     /**
@@ -57,9 +53,7 @@ trait ListLenOfTrait
      */
     public static function isListLenOfUInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isUInt(...);
-        return static::isListLenOf($value, $validator);
+        return static::isListLenOf($value, static::isUInt(...));
     }
 
     /**
@@ -69,9 +63,7 @@ trait ListLenOfTrait
      */
     public static function isListLenOfPosInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isPosInt(...);
-        return static::isListLenOf($value, $validator);
+        return static::isListLenOf($value, static::isPosInt(...));
     }
 
     /**
@@ -81,9 +73,7 @@ trait ListLenOfTrait
      */
     public static function isListLenOfNegInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNegInt(...);
-        return static::isListLenOf($value, $validator);
+        return static::isListLenOf($value, static::isNegInt(...));
     }
 
     /**
@@ -93,9 +83,7 @@ trait ListLenOfTrait
      */
     public static function isListLenOfIntId(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isIntId(...);
-        return static::isListLenOf($value, $validator);
+        return static::isListLenOf($value, static::isIntId(...));
     }
 
     // ========== FLOAT ========================================================= //
@@ -107,9 +95,7 @@ trait ListLenOfTrait
      */
     public static function isListLenOfFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isFloat(...);
-        return static::isListLenOf($value, $validator);
+        return static::isListLenOf($value, static::isFloat(...));
     }
 
     /**
@@ -118,9 +104,7 @@ trait ListLenOfTrait
      */
     public static function isListLenOfUFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isUFloat(...);
-        return static::isListLenOf($value, $validator);
+        return static::isListLenOf($value, static::isUFloat(...));
     }
 
     /**
@@ -129,9 +113,7 @@ trait ListLenOfTrait
      */
     public static function isListLenOfPosFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isPosFloat(...);
-        return static::isListLenOf($value, $validator);
+        return static::isListLenOf($value, static::isPosFloat(...));
     }
 
     /**
@@ -140,9 +122,7 @@ trait ListLenOfTrait
      */
     public static function isListLenOfNegFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNegFloat(...);
-        return static::isListLenOf($value, $validator);
+        return static::isListLenOf($value, static::isNegFloat(...));
     }
 
     // ========== NUM =========================================================== //
@@ -154,9 +134,7 @@ trait ListLenOfTrait
      */
     public static function isListLenOfNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNum(...);
-        return static::isListLenOf($value, $validator);
+        return static::isListLenOf($value, static::isNum(...));
     }
 
     /**
@@ -165,9 +143,7 @@ trait ListLenOfTrait
      */
     public static function isListLenOfUNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isUNum(...);
-        return static::isListLenOf($value, $validator);
+        return static::isListLenOf($value, static::isUNum(...));
     }
 
     /**
@@ -176,9 +152,7 @@ trait ListLenOfTrait
      */
     public static function isListLenOfPosNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isPosNum(...);
-        return static::isListLenOf($value, $validator);
+        return static::isListLenOf($value, static::isPosNum(...));
     }
 
     /**
@@ -187,9 +161,7 @@ trait ListLenOfTrait
      */
     public static function isListLenOfNegNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNegNum(...);
-        return static::isListLenOf($value, $validator);
+        return static::isListLenOf($value, static::isNegNum(...));
     }
 
     // ========== STR =========================================================== //
@@ -201,9 +173,7 @@ trait ListLenOfTrait
      */
     public static function isListLenOfStr(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isStr(...);
-        return static::isListLenOf($value, $validator);
+        return static::isListLenOf($value, static::isStr(...));
     }
 
     /**
@@ -213,9 +183,7 @@ trait ListLenOfTrait
      */
     public static function isListLenOfStrLen(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isStrLen(...);
-        return static::isListLenOf($value, $validator);
+        return static::isListLenOf($value, static::isStrLen(...));
     }
 
     // ========== MISC ========================================================== //
@@ -227,9 +195,7 @@ trait ListLenOfTrait
      */
     public static function isListLenOfRes(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isRes(...);
-        return static::isListLenOf($value, $validator);
+        return static::isListLenOf($value, static::isRes(...));
     }
 
     // ========== OBJ =========================================================== //
@@ -241,9 +207,7 @@ trait ListLenOfTrait
      */
     public static function isListLenOfObj(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isObj(...);
-        return static::isListLenOf($value, $validator);
+        return static::isListLenOf($value, static::isObj(...));
     }
 
     /**
@@ -253,9 +217,7 @@ trait ListLenOfTrait
      */
     public static function isListLenOfCls(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isCls(...);
-        return static::isListLenOf($value, $validator);
+        return static::isListLenOf($value, static::isCls(...));
     }
 
     /**
@@ -265,9 +227,7 @@ trait ListLenOfTrait
      */
     public static function isListLenOfIfc(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isIfc(...);
-        return static::isListLenOf($value, $validator);
+        return static::isListLenOf($value, static::isIfc(...));
     }
 
     /**

@@ -31,9 +31,7 @@ trait ListSoloOfTrait
      */
     public static function isListSoloOfBool(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isBool(...);
-        return static::isListSoloOf($value, $validator);
+        return static::isListSoloOf($value, static::isBool(...));
     }
 
     // ========== INT =========================================================== //
@@ -45,9 +43,7 @@ trait ListSoloOfTrait
      */
     public static function isListSoloOfInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isInt(...);
-        return static::isListSoloOf($value, $validator);
+        return static::isListSoloOf($value, static::isInt(...));
     }
 
     /**
@@ -57,9 +53,7 @@ trait ListSoloOfTrait
      */
     public static function isListSoloOfUInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isUInt(...);
-        return static::isListSoloOf($value, $validator);
+        return static::isListSoloOf($value, static::isUInt(...));
     }
 
     /**
@@ -69,9 +63,7 @@ trait ListSoloOfTrait
      */
     public static function isListSoloOfPosInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isPosInt(...);
-        return static::isListSoloOf($value, $validator);
+        return static::isListSoloOf($value, static::isPosInt(...));
     }
 
     /**
@@ -81,9 +73,7 @@ trait ListSoloOfTrait
      */
     public static function isListSoloOfNegInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNegInt(...);
-        return static::isListSoloOf($value, $validator);
+        return static::isListSoloOf($value, static::isNegInt(...));
     }
 
     /**
@@ -93,9 +83,7 @@ trait ListSoloOfTrait
      */
     public static function isListSoloOfIntId(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isIntId(...);
-        return static::isListSoloOf($value, $validator);
+        return static::isListSoloOf($value, static::isIntId(...));
     }
 
     // ========== FLOAT ========================================================= //
@@ -107,9 +95,7 @@ trait ListSoloOfTrait
      */
     public static function isListSoloOfFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isFloat(...);
-        return static::isListSoloOf($value, $validator);
+        return static::isListSoloOf($value, static::isFloat(...));
     }
 
     /**
@@ -118,9 +104,7 @@ trait ListSoloOfTrait
      */
     public static function isListSoloOfUFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isUFloat(...);
-        return static::isListSoloOf($value, $validator);
+        return static::isListSoloOf($value, static::isUFloat(...));
     }
 
     /**
@@ -129,9 +113,7 @@ trait ListSoloOfTrait
      */
     public static function isListSoloOfPosFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isPosFloat(...);
-        return static::isListSoloOf($value, $validator);
+        return static::isListSoloOf($value, static::isPosFloat(...));
     }
 
     /**
@@ -140,9 +122,7 @@ trait ListSoloOfTrait
      */
     public static function isListSoloOfNegFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNegFloat(...);
-        return static::isListSoloOf($value, $validator);
+        return static::isListSoloOf($value, static::isNegFloat(...));
     }
 
     // ========== NUM =========================================================== //
@@ -154,9 +134,7 @@ trait ListSoloOfTrait
      */
     public static function isListSoloOfNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNum(...);
-        return static::isListSoloOf($value, $validator);
+        return static::isListSoloOf($value, static::isNum(...));
     }
 
     /**
@@ -165,9 +143,7 @@ trait ListSoloOfTrait
      */
     public static function isListSoloOfUNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isUNum(...);
-        return static::isListSoloOf($value, $validator);
+        return static::isListSoloOf($value, static::isUNum(...));
     }
 
     /**
@@ -176,9 +152,7 @@ trait ListSoloOfTrait
      */
     public static function isListSoloOfPosNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isPosNum(...);
-        return static::isListSoloOf($value, $validator);
+        return static::isListSoloOf($value, static::isPosNum(...));
     }
 
     /**
@@ -187,9 +161,7 @@ trait ListSoloOfTrait
      */
     public static function isListSoloOfNegNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNegNum(...);
-        return static::isListSoloOf($value, $validator);
+        return static::isListSoloOf($value, static::isNegNum(...));
     }
 
     // ========== STR =========================================================== //
@@ -201,9 +173,7 @@ trait ListSoloOfTrait
      */
     public static function isListSoloOfStr(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isStr(...);
-        return static::isListSoloOf($value, $validator);
+        return static::isListSoloOf($value, static::isStr(...));
     }
 
     /**
@@ -213,9 +183,7 @@ trait ListSoloOfTrait
      */
     public static function isListSoloOfStrLen(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isStrLen(...);
-        return static::isListSoloOf($value, $validator);
+        return static::isListSoloOf($value, static::isStrLen(...));
     }
 
     // ========== MISC ========================================================== //
@@ -227,9 +195,7 @@ trait ListSoloOfTrait
      */
     public static function isListSoloOfRes(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isRes(...);
-        return static::isListSoloOf($value, $validator);
+        return static::isListSoloOf($value, static::isRes(...));
     }
 
     // ========== OBJ =========================================================== //
@@ -241,9 +207,7 @@ trait ListSoloOfTrait
      */
     public static function isListSoloOfObj(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isObj(...);
-        return static::isListSoloOf($value, $validator);
+        return static::isListSoloOf($value, static::isObj(...));
     }
 
     /**
@@ -253,9 +217,7 @@ trait ListSoloOfTrait
      */
     public static function isListSoloOfCls(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isCls(...);
-        return static::isListSoloOf($value, $validator);
+        return static::isListSoloOf($value, static::isCls(...));
     }
 
     /**
@@ -265,9 +227,7 @@ trait ListSoloOfTrait
      */
     public static function isListSoloOfIfc(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isIfc(...);
-        return static::isListSoloOf($value, $validator);
+        return static::isListSoloOf($value, static::isIfc(...));
     }
 
     /**

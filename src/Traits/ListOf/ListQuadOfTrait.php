@@ -31,9 +31,7 @@ trait ListQuadOfTrait
      */
     public static function isListQuadOfBool(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isBool(...);
-        return static::isListQuadOf($value, $validator);
+        return static::isListQuadOf($value, static::isBool(...));
     }
 
     // ========== INT =========================================================== //
@@ -45,9 +43,7 @@ trait ListQuadOfTrait
      */
     public static function isListQuadOfInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isInt(...);
-        return static::isListQuadOf($value, $validator);
+        return static::isListQuadOf($value, static::isInt(...));
     }
 
     /**
@@ -57,9 +53,7 @@ trait ListQuadOfTrait
      */
     public static function isListQuadOfUInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isUInt(...);
-        return static::isListQuadOf($value, $validator);
+        return static::isListQuadOf($value, static::isUInt(...));
     }
 
     /**
@@ -69,9 +63,7 @@ trait ListQuadOfTrait
      */
     public static function isListQuadOfPosInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isPosInt(...);
-        return static::isListQuadOf($value, $validator);
+        return static::isListQuadOf($value, static::isPosInt(...));
     }
 
     /**
@@ -81,9 +73,7 @@ trait ListQuadOfTrait
      */
     public static function isListQuadOfNegInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNegInt(...);
-        return static::isListQuadOf($value, $validator);
+        return static::isListQuadOf($value, static::isNegInt(...));
     }
 
     /**
@@ -93,9 +83,7 @@ trait ListQuadOfTrait
      */
     public static function isListQuadOfIntId(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isIntId(...);
-        return static::isListQuadOf($value, $validator);
+        return static::isListQuadOf($value, static::isIntId(...));
     }
 
     // ========== FLOAT ========================================================= //
@@ -107,9 +95,7 @@ trait ListQuadOfTrait
      */
     public static function isListQuadOfFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isFloat(...);
-        return static::isListQuadOf($value, $validator);
+        return static::isListQuadOf($value, static::isFloat(...));
     }
 
     /**
@@ -118,9 +104,7 @@ trait ListQuadOfTrait
      */
     public static function isListQuadOfUFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isUFloat(...);
-        return static::isListQuadOf($value, $validator);
+        return static::isListQuadOf($value, static::isUFloat(...));
     }
 
     /**
@@ -129,9 +113,7 @@ trait ListQuadOfTrait
      */
     public static function isListQuadOfPosFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isPosFloat(...);
-        return static::isListQuadOf($value, $validator);
+        return static::isListQuadOf($value, static::isPosFloat(...));
     }
 
     /**
@@ -140,9 +122,7 @@ trait ListQuadOfTrait
      */
     public static function isListQuadOfNegFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNegFloat(...);
-        return static::isListQuadOf($value, $validator);
+        return static::isListQuadOf($value, static::isNegFloat(...));
     }
 
     // ========== NUM =========================================================== //
@@ -154,9 +134,7 @@ trait ListQuadOfTrait
      */
     public static function isListQuadOfNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNum(...);
-        return static::isListQuadOf($value, $validator);
+        return static::isListQuadOf($value, static::isNum(...));
     }
 
     /**
@@ -165,9 +143,7 @@ trait ListQuadOfTrait
      */
     public static function isListQuadOfUNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isUNum(...);
-        return static::isListQuadOf($value, $validator);
+        return static::isListQuadOf($value, static::isUNum(...));
     }
 
     /**
@@ -176,9 +152,7 @@ trait ListQuadOfTrait
      */
     public static function isListQuadOfPosNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isPosNum(...);
-        return static::isListQuadOf($value, $validator);
+        return static::isListQuadOf($value, static::isPosNum(...));
     }
 
     /**
@@ -187,9 +161,7 @@ trait ListQuadOfTrait
      */
     public static function isListQuadOfNegNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNegNum(...);
-        return static::isListQuadOf($value, $validator);
+        return static::isListQuadOf($value, static::isNegNum(...));
     }
 
     // ========== STR =========================================================== //
@@ -201,9 +173,7 @@ trait ListQuadOfTrait
      */
     public static function isListQuadOfStr(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isStr(...);
-        return static::isListQuadOf($value, $validator);
+        return static::isListQuadOf($value, static::isStr(...));
     }
 
     /**
@@ -213,9 +183,7 @@ trait ListQuadOfTrait
      */
     public static function isListQuadOfStrLen(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isStrLen(...);
-        return static::isListQuadOf($value, $validator);
+        return static::isListQuadOf($value, static::isStrLen(...));
     }
 
     // ========== MISC ========================================================== //
@@ -227,9 +195,7 @@ trait ListQuadOfTrait
      */
     public static function isListQuadOfRes(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isRes(...);
-        return static::isListQuadOf($value, $validator);
+        return static::isListQuadOf($value, static::isRes(...));
     }
 
     // ========== OBJ =========================================================== //
@@ -241,9 +207,7 @@ trait ListQuadOfTrait
      */
     public static function isListQuadOfObj(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isObj(...);
-        return static::isListQuadOf($value, $validator);
+        return static::isListQuadOf($value, static::isObj(...));
     }
 
     /**
@@ -253,9 +217,7 @@ trait ListQuadOfTrait
      */
     public static function isListQuadOfCls(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isCls(...);
-        return static::isListQuadOf($value, $validator);
+        return static::isListQuadOf($value, static::isCls(...));
     }
 
     /**
@@ -265,9 +227,7 @@ trait ListQuadOfTrait
      */
     public static function isListQuadOfIfc(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isIfc(...);
-        return static::isListQuadOf($value, $validator);
+        return static::isListQuadOf($value, static::isIfc(...));
     }
 
     /**

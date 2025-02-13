@@ -31,9 +31,7 @@ trait AssocTrioOfTrait
      */
     public static function isAssocTrioOfBool(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isBool(...);
-        return static::isAssocTrioOf($value, $validator);
+        return static::isAssocTrioOf($value, static::isBool(...));
     }
 
     // ========== INT =========================================================== //
@@ -45,9 +43,7 @@ trait AssocTrioOfTrait
      */
     public static function isAssocTrioOfInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isInt(...);
-        return static::isAssocTrioOf($value, $validator);
+        return static::isAssocTrioOf($value, static::isInt(...));
     }
 
     /**
@@ -57,9 +53,7 @@ trait AssocTrioOfTrait
      */
     public static function isAssocTrioOfUInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isUInt(...);
-        return static::isAssocTrioOf($value, $validator);
+        return static::isAssocTrioOf($value, static::isUInt(...));
     }
 
     /**
@@ -69,9 +63,7 @@ trait AssocTrioOfTrait
      */
     public static function isAssocTrioOfPosInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isPosInt(...);
-        return static::isAssocTrioOf($value, $validator);
+        return static::isAssocTrioOf($value, static::isPosInt(...));
     }
 
     /**
@@ -81,9 +73,7 @@ trait AssocTrioOfTrait
      */
     public static function isAssocTrioOfNegInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNegInt(...);
-        return static::isAssocTrioOf($value, $validator);
+        return static::isAssocTrioOf($value, static::isNegInt(...));
     }
 
     /**
@@ -93,9 +83,7 @@ trait AssocTrioOfTrait
      */
     public static function isAssocTrioOfIntId(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isIntId(...);
-        return static::isAssocTrioOf($value, $validator);
+        return static::isAssocTrioOf($value, static::isIntId(...));
     }
 
     // ========== FLOAT ========================================================= //
@@ -107,9 +95,7 @@ trait AssocTrioOfTrait
      */
     public static function isAssocTrioOfFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isFloat(...);
-        return static::isAssocTrioOf($value, $validator);
+        return static::isAssocTrioOf($value, static::isFloat(...));
     }
 
     /**
@@ -118,9 +104,7 @@ trait AssocTrioOfTrait
      */
     public static function isAssocTrioOfUFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isUFloat(...);
-        return static::isAssocTrioOf($value, $validator);
+        return static::isAssocTrioOf($value, static::isUFloat(...));
     }
 
     /**
@@ -129,9 +113,7 @@ trait AssocTrioOfTrait
      */
     public static function isAssocTrioOfPosFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isPosFloat(...);
-        return static::isAssocTrioOf($value, $validator);
+        return static::isAssocTrioOf($value, static::isPosFloat(...));
     }
 
     /**
@@ -140,9 +122,7 @@ trait AssocTrioOfTrait
      */
     public static function isAssocTrioOfNegFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNegFloat(...);
-        return static::isAssocTrioOf($value, $validator);
+        return static::isAssocTrioOf($value, static::isNegFloat(...));
     }
 
     // ========== NUM =========================================================== //
@@ -154,9 +134,7 @@ trait AssocTrioOfTrait
      */
     public static function isAssocTrioOfNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNum(...);
-        return static::isAssocTrioOf($value, $validator);
+        return static::isAssocTrioOf($value, static::isNum(...));
     }
 
     /**
@@ -165,9 +143,7 @@ trait AssocTrioOfTrait
      */
     public static function isAssocTrioOfUNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isUNum(...);
-        return static::isAssocTrioOf($value, $validator);
+        return static::isAssocTrioOf($value, static::isUNum(...));
     }
 
     /**
@@ -176,9 +152,7 @@ trait AssocTrioOfTrait
      */
     public static function isAssocTrioOfPosNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isPosNum(...);
-        return static::isAssocTrioOf($value, $validator);
+        return static::isAssocTrioOf($value, static::isPosNum(...));
     }
 
     /**
@@ -187,9 +161,7 @@ trait AssocTrioOfTrait
      */
     public static function isAssocTrioOfNegNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNegNum(...);
-        return static::isAssocTrioOf($value, $validator);
+        return static::isAssocTrioOf($value, static::isNegNum(...));
     }
 
     // ========== STR =========================================================== //
@@ -201,9 +173,7 @@ trait AssocTrioOfTrait
      */
     public static function isAssocTrioOfStr(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isStr(...);
-        return static::isAssocTrioOf($value, $validator);
+        return static::isAssocTrioOf($value, static::isStr(...));
     }
 
     /**
@@ -213,9 +183,7 @@ trait AssocTrioOfTrait
      */
     public static function isAssocTrioOfStrLen(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isStrLen(...);
-        return static::isAssocTrioOf($value, $validator);
+        return static::isAssocTrioOf($value, static::isStrLen(...));
     }
 
     // ========== MISC ========================================================== //
@@ -227,9 +195,7 @@ trait AssocTrioOfTrait
      */
     public static function isAssocTrioOfRes(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isRes(...);
-        return static::isAssocTrioOf($value, $validator);
+        return static::isAssocTrioOf($value, static::isRes(...));
     }
 
     // ========== OBJ =========================================================== //
@@ -241,9 +207,7 @@ trait AssocTrioOfTrait
      */
     public static function isAssocTrioOfObj(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isObj(...);
-        return static::isAssocTrioOf($value, $validator);
+        return static::isAssocTrioOf($value, static::isObj(...));
     }
 
     /**
@@ -253,9 +217,7 @@ trait AssocTrioOfTrait
      */
     public static function isAssocTrioOfCls(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isCls(...);
-        return static::isAssocTrioOf($value, $validator);
+        return static::isAssocTrioOf($value, static::isCls(...));
     }
 
     /**
@@ -265,9 +227,7 @@ trait AssocTrioOfTrait
      */
     public static function isAssocTrioOfIfc(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isIfc(...);
-        return static::isAssocTrioOf($value, $validator);
+        return static::isAssocTrioOf($value, static::isIfc(...));
     }
 
     /**

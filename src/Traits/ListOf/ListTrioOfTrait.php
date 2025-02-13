@@ -31,9 +31,7 @@ trait ListTrioOfTrait
      */
     public static function isListTrioOfBool(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isBool(...);
-        return static::isListTrioOf($value, $validator);
+        return static::isListTrioOf($value, static::isBool(...));
     }
 
     // ========== INT =========================================================== //
@@ -45,9 +43,7 @@ trait ListTrioOfTrait
      */
     public static function isListTrioOfInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isInt(...);
-        return static::isListTrioOf($value, $validator);
+        return static::isListTrioOf($value, static::isInt(...));
     }
 
     /**
@@ -57,9 +53,7 @@ trait ListTrioOfTrait
      */
     public static function isListTrioOfUInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isUInt(...);
-        return static::isListTrioOf($value, $validator);
+        return static::isListTrioOf($value, static::isUInt(...));
     }
 
     /**
@@ -69,9 +63,7 @@ trait ListTrioOfTrait
      */
     public static function isListTrioOfPosInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isPosInt(...);
-        return static::isListTrioOf($value, $validator);
+        return static::isListTrioOf($value, static::isPosInt(...));
     }
 
     /**
@@ -81,9 +73,7 @@ trait ListTrioOfTrait
      */
     public static function isListTrioOfNegInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNegInt(...);
-        return static::isListTrioOf($value, $validator);
+        return static::isListTrioOf($value, static::isNegInt(...));
     }
 
     /**
@@ -93,9 +83,7 @@ trait ListTrioOfTrait
      */
     public static function isListTrioOfIntId(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isIntId(...);
-        return static::isListTrioOf($value, $validator);
+        return static::isListTrioOf($value, static::isIntId(...));
     }
 
     // ========== FLOAT ========================================================= //
@@ -107,9 +95,7 @@ trait ListTrioOfTrait
      */
     public static function isListTrioOfFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isFloat(...);
-        return static::isListTrioOf($value, $validator);
+        return static::isListTrioOf($value, static::isFloat(...));
     }
 
     /**
@@ -118,9 +104,7 @@ trait ListTrioOfTrait
      */
     public static function isListTrioOfUFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isUFloat(...);
-        return static::isListTrioOf($value, $validator);
+        return static::isListTrioOf($value, static::isUFloat(...));
     }
 
     /**
@@ -129,9 +113,7 @@ trait ListTrioOfTrait
      */
     public static function isListTrioOfPosFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isPosFloat(...);
-        return static::isListTrioOf($value, $validator);
+        return static::isListTrioOf($value, static::isPosFloat(...));
     }
 
     /**
@@ -140,9 +122,7 @@ trait ListTrioOfTrait
      */
     public static function isListTrioOfNegFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNegFloat(...);
-        return static::isListTrioOf($value, $validator);
+        return static::isListTrioOf($value, static::isNegFloat(...));
     }
 
     // ========== NUM =========================================================== //
@@ -154,9 +134,7 @@ trait ListTrioOfTrait
      */
     public static function isListTrioOfNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNum(...);
-        return static::isListTrioOf($value, $validator);
+        return static::isListTrioOf($value, static::isNum(...));
     }
 
     /**
@@ -165,9 +143,7 @@ trait ListTrioOfTrait
      */
     public static function isListTrioOfUNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isUNum(...);
-        return static::isListTrioOf($value, $validator);
+        return static::isListTrioOf($value, static::isUNum(...));
     }
 
     /**
@@ -176,9 +152,7 @@ trait ListTrioOfTrait
      */
     public static function isListTrioOfPosNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isPosNum(...);
-        return static::isListTrioOf($value, $validator);
+        return static::isListTrioOf($value, static::isPosNum(...));
     }
 
     /**
@@ -187,9 +161,7 @@ trait ListTrioOfTrait
      */
     public static function isListTrioOfNegNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNegNum(...);
-        return static::isListTrioOf($value, $validator);
+        return static::isListTrioOf($value, static::isNegNum(...));
     }
 
     // ========== STR =========================================================== //
@@ -201,9 +173,7 @@ trait ListTrioOfTrait
      */
     public static function isListTrioOfStr(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isStr(...);
-        return static::isListTrioOf($value, $validator);
+        return static::isListTrioOf($value, static::isStr(...));
     }
 
     /**
@@ -213,9 +183,7 @@ trait ListTrioOfTrait
      */
     public static function isListTrioOfStrLen(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isStrLen(...);
-        return static::isListTrioOf($value, $validator);
+        return static::isListTrioOf($value, static::isStrLen(...));
     }
 
     // ========== MISC ========================================================== //
@@ -227,9 +195,7 @@ trait ListTrioOfTrait
      */
     public static function isListTrioOfRes(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isRes(...);
-        return static::isListTrioOf($value, $validator);
+        return static::isListTrioOf($value, static::isRes(...));
     }
 
     // ========== OBJ =========================================================== //
@@ -241,9 +207,7 @@ trait ListTrioOfTrait
      */
     public static function isListTrioOfObj(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isObj(...);
-        return static::isListTrioOf($value, $validator);
+        return static::isListTrioOf($value, static::isObj(...));
     }
 
     /**
@@ -253,9 +217,7 @@ trait ListTrioOfTrait
      */
     public static function isListTrioOfCls(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isCls(...);
-        return static::isListTrioOf($value, $validator);
+        return static::isListTrioOf($value, static::isCls(...));
     }
 
     /**
@@ -265,9 +227,7 @@ trait ListTrioOfTrait
      */
     public static function isListTrioOfIfc(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isIfc(...);
-        return static::isListTrioOf($value, $validator);
+        return static::isListTrioOf($value, static::isIfc(...));
     }
 
     /**
