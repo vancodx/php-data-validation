@@ -3,7 +3,7 @@
 namespace Tests\Unit\Traits\Basic;
 
 use PHPUnit\Framework\Attributes\DataProvider;
-use Tests\Unit\BasicTestCase;
+use Tests\Unit\Traits\BasicTestCase;
 use VanCodX\Data\Validation\Validation as V;
 
 class ListTraitTest extends BasicTestCase

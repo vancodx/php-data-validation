@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Traits\ListOf;
 
-use Tests\Unit\ArrOfTestCase;
+use Tests\Unit\Traits\ArrOfTestCase;
 
 class ListDuoOfTraitTest extends ArrOfTestCase
 {

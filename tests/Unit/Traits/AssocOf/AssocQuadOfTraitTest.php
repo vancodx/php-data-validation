@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Traits\AssocOf;
 
-use Tests\Unit\ArrOfTestCase;
+use Tests\Unit\Traits\ArrOfTestCase;
 
 class AssocQuadOfTraitTest extends ArrOfTestCase
 {

@@ -31,9 +31,7 @@ trait AssocQuadOfTrait
      */
     public static function isAssocQuadOfBool(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isBool(...);
-        return static::isAssocQuadOf($value, $validator);
+        return static::isAssocQuadOf($value, static::isBool(...));
     }
 
     // ========== INT =========================================================== //
@@ -45,9 +43,7 @@ trait AssocQuadOfTrait
      */
     public static function isAssocQuadOfInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isInt(...);
-        return static::isAssocQuadOf($value, $validator);
+        return static::isAssocQuadOf($value, static::isInt(...));
     }
 
     /**
@@ -57,9 +53,7 @@ trait AssocQuadOfTrait
      */
     public static function isAssocQuadOfUInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isUInt(...);
-        return static::isAssocQuadOf($value, $validator);
+        return static::isAssocQuadOf($value, static::isUInt(...));
     }
 
     /**
@@ -69,9 +63,7 @@ trait AssocQuadOfTrait
      */
     public static function isAssocQuadOfPosInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isPosInt(...);
-        return static::isAssocQuadOf($value, $validator);
+        return static::isAssocQuadOf($value, static::isPosInt(...));
     }
 
     /**
@@ -81,9 +73,7 @@ trait AssocQuadOfTrait
      */
     public static function isAssocQuadOfNegInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNegInt(...);
-        return static::isAssocQuadOf($value, $validator);
+        return static::isAssocQuadOf($value, static::isNegInt(...));
     }
 
     /**
@@ -93,9 +83,7 @@ trait AssocQuadOfTrait
      */
     public static function isAssocQuadOfIntId(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isIntId(...);
-        return static::isAssocQuadOf($value, $validator);
+        return static::isAssocQuadOf($value, static::isIntId(...));
     }
 
     // ========== FLOAT ========================================================= //
@@ -107,9 +95,7 @@ trait AssocQuadOfTrait
      */
     public static function isAssocQuadOfFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isFloat(...);
-        return static::isAssocQuadOf($value, $validator);
+        return static::isAssocQuadOf($value, static::isFloat(...));
     }
 
     /**
@@ -118,9 +104,7 @@ trait AssocQuadOfTrait
      */
     public static function isAssocQuadOfUFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isUFloat(...);
-        return static::isAssocQuadOf($value, $validator);
+        return static::isAssocQuadOf($value, static::isUFloat(...));
     }
 
     /**
@@ -129,9 +113,7 @@ trait AssocQuadOfTrait
      */
     public static function isAssocQuadOfPosFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isPosFloat(...);
-        return static::isAssocQuadOf($value, $validator);
+        return static::isAssocQuadOf($value, static::isPosFloat(...));
     }
 
     /**
@@ -140,9 +122,7 @@ trait AssocQuadOfTrait
      */
     public static function isAssocQuadOfNegFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNegFloat(...);
-        return static::isAssocQuadOf($value, $validator);
+        return static::isAssocQuadOf($value, static::isNegFloat(...));
     }
 
     // ========== NUM =========================================================== //
@@ -154,9 +134,7 @@ trait AssocQuadOfTrait
      */
     public static function isAssocQuadOfNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNum(...);
-        return static::isAssocQuadOf($value, $validator);
+        return static::isAssocQuadOf($value, static::isNum(...));
     }
 
     /**
@@ -165,9 +143,7 @@ trait AssocQuadOfTrait
      */
     public static function isAssocQuadOfUNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isUNum(...);
-        return static::isAssocQuadOf($value, $validator);
+        return static::isAssocQuadOf($value, static::isUNum(...));
     }
 
     /**
@@ -176,9 +152,7 @@ trait AssocQuadOfTrait
      */
     public static function isAssocQuadOfPosNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isPosNum(...);
-        return static::isAssocQuadOf($value, $validator);
+        return static::isAssocQuadOf($value, static::isPosNum(...));
     }
 
     /**
@@ -187,9 +161,7 @@ trait AssocQuadOfTrait
      */
     public static function isAssocQuadOfNegNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNegNum(...);
-        return static::isAssocQuadOf($value, $validator);
+        return static::isAssocQuadOf($value, static::isNegNum(...));
     }
 
     // ========== STR =========================================================== //
@@ -201,9 +173,7 @@ trait AssocQuadOfTrait
      */
     public static function isAssocQuadOfStr(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isStr(...);
-        return static::isAssocQuadOf($value, $validator);
+        return static::isAssocQuadOf($value, static::isStr(...));
     }
 
     /**
@@ -213,9 +183,7 @@ trait AssocQuadOfTrait
      */
     public static function isAssocQuadOfStrLen(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isStrLen(...);
-        return static::isAssocQuadOf($value, $validator);
+        return static::isAssocQuadOf($value, static::isStrLen(...));
     }
 
     // ========== MISC ========================================================== //
@@ -227,9 +195,7 @@ trait AssocQuadOfTrait
      */
     public static function isAssocQuadOfRes(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isRes(...);
-        return static::isAssocQuadOf($value, $validator);
+        return static::isAssocQuadOf($value, static::isRes(...));
     }
 
     // ========== OBJ =========================================================== //
@@ -241,9 +207,7 @@ trait AssocQuadOfTrait
      */
     public static function isAssocQuadOfObj(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isObj(...);
-        return static::isAssocQuadOf($value, $validator);
+        return static::isAssocQuadOf($value, static::isObj(...));
     }
 
     /**
@@ -253,9 +217,7 @@ trait AssocQuadOfTrait
      */
     public static function isAssocQuadOfCls(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isCls(...);
-        return static::isAssocQuadOf($value, $validator);
+        return static::isAssocQuadOf($value, static::isCls(...));
     }
 
     /**
@@ -265,9 +227,7 @@ trait AssocQuadOfTrait
      */
     public static function isAssocQuadOfIfc(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isIfc(...);
-        return static::isAssocQuadOf($value, $validator);
+        return static::isAssocQuadOf($value, static::isIfc(...));
     }
 
     /**
@@ -279,9 +239,7 @@ trait AssocQuadOfTrait
      */
     public static function isAssocQuadOfObjOf(mixed $value, string $class): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
-        return static::isAssocQuadOf($value, $validator);
+        return static::isAssocQuadOf($value, static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class));
     }
 
     /**
@@ -293,8 +251,6 @@ trait AssocQuadOfTrait
      */
     public static function isAssocQuadOfClsOf(mixed $value, string $class): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
-        return static::isAssocQuadOf($value, $validator);
+        return static::isAssocQuadOf($value, static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class));
     }
 }

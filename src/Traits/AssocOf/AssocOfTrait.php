@@ -31,9 +31,7 @@ trait AssocOfTrait
      */
     public static function isAssocOfBool(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isBool(...);
-        return static::isAssocOf($value, $validator);
+        return static::isAssocOf($value, static::isBool(...));
     }
 
     // ========== INT =========================================================== //
@@ -45,9 +43,7 @@ trait AssocOfTrait
      */
     public static function isAssocOfInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isInt(...);
-        return static::isAssocOf($value, $validator);
+        return static::isAssocOf($value, static::isInt(...));
     }
 
     /**
@@ -57,9 +53,7 @@ trait AssocOfTrait
      */
     public static function isAssocOfUInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isUInt(...);
-        return static::isAssocOf($value, $validator);
+        return static::isAssocOf($value, static::isUInt(...));
     }
 
     /**
@@ -69,9 +63,7 @@ trait AssocOfTrait
      */
     public static function isAssocOfPosInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isPosInt(...);
-        return static::isAssocOf($value, $validator);
+        return static::isAssocOf($value, static::isPosInt(...));
     }
 
     /**
@@ -81,9 +73,7 @@ trait AssocOfTrait
      */
     public static function isAssocOfNegInt(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNegInt(...);
-        return static::isAssocOf($value, $validator);
+        return static::isAssocOf($value, static::isNegInt(...));
     }
 
     /**
@@ -93,9 +83,7 @@ trait AssocOfTrait
      */
     public static function isAssocOfIntId(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isIntId(...);
-        return static::isAssocOf($value, $validator);
+        return static::isAssocOf($value, static::isIntId(...));
     }
 
     // ========== FLOAT ========================================================= //
@@ -107,9 +95,7 @@ trait AssocOfTrait
      */
     public static function isAssocOfFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isFloat(...);
-        return static::isAssocOf($value, $validator);
+        return static::isAssocOf($value, static::isFloat(...));
     }
 
     /**
@@ -118,9 +104,7 @@ trait AssocOfTrait
      */
     public static function isAssocOfUFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isUFloat(...);
-        return static::isAssocOf($value, $validator);
+        return static::isAssocOf($value, static::isUFloat(...));
     }
 
     /**
@@ -129,9 +113,7 @@ trait AssocOfTrait
      */
     public static function isAssocOfPosFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isPosFloat(...);
-        return static::isAssocOf($value, $validator);
+        return static::isAssocOf($value, static::isPosFloat(...));
     }
 
     /**
@@ -140,9 +122,7 @@ trait AssocOfTrait
      */
     public static function isAssocOfNegFloat(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNegFloat(...);
-        return static::isAssocOf($value, $validator);
+        return static::isAssocOf($value, static::isNegFloat(...));
     }
 
     // ========== NUM =========================================================== //
@@ -154,9 +134,7 @@ trait AssocOfTrait
      */
     public static function isAssocOfNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNum(...);
-        return static::isAssocOf($value, $validator);
+        return static::isAssocOf($value, static::isNum(...));
     }
 
     /**
@@ -165,9 +143,7 @@ trait AssocOfTrait
      */
     public static function isAssocOfUNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isUNum(...);
-        return static::isAssocOf($value, $validator);
+        return static::isAssocOf($value, static::isUNum(...));
     }
 
     /**
@@ -176,9 +152,7 @@ trait AssocOfTrait
      */
     public static function isAssocOfPosNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isPosNum(...);
-        return static::isAssocOf($value, $validator);
+        return static::isAssocOf($value, static::isPosNum(...));
     }
 
     /**
@@ -187,9 +161,7 @@ trait AssocOfTrait
      */
     public static function isAssocOfNegNum(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isNegNum(...);
-        return static::isAssocOf($value, $validator);
+        return static::isAssocOf($value, static::isNegNum(...));
     }
 
     // ========== STR =========================================================== //
@@ -201,9 +173,7 @@ trait AssocOfTrait
      */
     public static function isAssocOfStr(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isStr(...);
-        return static::isAssocOf($value, $validator);
+        return static::isAssocOf($value, static::isStr(...));
     }
 
     /**
@@ -213,9 +183,7 @@ trait AssocOfTrait
      */
     public static function isAssocOfStrLen(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isStrLen(...);
-        return static::isAssocOf($value, $validator);
+        return static::isAssocOf($value, static::isStrLen(...));
     }
 
     // ========== MISC ========================================================== //
@@ -227,9 +195,7 @@ trait AssocOfTrait
      */
     public static function isAssocOfRes(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isRes(...);
-        return static::isAssocOf($value, $validator);
+        return static::isAssocOf($value, static::isRes(...));
     }
 
     // ========== OBJ =========================================================== //
@@ -241,9 +207,7 @@ trait AssocOfTrait
      */
     public static function isAssocOfObj(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isObj(...);
-        return static::isAssocOf($value, $validator);
+        return static::isAssocOf($value, static::isObj(...));
     }
 
     /**
@@ -253,9 +217,7 @@ trait AssocOfTrait
      */
     public static function isAssocOfCls(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isCls(...);
-        return static::isAssocOf($value, $validator);
+        return static::isAssocOf($value, static::isCls(...));
     }
 
     /**
@@ -265,9 +227,7 @@ trait AssocOfTrait
      */
     public static function isAssocOfIfc(mixed $value): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        static $validator = static::isIfc(...);
-        return static::isAssocOf($value, $validator);
+        return static::isAssocOf($value, static::isIfc(...));
     }
 
     /**
@@ -279,9 +239,7 @@ trait AssocOfTrait
      */
     public static function isAssocOfObjOf(mixed $value, string $class): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        $validator = static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class);
-        return static::isAssocOf($value, $validator);
+        return static::isAssocOf($value, static fn (mixed $itemValue): bool => static::isObjOf($itemValue, $class));
     }
 
     /**
@@ -293,8 +251,6 @@ trait AssocOfTrait
      */
     public static function isAssocOfClsOf(mixed $value, string $class): bool
     {
-        /** @var \Closure(mixed): bool $validator */
-        $validator = static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class);
-        return static::isAssocOf($value, $validator);
+        return static::isAssocOf($value, static fn (mixed $itemValue): bool => static::isClsOf($itemValue, $class));
     }
 }

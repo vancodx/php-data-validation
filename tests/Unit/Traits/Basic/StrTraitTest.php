@@ -7,7 +7,7 @@ use ArrayObject;
 use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\Support\MyArrayObject1;
 use Tests\Support\MyArrayObject2;
-use Tests\Unit\BasicTestCase;
+use Tests\Unit\Traits\BasicTestCase;
 use VanCodX\Data\Validation\Validation as V;
 
 class StrTraitTest extends BasicTestCase
