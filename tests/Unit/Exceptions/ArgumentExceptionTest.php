@@ -79,4 +79,38 @@ class ArgumentExceptionTest extends TestCase
 
         $this->assertSame(['first_name5' => 'Sailor', 'second_name5' => 'Moon'], $exception->getValueInfo());
     }
+
+    /**
+     * @return void
+     */
+    public function testArgumentException6(): void
+    {
+        $this->expectExceptionObjectOnCall(
+            new InvalidArgumentException('Argument "valueInfo" is invalid.'),
+            static function (): void {
+                new ArgumentException('');
+            }
+        );
+
+        $this->expectExceptionObjectOnCall(
+            new InvalidArgumentException('Argument "valueInfo" is invalid.'),
+            static function (): void {
+                new ArgumentException([]);
+            }
+        );
+
+        $this->expectExceptionObjectOnCall(
+            new InvalidArgumentException('Argument "valueInfo" is invalid.'),
+            static function (): void {
+                new ArgumentException(['']);
+            }
+        );
+
+        $this->expectExceptionObjectOnCall(
+            new InvalidArgumentException('Argument "valueInfo" is invalid.'),
+            static function (): void {
+                new ArgumentException(['' => 'Sailor Moon']);
+            }
+        );
+    }
 }
