@@ -8,7 +8,7 @@ use Tests\Support\MyArrayObject1;
 use Tests\Support\MyArrayObject2;
 use VanCodX\Testing\PHPUnit\TestCase;
 
-abstract class BasicTestCase extends TestCase
+abstract class BasicTraitsTestCase extends TestCase
 {
     /**
      * @return list<mixed>
