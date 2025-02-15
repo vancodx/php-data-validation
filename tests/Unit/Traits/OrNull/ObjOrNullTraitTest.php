@@ -2,9 +2,9 @@
 
 namespace Tests\Unit\Traits\OrNull;
 
-use Tests\Unit\Traits\OrNullTestCase;
+use Tests\Unit\Traits\OrNullTraitsTestCase;
 
-class ObjOrNullTraitTest extends OrNullTestCase
+class ObjOrNullTraitTest extends OrNullTraitsTestCase
 {
     /**
      * @return void

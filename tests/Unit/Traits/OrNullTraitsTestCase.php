@@ -7,7 +7,7 @@ use Mockery;
 use VanCodX\Data\Validation\Validation as V;
 use VanCodX\Testing\PHPUnit\MockeryTestCase;
 
-abstract class OrNullTestCase extends MockeryTestCase
+abstract class OrNullTraitsTestCase extends MockeryTestCase
 {
     /**
      * @param string $name
