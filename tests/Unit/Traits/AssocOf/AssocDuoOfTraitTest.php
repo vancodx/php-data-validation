@@ -2,9 +2,9 @@
 
 namespace Tests\Unit\Traits\AssocOf;
 
-use Tests\Unit\Traits\ArrOfTestCase;
+use Tests\Unit\Traits\ArrOfTraitsTestCase;
 
-class AssocDuoOfTraitTest extends ArrOfTestCase
+class AssocDuoOfTraitTest extends ArrOfTraitsTestCase
 {
     /**
      * @return void
