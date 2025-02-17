@@ -2,9 +2,9 @@
 
 namespace Tests\Unit\Traits\ArrOf;
 
-use Tests\Unit\Traits\ArrOfTestCase;
+use Tests\Unit\Traits\ArrOfTraitsTestCase;
 
-class ArrSoloOfTraitTest extends ArrOfTestCase
+class ArrSoloOfTraitTest extends ArrOfTraitsTestCase
 {
     /**
      * @return void

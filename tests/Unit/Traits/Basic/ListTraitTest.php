@@ -3,10 +3,10 @@
 namespace Tests\Unit\Traits\Basic;
 
 use PHPUnit\Framework\Attributes\DataProvider;
-use Tests\Unit\Traits\BasicTestCase;
+use Tests\Unit\Traits\BasicTraitsTestCase;
 use VanCodX\Data\Validation\Validation as V;
 
-class ListTraitTest extends BasicTestCase
+class ListTraitTest extends BasicTraitsTestCase
 {
     /**
      * @return list<array{0: mixed, 1: bool}>

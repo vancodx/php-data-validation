@@ -5,12 +5,12 @@ namespace Tests\Unit\Traits\Basic;
 use ArrayAccess;
 use ArrayObject;
 use PHPUnit\Framework\Attributes\DataProvider;
-use Tests\Support\MyArrayObject1;
-use Tests\Support\MyArrayObject2;
-use Tests\Unit\Traits\BasicTestCase;
+use Tests\Unit\Samples\MyArrayObject1;
+use Tests\Unit\Samples\MyArrayObject2;
+use Tests\Unit\Traits\BasicTraitsTestCase;
 use VanCodX\Data\Validation\Validation as V;
 
-class StrTraitTest extends BasicTestCase
+class StrTraitTest extends BasicTraitsTestCase
 {
     /**
      * @return list<array{0: mixed, 1: bool}>

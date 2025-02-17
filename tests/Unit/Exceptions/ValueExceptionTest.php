@@ -2,6 +2,7 @@
 
 namespace Tests\Unit\Exceptions;
 
+use InvalidArgumentException;
 use UnexpectedValueException;
 use VanCodX\Data\Validation\Exceptions\ValueException;
 use VanCodX\Testing\PHPUnit\TestCase;
@@ -78,5 +79,39 @@ class ValueExceptionTest extends TestCase
         $this->assertSame($previous, $exception->getPrevious());
 
         $this->assertSame(['first_name5' => 'Sailor', 'second_name5' => 'Moon'], $exception->getValueInfo());
+    }
+
+    /**
+     * @return void
+     */
+    public function testValueException6(): void
+    {
+        $this->expectExceptionObjectOnCall(
+            new InvalidArgumentException('Argument "valueInfo" is invalid.'),
+            static function (): void {
+                new ValueException('');
+            }
+        );
+
+        $this->expectExceptionObjectOnCall(
+            new InvalidArgumentException('Argument "valueInfo" is invalid.'),
+            static function (): void {
+                new ValueException([]);
+            }
+        );
+
+        $this->expectExceptionObjectOnCall(
+            new InvalidArgumentException('Argument "valueInfo" is invalid.'),
+            static function (): void {
+                new ValueException(['']);
+            }
+        );
+
+        $this->expectExceptionObjectOnCall(
+            new InvalidArgumentException('Argument "valueInfo" is invalid.'),
+            static function (): void {
+                new ValueException(['' => 'Sailor Moon']);
+            }
+        );
     }
 }

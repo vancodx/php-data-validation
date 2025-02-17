@@ -7,7 +7,7 @@ use Throwable;
 use VanCodX\Data\Validation\Exceptions\ArgumentException;
 use VanCodX\Data\Validation\Exceptions\ValueException;
 
-trait ExceptionsTrait
+trait ExceptionTrait
 {
     /**
      * @param string|list<string>|array<string, mixed> $valueInfo

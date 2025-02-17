@@ -9,7 +9,7 @@ use ReflectionFunction;
 use VanCodX\Data\Validation\Validation as V;
 use VanCodX\Testing\PHPUnit\MockeryTestCase;
 
-abstract class ArrOfTestCase extends MockeryTestCase
+abstract class ArrOfTraitsTestCase extends MockeryTestCase
 {
     /**
      * @param string $name
