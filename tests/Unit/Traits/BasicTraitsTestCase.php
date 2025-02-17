@@ -4,8 +4,8 @@ namespace Tests\Unit\Traits;
 
 use ArrayAccess;
 use ArrayObject;
-use Tests\Support\MyArrayObject1;
-use Tests\Support\MyArrayObject2;
+use Tests\Unit\Samples\MyArrayObject1;
+use Tests\Unit\Samples\MyArrayObject2;
 use VanCodX\Testing\PHPUnit\TestCase;
 
 abstract class BasicTraitsTestCase extends TestCase

@@ -13,14 +13,9 @@ class PrepareMessageTraitTest extends MockeryTestCase
     /**
      * @return void
      */
-    public function testPrepareMessage(): void
+    public function testPrepareMessage1(): void
     {
-        $mock = Mockery::mock(new class () {
-            use PrepareMessageTrait {
-                prepareNames as public;
-            }
-        });
-        $mock->makePartial();
+        $mock = Mockery::mock(PrepareMessageTraitObject::class)->makePartial();
         $method = new ReflectionMethod($mock, 'prepareMessage');
 
         $mock->expects('prepareNames')->once()->with('name1')->andReturn(['NAME1']);
@@ -48,6 +43,40 @@ class PrepareMessageTraitTest extends MockeryTestCase
         $this->assertSame(
             'Values (FIRST_NAME5, SECOND_NAME5) are ...',
             $method->invoke(null, $singularFormat, $pluralFormat, ['first_name5' => 'Sailor', 'second_name5' => 'Moon'])
+        );
+    }
+
+    /**
+     * @return void
+     */
+    public function testPrepareMessage2(): void
+    {
+        $mock = Mockery::mock(PrepareMessageTrait::class);
+        $mock->makePartial();
+        $method = new ReflectionMethod($mock, 'prepareMessage');
+
+        $singularFormat = 'Value "%s" is ...';
+        $pluralFormat = 'Values (%s) are ...';
+
+        $this->expectExceptionObjectOnCall(
+            new InvalidArgumentException('Argument "singularFormat" is invalid.'),
+            static function () use ($method, $pluralFormat): void {
+                $method->invoke(null, '', $pluralFormat, 'name1');
+            }
+        );
+
+        $this->expectExceptionObjectOnCall(
+            new InvalidArgumentException('Argument "pluralFormat" is invalid.'),
+            static function () use ($method, $singularFormat): void {
+                $method->invoke(null, $singularFormat, '', ['first_name2', 'second_name2']);
+            }
+        );
+
+        $this->expectExceptionObjectOnCall(
+            new InvalidArgumentException('Argument "nameSeparator" is invalid.'),
+            static function () use ($method, $singularFormat, $pluralFormat): void {
+                $method->invoke(null, $singularFormat, $pluralFormat, ['name3' => 'Sailor Moon'], '');
+            }
         );
     }
 
