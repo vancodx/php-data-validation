@@ -9,7 +9,7 @@ use VanCodX\Data\Validation\Exceptions\ValueException;
 use VanCodX\Data\Validation\Validation as V;
 use VanCodX\Testing\PHPUnit\TestCase;
 
-class ExceptionsTraitTest extends TestCase
+class ExceptionTraitTest extends TestCase
 {
     /**
      * @return void
