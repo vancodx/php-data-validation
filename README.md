@@ -17,4 +17,16 @@ Usage
 <?php declare(strict_types=1);
 
 use VanCodX\Data\Validation\Validation as V;
+
+/**
+ * @param list<int> $ids
+ * @return void
+ */
+function printIds(array $ids): void
+{
+    if (!V::isListLenOfIntId($ids)) {
+        throw V::newArgumentException(compact('ids'));
+    }
+    echo 'IDs: ', implode(', ', $ids), "\n";
+}
 ```
