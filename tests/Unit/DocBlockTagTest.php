@@ -9,7 +9,7 @@ use ReflectionMethod;
 use VanCodX\Data\Validation\Validation as V;
 use VanCodX\Testing\PHPUnit\TestCase;
 
-class PhpDocTagTest extends TestCase
+class DocBlockTagTest extends TestCase
 {
     /**
      * @var array<string, string|null>
@@ -114,7 +114,7 @@ class PhpDocTagTest extends TestCase
      * @return void
      */
     #[DataProvider('funcNameAndTypeDataProvider')]
-    public function testPhpDocTag(string $funcName, ?string $actualType): void
+    public function testDocBlockTag(string $funcName, ?string $actualType): void
     {
         $match = [];
         /** @var list<string> $patterns */
