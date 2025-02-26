@@ -32,9 +32,9 @@ class DocBlockTagTest extends TestCase
         'NegFloat' => 'float',
         // Num
         'Num' => 'int|float',
-        'UNum' => null,
-        'PosNum' => null,
-        'NegNum' => null,
+        'UNum' => 'non-negative-int|float',
+        'PosNum' => 'positive-int|float',
+        'NegNum' => 'negative-int|float',
         // Str
         'Str' => 'string',
         'StrLen' => 'non-empty-string',

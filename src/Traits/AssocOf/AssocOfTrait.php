@@ -143,6 +143,7 @@ trait AssocOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array<non-empty-string, non-negative-int|float> $value
      */
     public static function isAssocOfUNum(mixed $value): bool
     {
@@ -152,6 +153,7 @@ trait AssocOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array<non-empty-string, positive-int|float> $value
      */
     public static function isAssocOfPosNum(mixed $value): bool
     {
@@ -161,6 +163,7 @@ trait AssocOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array<non-empty-string, negative-int|float> $value
      */
     public static function isAssocOfNegNum(mixed $value): bool
     {

@@ -143,6 +143,7 @@ trait ListLenOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true non-empty-list<non-negative-int|float> $value
      */
     public static function isListLenOfUNum(mixed $value): bool
     {
@@ -152,6 +153,7 @@ trait ListLenOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true non-empty-list<positive-int|float> $value
      */
     public static function isListLenOfPosNum(mixed $value): bool
     {
@@ -161,6 +163,7 @@ trait ListLenOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true non-empty-list<negative-int|float> $value
      */
     public static function isListLenOfNegNum(mixed $value): bool
     {

@@ -143,6 +143,7 @@ trait ArrOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array<non-negative-int|float> $value
      */
     public static function isArrOfUNum(mixed $value): bool
     {
@@ -152,6 +153,7 @@ trait ArrOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array<positive-int|float> $value
      */
     public static function isArrOfPosNum(mixed $value): bool
     {
@@ -161,6 +163,7 @@ trait ArrOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array<negative-int|float> $value
      */
     public static function isArrOfNegNum(mixed $value): bool
     {
