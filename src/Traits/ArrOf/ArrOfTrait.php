@@ -8,6 +8,7 @@ trait ArrOfTrait
      * @param mixed $value
      * @param callable(mixed): bool $validator
      * @return bool
+     * @phpstan-assert-if-true array<mixed> $value
      */
     public static function isArrOf(mixed $value, callable $validator): bool
     {

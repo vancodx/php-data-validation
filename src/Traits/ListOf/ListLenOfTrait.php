@@ -8,6 +8,7 @@ trait ListLenOfTrait
      * @param mixed $value
      * @param callable(mixed): bool $validator
      * @return bool
+     * @phpstan-assert-if-true non-empty-list<mixed> $value
      */
     public static function isListLenOf(mixed $value, callable $validator): bool
     {

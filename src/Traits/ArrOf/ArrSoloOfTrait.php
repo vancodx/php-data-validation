@@ -8,6 +8,7 @@ trait ArrSoloOfTrait
      * @param mixed $value
      * @param callable(mixed): bool $validator
      * @return bool
+     * @phpstan-assert-if-true array{mixed} $value
      */
     public static function isArrSoloOf(mixed $value, callable $validator): bool
     {

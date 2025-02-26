@@ -8,6 +8,7 @@ trait ListTrioOfTrait
      * @param mixed $value
      * @param callable(mixed): bool $validator
      * @return bool
+     * @phpstan-assert-if-true array{0: mixed, 1: mixed, 2: mixed} $value
      */
     public static function isListTrioOf(mixed $value, callable $validator): bool
     {

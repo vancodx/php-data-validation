@@ -8,6 +8,7 @@ trait ListSoloOfTrait
      * @param mixed $value
      * @param callable(mixed): bool $validator
      * @return bool
+     * @phpstan-assert-if-true array{0: mixed} $value
      */
     public static function isListSoloOf(mixed $value, callable $validator): bool
     {

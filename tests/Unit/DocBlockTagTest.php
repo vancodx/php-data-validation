@@ -61,7 +61,7 @@ class DocBlockTagTest extends TestCase
      */
     protected static array $arrayTypeSizeMap = [
         'Arr' => [
-            'Def' => 'array<%TYPE%>',
+            '_' => 'array<%TYPE%>',
             'Len' => 'non-empty-array<%TYPE%>',
             'Solo' => 'array{%TYPE%}',
             'Duo' => 'array{%TYPE%, %TYPE%}',
@@ -69,7 +69,7 @@ class DocBlockTagTest extends TestCase
             'Quad' => 'array{%TYPE%, %TYPE%, %TYPE%, %TYPE%}'
         ],
         'List' => [
-            'Def' => 'list<%TYPE%>',
+            '_' => 'list<%TYPE%>',
             'Len' => 'non-empty-list<%TYPE%>',
             'Solo' => 'array{0: %TYPE%}',
             'Duo' => 'array{0: %TYPE%, 1: %TYPE%}',
@@ -78,7 +78,7 @@ class DocBlockTagTest extends TestCase
         ],
         'Assoc' => [
             // phpcs:disable Generic.Files.LineLength
-            'Def' => 'array<non-empty-string, %TYPE%>',
+            '_' => 'array<non-empty-string, %TYPE%>',
             'Len' => 'non-empty-array<non-empty-string, %TYPE%>',
             'Solo' => 'array{non-empty-string: %TYPE%}',
             'Duo' => 'array{non-empty-string: %TYPE%, non-empty-string: %TYPE%}',
@@ -143,16 +143,14 @@ class DocBlockTagTest extends TestCase
         }
 
         if (array_key_exists('arrayType', $match)) {
-            if (!$expectedType && !array_key_exists('of', $match)) {
+            if (!$expectedType) {
                 $expectedType = 'mixed';
             }
-            if ($expectedType) {
-                $arrayType = $match['arrayType'];
-                $arraySize = (array_key_exists('arraySize', $match) ? $match['arraySize'] : '') ?: 'Def';
-                $expectedType = str_replace('%TYPE%', $expectedType, static::$arrayTypeSizeMap[$arrayType][$arraySize]);
-                if (array_key_exists('orNull', $match)) {
-                    $expectedType .= '|null';
-                }
+            $arrayType = $match['arrayType'];
+            $arraySize = (array_key_exists('arraySize', $match) ? $match['arraySize'] : '') ?: '_';
+            $expectedType = str_replace('%TYPE%', $expectedType, static::$arrayTypeSizeMap[$arrayType][$arraySize]);
+            if (array_key_exists('orNull', $match)) {
+                $expectedType .= '|null';
             }
         }
 

@@ -8,6 +8,7 @@ trait ArrLenOfTrait
      * @param mixed $value
      * @param callable(mixed): bool $validator
      * @return bool
+     * @phpstan-assert-if-true non-empty-array<mixed> $value
      */
     public static function isArrLenOf(mixed $value, callable $validator): bool
     {

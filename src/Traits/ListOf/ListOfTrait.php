@@ -8,6 +8,7 @@ trait ListOfTrait
      * @param mixed $value
      * @param callable(mixed): bool $validator
      * @return bool
+     * @phpstan-assert-if-true list<mixed> $value
      */
     public static function isListOf(mixed $value, callable $validator): bool
     {

@@ -8,6 +8,7 @@ trait ArrDuoOfTrait
      * @param mixed $value
      * @param callable(mixed): bool $validator
      * @return bool
+     * @phpstan-assert-if-true array{mixed, mixed} $value
      */
     public static function isArrDuoOf(mixed $value, callable $validator): bool
     {

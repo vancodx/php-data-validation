@@ -8,6 +8,7 @@ trait ArrQuadOfTrait
      * @param mixed $value
      * @param callable(mixed): bool $validator
      * @return bool
+     * @phpstan-assert-if-true array{mixed, mixed, mixed, mixed} $value
      */
     public static function isArrQuadOf(mixed $value, callable $validator): bool
     {

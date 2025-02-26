@@ -8,6 +8,7 @@ trait AssocTrioOfTrait
      * @param mixed $value
      * @param callable(mixed): bool $validator
      * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: mixed, non-empty-string: mixed, non-empty-string: mixed} $value
      */
     public static function isAssocTrioOf(mixed $value, callable $validator): bool
     {
