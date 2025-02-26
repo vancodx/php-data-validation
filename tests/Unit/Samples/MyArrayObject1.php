@@ -5,7 +5,7 @@ namespace Tests\Unit\Samples;
 use ArrayObject;
 
 /**
- * @template TKey of int|string
+ * @template TKey of array-key
  * @template TValue of mixed
  * @extends ArrayObject<TKey, TValue>
  */
