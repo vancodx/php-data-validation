@@ -101,6 +101,7 @@ trait ArrSoloOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{float} $value
      */
     public static function isArrSoloOfUFloat(mixed $value): bool
     {
@@ -110,6 +111,7 @@ trait ArrSoloOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{float} $value
      */
     public static function isArrSoloOfPosFloat(mixed $value): bool
     {
@@ -119,6 +121,7 @@ trait ArrSoloOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{float} $value
      */
     public static function isArrSoloOfNegFloat(mixed $value): bool
     {

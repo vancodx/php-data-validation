@@ -101,6 +101,7 @@ trait AssocQuadOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: float, non-empty-string: float, non-empty-string: float, non-empty-string: float} $value
      */
     public static function isAssocQuadOfUFloat(mixed $value): bool
     {
@@ -110,6 +111,7 @@ trait AssocQuadOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: float, non-empty-string: float, non-empty-string: float, non-empty-string: float} $value
      */
     public static function isAssocQuadOfPosFloat(mixed $value): bool
     {
@@ -119,6 +121,7 @@ trait AssocQuadOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: float, non-empty-string: float, non-empty-string: float, non-empty-string: float} $value
      */
     public static function isAssocQuadOfNegFloat(mixed $value): bool
     {

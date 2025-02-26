@@ -101,6 +101,7 @@ trait AssocDuoOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: float, non-empty-string: float} $value
      */
     public static function isAssocDuoOfUFloat(mixed $value): bool
     {
@@ -110,6 +111,7 @@ trait AssocDuoOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: float, non-empty-string: float} $value
      */
     public static function isAssocDuoOfPosFloat(mixed $value): bool
     {
@@ -119,6 +121,7 @@ trait AssocDuoOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: float, non-empty-string: float} $value
      */
     public static function isAssocDuoOfNegFloat(mixed $value): bool
     {

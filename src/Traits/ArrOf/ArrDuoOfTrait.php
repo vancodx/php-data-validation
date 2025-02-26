@@ -101,6 +101,7 @@ trait ArrDuoOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{float, float} $value
      */
     public static function isArrDuoOfUFloat(mixed $value): bool
     {
@@ -110,6 +111,7 @@ trait ArrDuoOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{float, float} $value
      */
     public static function isArrDuoOfPosFloat(mixed $value): bool
     {
@@ -119,6 +121,7 @@ trait ArrDuoOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{float, float} $value
      */
     public static function isArrDuoOfNegFloat(mixed $value): bool
     {

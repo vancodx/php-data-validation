@@ -101,6 +101,7 @@ trait ListLenOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true non-empty-list<float> $value
      */
     public static function isListLenOfUFloat(mixed $value): bool
     {
@@ -110,6 +111,7 @@ trait ListLenOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true non-empty-list<float> $value
      */
     public static function isListLenOfPosFloat(mixed $value): bool
     {
@@ -119,6 +121,7 @@ trait ListLenOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true non-empty-list<float> $value
      */
     public static function isListLenOfNegFloat(mixed $value): bool
     {

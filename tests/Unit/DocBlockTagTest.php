@@ -27,9 +27,9 @@ class DocBlockTagTest extends TestCase
         'IntId' => 'positive-int',
         // Float
         'Float' => 'float',
-        'UFloat' => null,
-        'PosFloat' => null,
-        'NegFloat' => null,
+        'UFloat' => 'float',
+        'PosFloat' => 'float',
+        'NegFloat' => 'float',
         // Num
         'Num' => 'int|float',
         'UNum' => null,

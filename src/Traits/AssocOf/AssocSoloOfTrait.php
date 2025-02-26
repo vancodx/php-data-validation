@@ -101,6 +101,7 @@ trait AssocSoloOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: float} $value
      */
     public static function isAssocSoloOfUFloat(mixed $value): bool
     {
@@ -110,6 +111,7 @@ trait AssocSoloOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: float} $value
      */
     public static function isAssocSoloOfPosFloat(mixed $value): bool
     {
@@ -119,6 +121,7 @@ trait AssocSoloOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: float} $value
      */
     public static function isAssocSoloOfNegFloat(mixed $value): bool
     {

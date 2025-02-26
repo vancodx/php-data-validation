@@ -101,6 +101,7 @@ trait ArrLenOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true non-empty-array<float> $value
      */
     public static function isArrLenOfUFloat(mixed $value): bool
     {
@@ -110,6 +111,7 @@ trait ArrLenOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true non-empty-array<float> $value
      */
     public static function isArrLenOfPosFloat(mixed $value): bool
     {
@@ -119,6 +121,7 @@ trait ArrLenOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true non-empty-array<float> $value
      */
     public static function isArrLenOfNegFloat(mixed $value): bool
     {

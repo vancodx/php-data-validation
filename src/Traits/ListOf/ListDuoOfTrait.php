@@ -101,6 +101,7 @@ trait ListDuoOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{0: float, 1: float} $value
      */
     public static function isListDuoOfUFloat(mixed $value): bool
     {
@@ -110,6 +111,7 @@ trait ListDuoOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{0: float, 1: float} $value
      */
     public static function isListDuoOfPosFloat(mixed $value): bool
     {
@@ -119,6 +121,7 @@ trait ListDuoOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{0: float, 1: float} $value
      */
     public static function isListDuoOfNegFloat(mixed $value): bool
     {

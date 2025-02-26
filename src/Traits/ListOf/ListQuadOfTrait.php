@@ -101,6 +101,7 @@ trait ListQuadOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{0: float, 1: float, 2: float, 3: float} $value
      */
     public static function isListQuadOfUFloat(mixed $value): bool
     {
@@ -110,6 +111,7 @@ trait ListQuadOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{0: float, 1: float, 2: float, 3: float} $value
      */
     public static function isListQuadOfPosFloat(mixed $value): bool
     {
@@ -119,6 +121,7 @@ trait ListQuadOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{0: float, 1: float, 2: float, 3: float} $value
      */
     public static function isListQuadOfNegFloat(mixed $value): bool
     {

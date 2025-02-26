@@ -101,6 +101,7 @@ trait ArrTrioOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{float, float, float} $value
      */
     public static function isArrTrioOfUFloat(mixed $value): bool
     {
@@ -110,6 +111,7 @@ trait ArrTrioOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{float, float, float} $value
      */
     public static function isArrTrioOfPosFloat(mixed $value): bool
     {
@@ -119,6 +121,7 @@ trait ArrTrioOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{float, float, float} $value
      */
     public static function isArrTrioOfNegFloat(mixed $value): bool
     {

@@ -101,6 +101,7 @@ trait ListOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true list<float> $value
      */
     public static function isListOfUFloat(mixed $value): bool
     {
@@ -110,6 +111,7 @@ trait ListOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true list<float> $value
      */
     public static function isListOfPosFloat(mixed $value): bool
     {
@@ -119,6 +121,7 @@ trait ListOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true list<float> $value
      */
     public static function isListOfNegFloat(mixed $value): bool
     {
