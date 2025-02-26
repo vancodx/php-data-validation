@@ -8,6 +8,7 @@ trait ListSoloOfTrait
      * @param mixed $value
      * @param callable(mixed): bool $validator
      * @return bool
+     * @phpstan-assert-if-true array{0: mixed} $value
      */
     public static function isListSoloOf(mixed $value, callable $validator): bool
     {
@@ -101,6 +102,7 @@ trait ListSoloOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{0: float} $value
      */
     public static function isListSoloOfUFloat(mixed $value): bool
     {
@@ -110,6 +112,7 @@ trait ListSoloOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{0: float} $value
      */
     public static function isListSoloOfPosFloat(mixed $value): bool
     {
@@ -119,6 +122,7 @@ trait ListSoloOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{0: float} $value
      */
     public static function isListSoloOfNegFloat(mixed $value): bool
     {
@@ -140,6 +144,7 @@ trait ListSoloOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{0: non-negative-int|float} $value
      */
     public static function isListSoloOfUNum(mixed $value): bool
     {
@@ -149,6 +154,7 @@ trait ListSoloOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{0: positive-int|float} $value
      */
     public static function isListSoloOfPosNum(mixed $value): bool
     {
@@ -158,6 +164,7 @@ trait ListSoloOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{0: negative-int|float} $value
      */
     public static function isListSoloOfNegNum(mixed $value): bool
     {

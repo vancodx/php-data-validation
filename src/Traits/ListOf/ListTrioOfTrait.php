@@ -8,6 +8,7 @@ trait ListTrioOfTrait
      * @param mixed $value
      * @param callable(mixed): bool $validator
      * @return bool
+     * @phpstan-assert-if-true array{0: mixed, 1: mixed, 2: mixed} $value
      */
     public static function isListTrioOf(mixed $value, callable $validator): bool
     {
@@ -101,6 +102,7 @@ trait ListTrioOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{0: float, 1: float, 2: float} $value
      */
     public static function isListTrioOfUFloat(mixed $value): bool
     {
@@ -110,6 +112,7 @@ trait ListTrioOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{0: float, 1: float, 2: float} $value
      */
     public static function isListTrioOfPosFloat(mixed $value): bool
     {
@@ -119,6 +122,7 @@ trait ListTrioOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{0: float, 1: float, 2: float} $value
      */
     public static function isListTrioOfNegFloat(mixed $value): bool
     {
@@ -140,6 +144,7 @@ trait ListTrioOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{0: non-negative-int|float, 1: non-negative-int|float, 2: non-negative-int|float} $value
      */
     public static function isListTrioOfUNum(mixed $value): bool
     {
@@ -149,6 +154,7 @@ trait ListTrioOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{0: positive-int|float, 1: positive-int|float, 2: positive-int|float} $value
      */
     public static function isListTrioOfPosNum(mixed $value): bool
     {
@@ -158,6 +164,7 @@ trait ListTrioOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{0: negative-int|float, 1: negative-int|float, 2: negative-int|float} $value
      */
     public static function isListTrioOfNegNum(mixed $value): bool
     {

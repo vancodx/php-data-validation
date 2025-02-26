@@ -17,6 +17,7 @@ trait NumTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true non-negative-int|float $value
      */
     public static function isUNum(mixed $value): bool
     {
@@ -26,6 +27,7 @@ trait NumTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true positive-int|float $value
      */
     public static function isPosNum(mixed $value): bool
     {
@@ -35,6 +37,7 @@ trait NumTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true negative-int|float $value
      */
     public static function isNegNum(mixed $value): bool
     {

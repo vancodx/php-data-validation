@@ -9,7 +9,7 @@ use ReflectionMethod;
 use VanCodX\Data\Validation\Validation as V;
 use VanCodX\Testing\PHPUnit\TestCase;
 
-class PhpDocTagTest extends TestCase
+class DocBlockTagTest extends TestCase
 {
     /**
      * @var array<string, string|null>
@@ -27,14 +27,14 @@ class PhpDocTagTest extends TestCase
         'IntId' => 'positive-int',
         // Float
         'Float' => 'float',
-        'UFloat' => null,
-        'PosFloat' => null,
-        'NegFloat' => null,
+        'UFloat' => 'float',
+        'PosFloat' => 'float',
+        'NegFloat' => 'float',
         // Num
         'Num' => 'int|float',
-        'UNum' => null,
-        'PosNum' => null,
-        'NegNum' => null,
+        'UNum' => 'non-negative-int|float',
+        'PosNum' => 'positive-int|float',
+        'NegNum' => 'negative-int|float',
         // Str
         'Str' => 'string',
         'StrLen' => 'non-empty-string',
@@ -61,7 +61,7 @@ class PhpDocTagTest extends TestCase
      */
     protected static array $arrayTypeSizeMap = [
         'Arr' => [
-            'Def' => 'array<%TYPE%>',
+            '_' => 'array<%TYPE%>',
             'Len' => 'non-empty-array<%TYPE%>',
             'Solo' => 'array{%TYPE%}',
             'Duo' => 'array{%TYPE%, %TYPE%}',
@@ -69,7 +69,7 @@ class PhpDocTagTest extends TestCase
             'Quad' => 'array{%TYPE%, %TYPE%, %TYPE%, %TYPE%}'
         ],
         'List' => [
-            'Def' => 'list<%TYPE%>',
+            '_' => 'list<%TYPE%>',
             'Len' => 'non-empty-list<%TYPE%>',
             'Solo' => 'array{0: %TYPE%}',
             'Duo' => 'array{0: %TYPE%, 1: %TYPE%}',
@@ -78,7 +78,7 @@ class PhpDocTagTest extends TestCase
         ],
         'Assoc' => [
             // phpcs:disable Generic.Files.LineLength
-            'Def' => 'array<non-empty-string, %TYPE%>',
+            '_' => 'array<non-empty-string, %TYPE%>',
             'Len' => 'non-empty-array<non-empty-string, %TYPE%>',
             'Solo' => 'array{non-empty-string: %TYPE%}',
             'Duo' => 'array{non-empty-string: %TYPE%, non-empty-string: %TYPE%}',
@@ -114,7 +114,7 @@ class PhpDocTagTest extends TestCase
      * @return void
      */
     #[DataProvider('funcNameAndTypeDataProvider')]
-    public function testPhpDocTag(string $funcName, ?string $actualType): void
+    public function testDocBlockTag(string $funcName, ?string $actualType): void
     {
         $match = [];
         /** @var list<string> $patterns */
@@ -143,16 +143,14 @@ class PhpDocTagTest extends TestCase
         }
 
         if (array_key_exists('arrayType', $match)) {
-            if (!$expectedType && !array_key_exists('of', $match)) {
+            if (!$expectedType) {
                 $expectedType = 'mixed';
             }
-            if ($expectedType) {
-                $arrayType = $match['arrayType'];
-                $arraySize = (array_key_exists('arraySize', $match) ? $match['arraySize'] : '') ?: 'Def';
-                $expectedType = str_replace('%TYPE%', $expectedType, static::$arrayTypeSizeMap[$arrayType][$arraySize]);
-                if (array_key_exists('orNull', $match)) {
-                    $expectedType .= '|null';
-                }
+            $arrayType = $match['arrayType'];
+            $arraySize = (array_key_exists('arraySize', $match) ? $match['arraySize'] : '') ?: '_';
+            $expectedType = str_replace('%TYPE%', $expectedType, static::$arrayTypeSizeMap[$arrayType][$arraySize]);
+            if (array_key_exists('orNull', $match)) {
+                $expectedType .= '|null';
             }
         }
 

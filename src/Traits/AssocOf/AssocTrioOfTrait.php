@@ -8,6 +8,7 @@ trait AssocTrioOfTrait
      * @param mixed $value
      * @param callable(mixed): bool $validator
      * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: mixed, non-empty-string: mixed, non-empty-string: mixed} $value
      */
     public static function isAssocTrioOf(mixed $value, callable $validator): bool
     {
@@ -101,6 +102,7 @@ trait AssocTrioOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: float, non-empty-string: float, non-empty-string: float} $value
      */
     public static function isAssocTrioOfUFloat(mixed $value): bool
     {
@@ -110,6 +112,7 @@ trait AssocTrioOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: float, non-empty-string: float, non-empty-string: float} $value
      */
     public static function isAssocTrioOfPosFloat(mixed $value): bool
     {
@@ -119,6 +122,7 @@ trait AssocTrioOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: float, non-empty-string: float, non-empty-string: float} $value
      */
     public static function isAssocTrioOfNegFloat(mixed $value): bool
     {
@@ -140,6 +144,7 @@ trait AssocTrioOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: non-negative-int|float, non-empty-string: non-negative-int|float, non-empty-string: non-negative-int|float} $value
      */
     public static function isAssocTrioOfUNum(mixed $value): bool
     {
@@ -149,6 +154,7 @@ trait AssocTrioOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: positive-int|float, non-empty-string: positive-int|float, non-empty-string: positive-int|float} $value
      */
     public static function isAssocTrioOfPosNum(mixed $value): bool
     {
@@ -158,6 +164,7 @@ trait AssocTrioOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{non-empty-string: negative-int|float, non-empty-string: negative-int|float, non-empty-string: negative-int|float} $value
      */
     public static function isAssocTrioOfNegNum(mixed $value): bool
     {

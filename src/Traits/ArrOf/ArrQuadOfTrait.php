@@ -8,6 +8,7 @@ trait ArrQuadOfTrait
      * @param mixed $value
      * @param callable(mixed): bool $validator
      * @return bool
+     * @phpstan-assert-if-true array{mixed, mixed, mixed, mixed} $value
      */
     public static function isArrQuadOf(mixed $value, callable $validator): bool
     {
@@ -101,6 +102,7 @@ trait ArrQuadOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{float, float, float, float} $value
      */
     public static function isArrQuadOfUFloat(mixed $value): bool
     {
@@ -110,6 +112,7 @@ trait ArrQuadOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{float, float, float, float} $value
      */
     public static function isArrQuadOfPosFloat(mixed $value): bool
     {
@@ -119,6 +122,7 @@ trait ArrQuadOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{float, float, float, float} $value
      */
     public static function isArrQuadOfNegFloat(mixed $value): bool
     {
@@ -140,6 +144,7 @@ trait ArrQuadOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{non-negative-int|float, non-negative-int|float, non-negative-int|float, non-negative-int|float} $value
      */
     public static function isArrQuadOfUNum(mixed $value): bool
     {
@@ -149,6 +154,7 @@ trait ArrQuadOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{positive-int|float, positive-int|float, positive-int|float, positive-int|float} $value
      */
     public static function isArrQuadOfPosNum(mixed $value): bool
     {
@@ -158,6 +164,7 @@ trait ArrQuadOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{negative-int|float, negative-int|float, negative-int|float, negative-int|float} $value
      */
     public static function isArrQuadOfNegNum(mixed $value): bool
     {

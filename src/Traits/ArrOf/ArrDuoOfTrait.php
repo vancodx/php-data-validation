@@ -8,6 +8,7 @@ trait ArrDuoOfTrait
      * @param mixed $value
      * @param callable(mixed): bool $validator
      * @return bool
+     * @phpstan-assert-if-true array{mixed, mixed} $value
      */
     public static function isArrDuoOf(mixed $value, callable $validator): bool
     {
@@ -101,6 +102,7 @@ trait ArrDuoOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{float, float} $value
      */
     public static function isArrDuoOfUFloat(mixed $value): bool
     {
@@ -110,6 +112,7 @@ trait ArrDuoOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{float, float} $value
      */
     public static function isArrDuoOfPosFloat(mixed $value): bool
     {
@@ -119,6 +122,7 @@ trait ArrDuoOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{float, float} $value
      */
     public static function isArrDuoOfNegFloat(mixed $value): bool
     {
@@ -140,6 +144,7 @@ trait ArrDuoOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{non-negative-int|float, non-negative-int|float} $value
      */
     public static function isArrDuoOfUNum(mixed $value): bool
     {
@@ -149,6 +154,7 @@ trait ArrDuoOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{positive-int|float, positive-int|float} $value
      */
     public static function isArrDuoOfPosNum(mixed $value): bool
     {
@@ -158,6 +164,7 @@ trait ArrDuoOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{negative-int|float, negative-int|float} $value
      */
     public static function isArrDuoOfNegNum(mixed $value): bool
     {

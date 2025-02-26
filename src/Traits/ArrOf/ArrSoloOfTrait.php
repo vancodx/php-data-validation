@@ -8,6 +8,7 @@ trait ArrSoloOfTrait
      * @param mixed $value
      * @param callable(mixed): bool $validator
      * @return bool
+     * @phpstan-assert-if-true array{mixed} $value
      */
     public static function isArrSoloOf(mixed $value, callable $validator): bool
     {
@@ -101,6 +102,7 @@ trait ArrSoloOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{float} $value
      */
     public static function isArrSoloOfUFloat(mixed $value): bool
     {
@@ -110,6 +112,7 @@ trait ArrSoloOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{float} $value
      */
     public static function isArrSoloOfPosFloat(mixed $value): bool
     {
@@ -119,6 +122,7 @@ trait ArrSoloOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{float} $value
      */
     public static function isArrSoloOfNegFloat(mixed $value): bool
     {
@@ -140,6 +144,7 @@ trait ArrSoloOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{non-negative-int|float} $value
      */
     public static function isArrSoloOfUNum(mixed $value): bool
     {
@@ -149,6 +154,7 @@ trait ArrSoloOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{positive-int|float} $value
      */
     public static function isArrSoloOfPosNum(mixed $value): bool
     {
@@ -158,6 +164,7 @@ trait ArrSoloOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true array{negative-int|float} $value
      */
     public static function isArrSoloOfNegNum(mixed $value): bool
     {

@@ -8,6 +8,7 @@ trait ArrLenOfTrait
      * @param mixed $value
      * @param callable(mixed): bool $validator
      * @return bool
+     * @phpstan-assert-if-true non-empty-array<mixed> $value
      */
     public static function isArrLenOf(mixed $value, callable $validator): bool
     {
@@ -101,6 +102,7 @@ trait ArrLenOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true non-empty-array<float> $value
      */
     public static function isArrLenOfUFloat(mixed $value): bool
     {
@@ -110,6 +112,7 @@ trait ArrLenOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true non-empty-array<float> $value
      */
     public static function isArrLenOfPosFloat(mixed $value): bool
     {
@@ -119,6 +122,7 @@ trait ArrLenOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true non-empty-array<float> $value
      */
     public static function isArrLenOfNegFloat(mixed $value): bool
     {
@@ -140,6 +144,7 @@ trait ArrLenOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true non-empty-array<non-negative-int|float> $value
      */
     public static function isArrLenOfUNum(mixed $value): bool
     {
@@ -149,6 +154,7 @@ trait ArrLenOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true non-empty-array<positive-int|float> $value
      */
     public static function isArrLenOfPosNum(mixed $value): bool
     {
@@ -158,6 +164,7 @@ trait ArrLenOfTrait
     /**
      * @param mixed $value
      * @return bool
+     * @phpstan-assert-if-true non-empty-array<negative-int|float> $value
      */
     public static function isArrLenOfNegNum(mixed $value): bool
     {
