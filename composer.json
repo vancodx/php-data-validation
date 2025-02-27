@@ -4,7 +4,9 @@
   "keywords": [
     "vancodx",
     "data",
-    "validation"
+    "validation",
+    "phpstan",
+    "static analysis"
   ],
   "type": "library",
   "license": "MIT",

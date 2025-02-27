@@ -3,7 +3,7 @@
 namespace Tests\Unit\Samples;
 
 /**
- * @template TKey of int|string
+ * @template TKey of array-key
  * @template TValue of mixed
  * @extends MyArrayObject1<TKey, TValue>
  */
