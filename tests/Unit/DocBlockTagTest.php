@@ -102,8 +102,8 @@ class DocBlockTagTest extends TestCase
             $docComment = $method->getDocComment();
             return [
                 $method->getName(),
-                $docComment && preg_match('~@phpstan-assert-if-true (?<type>[^$]+) \$value\n~', $docComment, $match)
-                    ? $match['type'] : null
+                $docComment && preg_match('~@phpstan-assert-if-true ([^$]+) \$value\n~', $docComment, $match)
+                    ? $match[1] : null
             ];
         }, $methods);
     }
