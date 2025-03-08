@@ -1,9 +1,9 @@
 VanCodX PHP Data Validation
 ===========================
 
-This library contains a set of static methods for validation the type of arguments and variables of functions and methods.
-The main goal is to improve the quality of data validation and static analysis.
-Each validation method contains a PHPStan tag in its DocBlock comment to narrow the type of "value" argument.
+This library contains a set of static methods for validation the type of arguments and variables of functions and
+methods. The main goal is to improve the quality of data validation and static analysis. Each validation method contains
+a PHPStan tag in its DocBlock comment to narrow the type of "value" argument.
 
 Installation
 ------------
