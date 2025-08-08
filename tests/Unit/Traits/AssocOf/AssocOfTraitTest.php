@@ -11,7 +11,7 @@ class AssocOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocOf(): void
     {
-        $this->checkArrOfFunction(__FUNCTION__);
+        $this->checkIsArrOfFunction(__FUNCTION__);
     }
 
     // ========== BOOL ========================================================== //
@@ -21,7 +21,7 @@ class AssocOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocOfBool(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== INT =========================================================== //
@@ -31,7 +31,7 @@ class AssocOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocOfInt(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -39,7 +39,7 @@ class AssocOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocOfUInt(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -47,7 +47,7 @@ class AssocOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocOfPosInt(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -55,7 +55,7 @@ class AssocOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocOfNegInt(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -63,7 +63,7 @@ class AssocOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocOfIntId(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== FLOAT ========================================================= //
@@ -73,7 +73,7 @@ class AssocOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocOfFloat(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -81,7 +81,7 @@ class AssocOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocOfUFloat(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -89,7 +89,7 @@ class AssocOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocOfPosFloat(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -97,7 +97,7 @@ class AssocOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocOfNegFloat(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== NUM =========================================================== //
@@ -107,7 +107,7 @@ class AssocOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocOfNum(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -115,7 +115,7 @@ class AssocOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocOfUNum(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -123,7 +123,7 @@ class AssocOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocOfPosNum(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -131,7 +131,7 @@ class AssocOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocOfNegNum(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== STR =========================================================== //
@@ -141,7 +141,7 @@ class AssocOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocOfStr(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -149,7 +149,7 @@ class AssocOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocOfStrLen(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== MISC ========================================================== //
@@ -159,7 +159,7 @@ class AssocOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocOfRes(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== OBJ =========================================================== //
@@ -169,7 +169,7 @@ class AssocOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocOfObj(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -177,7 +177,7 @@ class AssocOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocOfCls(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -185,7 +185,7 @@ class AssocOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocOfIfc(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -193,7 +193,7 @@ class AssocOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocOfObjOf(): void
     {
-        $this->checkArrOfSthOfFunction(__FUNCTION__);
+        $this->checkIsArrOfSthOfFunction(__FUNCTION__);
     }
 
     /**
@@ -201,6 +201,6 @@ class AssocOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocOfClsOf(): void
     {
-        $this->checkArrOfSthOfFunction(__FUNCTION__);
+        $this->checkIsArrOfSthOfFunction(__FUNCTION__);
     }
 }

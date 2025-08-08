@@ -11,7 +11,7 @@ class StrOrNullTraitTest extends OrNullTraitsTestCase
      */
     public function testIsStrOrNull(): void
     {
-        $this->checkSthOrNullFunction(__FUNCTION__);
+        $this->checkIsSthOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -19,7 +19,7 @@ class StrOrNullTraitTest extends OrNullTraitsTestCase
      */
     public function testIsStrLenOrNull(): void
     {
-        $this->checkSthOrNullFunction(__FUNCTION__);
+        $this->checkIsSthOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -27,6 +27,6 @@ class StrOrNullTraitTest extends OrNullTraitsTestCase
      */
     public function testIsEmptyStrOrNull(): void
     {
-        $this->checkSthOrNullFunction(__FUNCTION__);
+        $this->checkIsSthOrNullFunction(__FUNCTION__);
     }
 }

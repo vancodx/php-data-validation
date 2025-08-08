@@ -11,6 +11,6 @@ class MiscOrNullTraitTest extends OrNullTraitsTestCase
      */
     public function testIsResOrNull(): void
     {
-        $this->checkSthOrNullFunction(__FUNCTION__);
+        $this->checkIsSthOrNullFunction(__FUNCTION__);
     }
 }

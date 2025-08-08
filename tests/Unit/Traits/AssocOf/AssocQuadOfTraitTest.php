@@ -11,7 +11,7 @@ class AssocQuadOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocQuadOf(): void
     {
-        $this->checkArrOfFunction(__FUNCTION__);
+        $this->checkIsArrOfFunction(__FUNCTION__);
     }
 
     // ========== BOOL ========================================================== //
@@ -21,7 +21,7 @@ class AssocQuadOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocQuadOfBool(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== INT =========================================================== //
@@ -31,7 +31,7 @@ class AssocQuadOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocQuadOfInt(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -39,7 +39,7 @@ class AssocQuadOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocQuadOfUInt(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -47,7 +47,7 @@ class AssocQuadOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocQuadOfPosInt(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -55,7 +55,7 @@ class AssocQuadOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocQuadOfNegInt(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -63,7 +63,7 @@ class AssocQuadOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocQuadOfIntId(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== FLOAT ========================================================= //
@@ -73,7 +73,7 @@ class AssocQuadOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocQuadOfFloat(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -81,7 +81,7 @@ class AssocQuadOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocQuadOfUFloat(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -89,7 +89,7 @@ class AssocQuadOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocQuadOfPosFloat(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -97,7 +97,7 @@ class AssocQuadOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocQuadOfNegFloat(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== NUM =========================================================== //
@@ -107,7 +107,7 @@ class AssocQuadOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocQuadOfNum(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -115,7 +115,7 @@ class AssocQuadOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocQuadOfUNum(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -123,7 +123,7 @@ class AssocQuadOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocQuadOfPosNum(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -131,7 +131,7 @@ class AssocQuadOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocQuadOfNegNum(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== STR =========================================================== //
@@ -141,7 +141,7 @@ class AssocQuadOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocQuadOfStr(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -149,7 +149,7 @@ class AssocQuadOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocQuadOfStrLen(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== MISC ========================================================== //
@@ -159,7 +159,7 @@ class AssocQuadOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocQuadOfRes(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== OBJ =========================================================== //
@@ -169,7 +169,7 @@ class AssocQuadOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocQuadOfObj(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -177,7 +177,7 @@ class AssocQuadOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocQuadOfCls(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -185,7 +185,7 @@ class AssocQuadOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocQuadOfIfc(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -193,7 +193,7 @@ class AssocQuadOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocQuadOfObjOf(): void
     {
-        $this->checkArrOfSthOfFunction(__FUNCTION__);
+        $this->checkIsArrOfSthOfFunction(__FUNCTION__);
     }
 
     /**
@@ -201,6 +201,6 @@ class AssocQuadOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocQuadOfClsOf(): void
     {
-        $this->checkArrOfSthOfFunction(__FUNCTION__);
+        $this->checkIsArrOfSthOfFunction(__FUNCTION__);
     }
 }

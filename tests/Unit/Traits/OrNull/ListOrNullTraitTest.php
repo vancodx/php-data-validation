@@ -11,7 +11,7 @@ class ListOrNullTraitTest extends OrNullTraitsTestCase
      */
     public function testIsListOrNull(): void
     {
-        $this->checkSthOrNullFunction(__FUNCTION__);
+        $this->checkIsSthOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -19,7 +19,7 @@ class ListOrNullTraitTest extends OrNullTraitsTestCase
      */
     public function testIsListLenOrNull(): void
     {
-        $this->checkSthOrNullFunction(__FUNCTION__);
+        $this->checkIsSthOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -27,7 +27,7 @@ class ListOrNullTraitTest extends OrNullTraitsTestCase
      */
     public function testIsEmptyListOrNull(): void
     {
-        $this->checkSthOrNullFunction(__FUNCTION__);
+        $this->checkIsSthOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -35,7 +35,7 @@ class ListOrNullTraitTest extends OrNullTraitsTestCase
      */
     public function testIsListSoloOrNull(): void
     {
-        $this->checkSthOrNullFunction(__FUNCTION__);
+        $this->checkIsSthOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -43,7 +43,7 @@ class ListOrNullTraitTest extends OrNullTraitsTestCase
      */
     public function testIsListDuoOrNull(): void
     {
-        $this->checkSthOrNullFunction(__FUNCTION__);
+        $this->checkIsSthOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -51,7 +51,7 @@ class ListOrNullTraitTest extends OrNullTraitsTestCase
      */
     public function testIsListTrioOrNull(): void
     {
-        $this->checkSthOrNullFunction(__FUNCTION__);
+        $this->checkIsSthOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -59,6 +59,6 @@ class ListOrNullTraitTest extends OrNullTraitsTestCase
      */
     public function testIsListQuadOrNull(): void
     {
-        $this->checkSthOrNullFunction(__FUNCTION__);
+        $this->checkIsSthOrNullFunction(__FUNCTION__);
     }
 }

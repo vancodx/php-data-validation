@@ -11,7 +11,7 @@ class ListSoloOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsListSoloOf(): void
     {
-        $this->checkArrOfFunction(__FUNCTION__);
+        $this->checkIsArrOfFunction(__FUNCTION__);
     }
 
     // ========== BOOL ========================================================== //
@@ -21,7 +21,7 @@ class ListSoloOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsListSoloOfBool(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== INT =========================================================== //
@@ -31,7 +31,7 @@ class ListSoloOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsListSoloOfInt(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -39,7 +39,7 @@ class ListSoloOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsListSoloOfUInt(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -47,7 +47,7 @@ class ListSoloOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsListSoloOfPosInt(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -55,7 +55,7 @@ class ListSoloOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsListSoloOfNegInt(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -63,7 +63,7 @@ class ListSoloOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsListSoloOfIntId(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== FLOAT ========================================================= //
@@ -73,7 +73,7 @@ class ListSoloOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsListSoloOfFloat(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -81,7 +81,7 @@ class ListSoloOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsListSoloOfUFloat(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -89,7 +89,7 @@ class ListSoloOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsListSoloOfPosFloat(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -97,7 +97,7 @@ class ListSoloOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsListSoloOfNegFloat(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== NUM =========================================================== //
@@ -107,7 +107,7 @@ class ListSoloOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsListSoloOfNum(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -115,7 +115,7 @@ class ListSoloOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsListSoloOfUNum(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -123,7 +123,7 @@ class ListSoloOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsListSoloOfPosNum(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -131,7 +131,7 @@ class ListSoloOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsListSoloOfNegNum(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== STR =========================================================== //
@@ -141,7 +141,7 @@ class ListSoloOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsListSoloOfStr(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -149,7 +149,7 @@ class ListSoloOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsListSoloOfStrLen(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== MISC ========================================================== //
@@ -159,7 +159,7 @@ class ListSoloOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsListSoloOfRes(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== OBJ =========================================================== //
@@ -169,7 +169,7 @@ class ListSoloOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsListSoloOfObj(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -177,7 +177,7 @@ class ListSoloOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsListSoloOfCls(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -185,7 +185,7 @@ class ListSoloOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsListSoloOfIfc(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -193,7 +193,7 @@ class ListSoloOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsListSoloOfObjOf(): void
     {
-        $this->checkArrOfSthOfFunction(__FUNCTION__);
+        $this->checkIsArrOfSthOfFunction(__FUNCTION__);
     }
 
     /**
@@ -201,6 +201,6 @@ class ListSoloOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsListSoloOfClsOf(): void
     {
-        $this->checkArrOfSthOfFunction(__FUNCTION__);
+        $this->checkIsArrOfSthOfFunction(__FUNCTION__);
     }
 }
