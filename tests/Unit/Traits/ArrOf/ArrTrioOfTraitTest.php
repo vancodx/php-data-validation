@@ -11,7 +11,7 @@ class ArrTrioOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsArrTrioOf(): void
     {
-        $this->checkArrOfFunction(__FUNCTION__);
+        $this->checkIsArrOfFunction(__FUNCTION__);
     }
 
     // ========== BOOL ========================================================== //
@@ -21,7 +21,7 @@ class ArrTrioOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsArrTrioOfBool(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== INT =========================================================== //
@@ -31,7 +31,7 @@ class ArrTrioOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsArrTrioOfInt(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -39,7 +39,7 @@ class ArrTrioOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsArrTrioOfUInt(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -47,7 +47,7 @@ class ArrTrioOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsArrTrioOfPosInt(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -55,7 +55,7 @@ class ArrTrioOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsArrTrioOfNegInt(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -63,7 +63,7 @@ class ArrTrioOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsArrTrioOfIntId(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== FLOAT ========================================================= //
@@ -73,7 +73,7 @@ class ArrTrioOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsArrTrioOfFloat(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -81,7 +81,7 @@ class ArrTrioOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsArrTrioOfUFloat(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -89,7 +89,7 @@ class ArrTrioOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsArrTrioOfPosFloat(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -97,7 +97,7 @@ class ArrTrioOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsArrTrioOfNegFloat(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== NUM =========================================================== //
@@ -107,7 +107,7 @@ class ArrTrioOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsArrTrioOfNum(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -115,7 +115,7 @@ class ArrTrioOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsArrTrioOfUNum(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -123,7 +123,7 @@ class ArrTrioOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsArrTrioOfPosNum(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -131,7 +131,7 @@ class ArrTrioOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsArrTrioOfNegNum(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== STR =========================================================== //
@@ -141,7 +141,7 @@ class ArrTrioOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsArrTrioOfStr(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -149,7 +149,7 @@ class ArrTrioOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsArrTrioOfStrLen(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== MISC ========================================================== //
@@ -159,7 +159,7 @@ class ArrTrioOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsArrTrioOfRes(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== OBJ =========================================================== //
@@ -169,7 +169,7 @@ class ArrTrioOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsArrTrioOfObj(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -177,7 +177,7 @@ class ArrTrioOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsArrTrioOfCls(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -185,7 +185,7 @@ class ArrTrioOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsArrTrioOfIfc(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -193,7 +193,7 @@ class ArrTrioOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsArrTrioOfObjOf(): void
     {
-        $this->checkArrOfSthOfFunction(__FUNCTION__);
+        $this->checkIsArrOfSthOfFunction(__FUNCTION__);
     }
 
     /**
@@ -201,6 +201,6 @@ class ArrTrioOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsArrTrioOfClsOf(): void
     {
-        $this->checkArrOfSthOfFunction(__FUNCTION__);
+        $this->checkIsArrOfSthOfFunction(__FUNCTION__);
     }
 }

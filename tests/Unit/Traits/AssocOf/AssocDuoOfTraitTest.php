@@ -11,7 +11,7 @@ class AssocDuoOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocDuoOf(): void
     {
-        $this->checkArrOfFunction(__FUNCTION__);
+        $this->checkIsArrOfFunction(__FUNCTION__);
     }
 
     // ========== BOOL ========================================================== //
@@ -21,7 +21,7 @@ class AssocDuoOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocDuoOfBool(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== INT =========================================================== //
@@ -31,7 +31,7 @@ class AssocDuoOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocDuoOfInt(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -39,7 +39,7 @@ class AssocDuoOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocDuoOfUInt(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -47,7 +47,7 @@ class AssocDuoOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocDuoOfPosInt(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -55,7 +55,7 @@ class AssocDuoOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocDuoOfNegInt(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -63,7 +63,7 @@ class AssocDuoOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocDuoOfIntId(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== FLOAT ========================================================= //
@@ -73,7 +73,7 @@ class AssocDuoOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocDuoOfFloat(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -81,7 +81,7 @@ class AssocDuoOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocDuoOfUFloat(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -89,7 +89,7 @@ class AssocDuoOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocDuoOfPosFloat(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -97,7 +97,7 @@ class AssocDuoOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocDuoOfNegFloat(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== NUM =========================================================== //
@@ -107,7 +107,7 @@ class AssocDuoOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocDuoOfNum(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -115,7 +115,7 @@ class AssocDuoOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocDuoOfUNum(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -123,7 +123,7 @@ class AssocDuoOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocDuoOfPosNum(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -131,7 +131,7 @@ class AssocDuoOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocDuoOfNegNum(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== STR =========================================================== //
@@ -141,7 +141,7 @@ class AssocDuoOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocDuoOfStr(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -149,7 +149,7 @@ class AssocDuoOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocDuoOfStrLen(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== MISC ========================================================== //
@@ -159,7 +159,7 @@ class AssocDuoOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocDuoOfRes(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     // ========== OBJ =========================================================== //
@@ -169,7 +169,7 @@ class AssocDuoOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocDuoOfObj(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -177,7 +177,7 @@ class AssocDuoOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocDuoOfCls(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -185,7 +185,7 @@ class AssocDuoOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocDuoOfIfc(): void
     {
-        $this->checkArrOfSthFunction(__FUNCTION__);
+        $this->checkIsArrOfSthFunction(__FUNCTION__);
     }
 
     /**
@@ -193,7 +193,7 @@ class AssocDuoOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocDuoOfObjOf(): void
     {
-        $this->checkArrOfSthOfFunction(__FUNCTION__);
+        $this->checkIsArrOfSthOfFunction(__FUNCTION__);
     }
 
     /**
@@ -201,6 +201,6 @@ class AssocDuoOfTraitTest extends ArrOfTraitsTestCase
      */
     public function testIsAssocDuoOfClsOf(): void
     {
-        $this->checkArrOfSthOfFunction(__FUNCTION__);
+        $this->checkIsArrOfSthOfFunction(__FUNCTION__);
     }
 }
