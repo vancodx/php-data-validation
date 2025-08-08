@@ -11,7 +11,7 @@ class NumOrNullTraitTest extends OrNullTraitsTestCase
      */
     public function testIsNumOrNull(): void
     {
-        $this->checkSthOrNullFunction(__FUNCTION__);
+        $this->checkIsSthOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -19,7 +19,7 @@ class NumOrNullTraitTest extends OrNullTraitsTestCase
      */
     public function testIsUNumOrNull(): void
     {
-        $this->checkSthOrNullFunction(__FUNCTION__);
+        $this->checkIsSthOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -27,7 +27,7 @@ class NumOrNullTraitTest extends OrNullTraitsTestCase
      */
     public function testIsPosNumOrNull(): void
     {
-        $this->checkSthOrNullFunction(__FUNCTION__);
+        $this->checkIsSthOrNullFunction(__FUNCTION__);
     }
 
     /**
@@ -35,6 +35,6 @@ class NumOrNullTraitTest extends OrNullTraitsTestCase
      */
     public function testIsNegNumOrNull(): void
     {
-        $this->checkSthOrNullFunction(__FUNCTION__);
+        $this->checkIsSthOrNullFunction(__FUNCTION__);
     }
 }

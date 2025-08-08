@@ -72,12 +72,12 @@ abstract class ArrOfTraitsTestCase extends MockeryTestCase
         }
         $checkArrOfSthFuncName = lcfirst($match[1]);
         $checkArrOfFuncName = lcfirst($match[2]);
-        $checkSthFuncName = 'is' . $match[3];
+        $isSthFuncName = 'is' . $match[3];
 
         $mock = Mockery::mock(V::class)->makePartial();
 
-        $checkSthFuncClosure = $mock::$checkSthFuncName(...);
-        $validatorMatcher = Mockery::on(static fn (Closure $validator): bool => $validator == $checkSthFuncClosure);
+        $isSthFuncClosure = $mock::$isSthFuncName(...);
+        $validatorMatcher = Mockery::on(static fn (Closure $validator): bool => $validator == $isSthFuncClosure);
 
         $value1 = 'value-1';
         $mock->expects($checkArrOfFuncName)->once()->with($value1, $validatorMatcher)->andReturnFalse();
@@ -86,7 +86,7 @@ abstract class ArrOfTraitsTestCase extends MockeryTestCase
         $mock->expects($checkArrOfFuncName)->once()->with($value2, $validatorMatcher)->andReturnTrue();
 
         $mock->expects($checkArrOfFuncName)->never();
-        $mock->expects($checkSthFuncName)->never();
+        $mock->expects($isSthFuncName)->never();
 
         $this->assertFalse($mock::$checkArrOfSthFuncName($value1));
         $this->assertTrue($mock::$checkArrOfSthFuncName($value2));
@@ -106,7 +106,7 @@ abstract class ArrOfTraitsTestCase extends MockeryTestCase
         }
         $checkArrOfSthOfFuncName = lcfirst($match[1]);
         $checkArrOfFuncName = lcfirst($match[2]);
-        $checkSthOfFuncName = 'is' . $match[3];
+        $isSthOfFuncName = 'is' . $match[3];
 
         $mock = Mockery::mock(V::class)->makePartial();
 
@@ -118,7 +118,7 @@ abstract class ArrOfTraitsTestCase extends MockeryTestCase
                 && ($validator($value1) === false);
         });
         $mock->expects($checkArrOfFuncName)->once()->with($value1, $validatorMatcher1)->andReturnFalse();
-        $mock->expects($checkSthOfFuncName)->once()->with($value1, $arg1)->andReturnFalse();
+        $mock->expects($isSthOfFuncName)->once()->with($value1, $arg1)->andReturnFalse();
 
         $value2 = 'value-2';
         $arg2 = 'arg-2';
@@ -128,10 +128,10 @@ abstract class ArrOfTraitsTestCase extends MockeryTestCase
                 && ($validator($value2) === true);
         });
         $mock->expects($checkArrOfFuncName)->once()->with($value2, $validatorMatcher2)->andReturnTrue();
-        $mock->expects($checkSthOfFuncName)->once()->with($value2, $arg2)->andReturnTrue();
+        $mock->expects($isSthOfFuncName)->once()->with($value2, $arg2)->andReturnTrue();
 
         $mock->expects($checkArrOfFuncName)->never();
-        $mock->expects($checkSthOfFuncName)->never();
+        $mock->expects($isSthOfFuncName)->never();
 
         $this->assertFalse($mock::$checkArrOfSthOfFuncName($value1, $arg1));
         $this->assertTrue($mock::$checkArrOfSthOfFuncName($value2, $arg2));
