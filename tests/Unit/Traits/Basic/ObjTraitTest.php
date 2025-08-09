@@ -5,8 +5,8 @@ namespace Tests\Unit\Traits\Basic;
 use ArrayAccess;
 use ArrayObject;
 use PHPUnit\Framework\Attributes\DataProvider;
-use Tests\Unit\Samples\MyArrayObject1;
-use Tests\Unit\Samples\MyArrayObject2;
+use Tests\Samples\MyArrayObject1;
+use Tests\Samples\MyArrayObject2;
 use Tests\Unit\Traits\BasicTraitsTestCase;
 use VanCodX\Data\Validation\Validation as V;
 
