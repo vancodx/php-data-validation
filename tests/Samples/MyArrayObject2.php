@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Tests\Unit\Samples;
+namespace Tests\Samples;
 
 /**
  * @template TKey of array-key
