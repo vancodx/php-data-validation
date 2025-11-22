@@ -88,7 +88,6 @@ class ArgumentExceptionTest extends TestCase
         $this->expectExceptionObjectOnCall(
             new InvalidArgumentException('Argument "valueInfo" is invalid.'),
             static function (): void {
-                /** @phpstan-ignore new.resultUnused */
                 new ArgumentException('');
             }
         );
@@ -96,7 +95,6 @@ class ArgumentExceptionTest extends TestCase
         $this->expectExceptionObjectOnCall(
             new InvalidArgumentException('Argument "valueInfo" is invalid.'),
             static function (): void {
-                /** @phpstan-ignore new.resultUnused */
                 new ArgumentException([]);
             }
         );
@@ -104,7 +102,6 @@ class ArgumentExceptionTest extends TestCase
         $this->expectExceptionObjectOnCall(
             new InvalidArgumentException('Argument "valueInfo" is invalid.'),
             static function (): void {
-                /** @phpstan-ignore new.resultUnused */
                 new ArgumentException(['']);
             }
         );
@@ -112,7 +109,6 @@ class ArgumentExceptionTest extends TestCase
         $this->expectExceptionObjectOnCall(
             new InvalidArgumentException('Argument "valueInfo" is invalid.'),
             static function (): void {
-                /** @phpstan-ignore new.resultUnused */
                 new ArgumentException(['' => 'Sailor Moon']);
             }
         );
